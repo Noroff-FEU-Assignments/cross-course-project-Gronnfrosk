@@ -1,10 +1,117 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>My first website</title>
-  </head>
-  <body>
-    <h1>Hello world!</h1>
-    <p>Welcome to my first website.</p>
-  </body>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/style.css" />
+		<script
+			src="https://kit.fontawesome.com/97c20a411c.js"
+			crossorigin="anonymous"
+		></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+			rel="stylesheet"
+		/>
+		<title>GameHub | Home</title>
+	</head>
+	<body>
+		<!-- Header-->
+		<header>
+			<img src="/images/GameHub_Logo.png" alt="Logo image" class="logo" />
+			<nav class="nav-top">
+				<a href="" class="icon"><i class="fas fa-heart"></i>Saved</a>
+				<a href="" class="icon"><i class="fas fa-user"></i>Sign in</a>
+				<a href="" class="icon"><i class="fas fa-shopping-cart"></i>Cart</a>
+			</nav>
+			<div class="search-bar">
+				<div class="search">
+					<input type="text" class="game-search" name="game-search" />
+					<i class="fas fa-search"></i>
+				</div>
+			</div>
+		</header>
+		<!-- Main-->
+		<main>
+			<h1>What computer game do you want to play?</h1>
+			<!-- Popular games-->
+			<section class="game-list">
+				<h2>Popular games</h2>
+				<div class="product">
+					<img
+						src="images/GameHub_covers5.jpg"
+						alt="Computer game called Assassin"
+						class="product-img"
+					/>
+				</div>
+				<div class="details">
+					<i class="fas fa-heart"></i>
+					<h4>Assasin</h4>
+					<p>- New</p>
+					<p>- Playbox One X Enhanced</p>
+					<p>Rating</p>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="far fa-star"></i>
+					<p>500 kr</p>
+					<button class="cta one">Add to cart</button>
+				</div>
+				<button href="" class="cta two">+ More</button>
+			</section>
+			<!-- Selling point-->
+			<section class="slogan">
+				<div class="text">
+					<h2>The universe of games</h2>
+					<p class="pointb">
+						We have a huge range of games that is competitively priced. Buy
+						either used games, brand new or pre-order games from us.
+					</p>
+					<p class="points">
+						Be able to regain some money back by selling the games back to us.
+					</p>
+					<a href="" class="text-link">Join us now -></a>
+				</div>
+				<img src="/images/GameHub_Logo.png" alt="logo" class="logoone" />
+			</section>
+			<!-- Pre-order games-->
+			<section class="products pre-order"></section>
+			<!-- Brand new games-->
+			<section class="products brand-new"></section>
+			<!-- Pre-used games-->
+			<section class="products pre-used"></section>
+		</main>
+		<!-- Footer-->
+		<footer>
+			<div class="navb">
+				<a href="index.html" class="topbutton"
+					><i class="fas fa-chevron-circle-up"></i
+				></a>
+				<div class="navbottom">
+					<ul class="navlinks">
+						<li><a href="">- Contact us</a></li>
+						<li><a href="">- About us</a></li>
+						<li><a href="">- My account</a></li>
+						<li><a href="">- Terms of transaction and delivery</a></li>
+						<li><a href="">- Privacy policy</a></li>
+					</ul>
+					<div class="social">
+						<a href=""> <i class="fab fa-facebook-f"></i></a>
+						<a href=""> <i class="fab fa-twitter"></i></a>
+						<a href=""> <i class="fab fa-instagram"></i></a>
+						<a href=""> <i class="fab fa-youtube"></i></a>
+					</div>
+				</div>
+			</div>
+			<div class="last">
+				<a href="index.html"
+					><img src="/images/GameHub_Logo.png" alt="logo" class="logotwo"
+				/></a>
+				<p>&copy;Copyright 2021 GameHub</p>
+			</div>
+		</footer>
+	</body>
 </html>

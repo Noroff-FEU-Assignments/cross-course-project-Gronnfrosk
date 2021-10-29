@@ -1,0 +1,254 @@
+body {
+	margin: 0;
+	/*border-top: solid 50px #1b203d*/
+}
+/* Top navigation */
+.logo {
+	height: 112px;
+	padding-top: 10px;
+	padding-left: 10px;
+	float: left;
+}
+.logo,
+.nav-top {
+	margin-top: -58px;
+}
+.icon i {
+	display: block;
+}
+nav {
+	display: flex;
+	font-weight: bold;
+	float: right;
+	margin-top: 5px;
+	margin-right: 30px;
+}
+.icon {
+	padding: 7px;
+	text-align: center;
+}
+
+i {
+	color: #1b203d;
+	font-size: 25px;
+}
+i:hover,
+a:hover {
+	color: #5bd2ff;
+}
+a {
+	text-decoration: none;
+}
+nav a {
+	font-size: 12px;
+	color: #1b203d;
+}
+
+li {
+	list-style-type: none;
+}
+.game-search {
+	width: 311px;
+	height: 53px;
+	border-radius: 15px;
+}
+.search-bar {
+	border-top: solid 23px #1b203d;
+	margin-top: 58px;
+	display: relative;
+	padding-top: 60px;
+}
+.search {
+	max-width: 311px;
+	margin: 0 auto;
+}
+.fa-search {
+	position: absolute;
+	margin-top: -45px;
+	margin-left: 280px;
+}
+h1,
+h2,
+h3,
+h4,
+p,
+a {
+	font-family: "Roboto", sans-serif;
+}
+h1 {
+	color: #1b203d;
+	text-align: center;
+}
+h2 {
+	text-transform: uppercase;
+}
+a {
+	color: black;
+}
+/* Game lists */
+/*section .game-list {
+	width: 273px;
+	
+}*/
+
+.product-img {
+	height: 194px;
+}
+.one {
+	background-color: #baff3b;
+	border: none;
+	border-radius: 2px;
+	width: 75px;
+	height: 22px;
+	color: black;
+	text-align: center;
+	font-size: 11px;
+	font-weight: bold;
+	cursor: pointer;
+}
+.two {
+	background-color: #1b203d;
+	border: none;
+	width: 146px;
+	height: 35px;
+	color: white;
+	text-align: center;
+	font-size: 1em;
+	cursor: pointer;
+}
+
+.two:hover {
+	box-shadow: 0 10px 20px rgb(0, 0, 0);
+}
+
+/* Slogan and selling point */
+.slogan {
+	border: solid #1b203d 20px;
+	text-align: center;
+	margin: 50px auto;
+	max-width: 679px;
+}
+section .text {
+	margin: auto auto;
+	width: 253px;
+}
+.text-link {
+	text-decoration: underline;
+	padding: 20px;
+}
+.slogan .logoone {
+	height: 63px;
+	position: relative;
+	top: 34px;
+}
+
+/* footer */
+.topbutton {
+	float: right;
+}
+.topbutton i {
+	font-size: 60px;
+}
+.navlinks li {
+	font-size: 20px;
+	padding: 3px;
+}
+footer .logotwo {
+	height: 81px;
+	margin-bottom: -17px;
+}
+footer p {
+	text-align: center;
+	font-size: 12px;
+	margin-bottom: 1px;
+	margin-top: 0;
+}
+.last a,
+.last p {
+	display: block;
+	text-align: center;
+	margin-top: 20px;
+}
+
+/*mobile styles*/
+
+@media only screen and (max-width: 990px) {
+	.slogan {
+		height: 169px;
+	}
+	main h1,
+	.pointb,
+	.slogan h2 {
+		display: none;
+	}
+	.text {
+		width: 253px;
+	}
+	h2 {
+		font-size: 17px;
+	}
+	.topbutton {
+		margin-right: 35px;
+	}
+	.navlinks {
+		padding-inline-start: 35px;
+		margin-block-start: 30px;
+		margin-block-end: 40px;
+	}
+	.social {
+		text-align: center;
+	}
+	.social a {
+		margin: 10px;
+	}
+	footer {
+		border: solid 21px #5bd2ff;
+		border-top: solid 1px #1b203d;
+		border-left: hidden;
+		border-right: hidden;
+	}
+}
+
+/*desktop/tablet styles*/
+
+@media only screen and (min-width: 991px) {
+	.slogan {
+		height: 247px;
+		align-items: center;
+	}
+	.text {
+		min-width: 400px;
+	}
+	.points {
+		display: none;
+	}
+	.slogan .logoone {
+		height: 69px;
+		position: relative;
+		top: 34px;
+	}
+	.navb {
+		max-width: 1425px;
+	}
+	.topbutton {
+		margin-right: 100px;
+	}
+	.navlinks {
+		padding-inline-start: 280px;
+	}
+	.social a {
+		display: block;
+		margin: 20px 0 -10px 70px;
+		text-align: center;
+	}
+	.navbottom {
+		display: flex;
+		margin-top: 30px;
+	}
+	footer {
+		border: solid 21px #5bd2ff;
+		border-top: solid 1px #1b203d;
+		border-left: hidden;
+		border-right: hidden;
+	}
+}
