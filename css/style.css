@@ -65,7 +65,7 @@ li {
 	height: 53px;
 	border-radius: 15px;
 	border-width: 3px;
-	margin: 10px;
+	margin: 50px 0 20px 20px;
 }
 .search-bar {
 	border-top: solid 23px #1b203d;
@@ -106,30 +106,21 @@ a {
 }
 /* Game lists */
 .list {
-	width: 300px;
-	display: grid;
-	grid-template-areas:
-		"head head"
-		"product details"
-		"scrolldots scrolldots"
-		"button button";
+	display: flex;
 }
 .border h2 {
 	border-top: solid 1px #1b203d;
 }
 h2 {
-	grid-area: head;
 	font-size: 12px;
-}
-.product {
-	grid-area: product;
 }
 .product-img {
 	height: 194px;
 	box-shadow: 5px 4px 6px rgb(158, 158, 158);
 }
-.details {
-	grid-area: details;
+.details,
+.details-one,
+.details-two {
 	width: 95px;
 }
 .list .fa-heart {
@@ -277,7 +268,23 @@ footer p {
 	select {
 		display: none;
 	}
+	.game-search {
+		margin: 20px 0 0 20px;
+	}
 	/* Game lists */
+	.list {
+		display: grid;
+		grid-template-areas:
+			"head head head head head head"
+			"one two three four five six"
+			"dots dots dots dots dots dots"
+			"button button button button button button";
+	}
+	h2 {
+		grid-area: head;
+		width: max-content;
+		padding-top: 20px;
+	}
 	h2,
 	.product,
 	.product-one,
@@ -285,9 +292,45 @@ footer p {
 		margin-left: 30px;
 		width: 150px;
 	}
+	.details,
+	.details-one,
+	.details-two {
+		margin-left: 10px;
+	}
+	.product {
+		grid-area: one;
+	}
+	.product-one {
+		grid-area: three;
+	}
+	.product-two {
+		grid-area: five;
+	}
+	.details {
+		grid-area: two;
+	}
+	.details-one {
+		grid-area: four;
+	}
+	.details-two {
+		grid-area: six;
+	}
+	.dots {
+		grid-area: dots;
+	}
+	.two {
+		grid-area: button;
+	}
+	.list {
+		overflow: auto;
+	}
+	.fa-gamepad {
+		display: none;
+	}
 	/* Slogan and selling point */
 	.slogan {
 		height: 130px;
+		background-color: white;
 	}
 	main h1,
 	.pointb,
@@ -298,6 +341,7 @@ footer p {
 		width: 253px;
 	}
 	h2 {
+		width: 500px;
 		font-size: 17px;
 	}
 	.desktop {
@@ -385,7 +429,7 @@ footer p {
 	h1 {
 		text-align: center;
 		border-bottom: solid #1b203d 1px;
-		margin: 50px auto 0 auto;
+		margin: 100px auto 0 auto;
 		padding-bottom: 10px;
 		width: 700px;
 	}
@@ -399,7 +443,7 @@ footer p {
 	/* Game lists */
 	.list {
 		margin: 0 auto 20px auto;
-		width: max-content;
+		width: 1300px;
 		display: flex;
 		flex-wrap: wrap;
 		border: solid 10px white;
@@ -419,21 +463,27 @@ footer p {
 	.details-one,
 	.details-two {
 		width: 95px;
-		margin-right: 2%;
+		margin-right: 1.5%;
 		margin-left: 10px;
 		width: 100px;
 	}
 	.title {
-		font-size: 20px;
+		font-size: 18px;
 	}
 	.description,
 	.rating,
 	.one {
 		font-size: 14px;
 	}
+	.prize {
+		margin-top: 27px;
+	}
 	.one {
 		width: 100%;
 		height: 30px;
+	}
+	.pre .title {
+		margin-bottom: 45px;
 	}
 	.dots {
 		display: none;
@@ -443,15 +493,33 @@ footer p {
 		height: auto;
 		margin: 0;
 		font-size: 50px;
-		overflow: hidden;
 	}
 	section .mobile {
 		display: none;
 	}
+	.fa-gamepad {
+		color: #1b203d;
+		text-align: center;
+		background-color: #1b203d;
+		height: 130px;
+		border: solid;
+		border-bottom: 0;
+		border-color: #5bd2ff;
+		background-clip: content-box, padding-box;
+		border-width: 40px 200px;
+		display: block;
+		z-index: -2;
+		margin: 80px 0 -150px 0;
+	}
+	.fa-gamepad:hover {
+		color: #1b203d;
+	}
+
 	/* Slogan and selling point */
 	.slogan {
 		height: 200px;
 		align-items: center;
+		background-color: white;
 	}
 	.text {
 		min-width: 400px;
@@ -468,7 +536,7 @@ footer p {
 		margin-right: 100px;
 	}
 	.navlinks {
-		padding-inline-start: 280px;
+		padding-inline-start: 250px;
 	}
 	.social a {
 		display: block;
