@@ -417,6 +417,10 @@ footer p {
 		margin: 10px 0 10px -20px;
 		z-index: 1;
 	}
+	select:hover {
+		cursor: pointer;
+		background-color: black;
+	}
 	h1 {
 		text-align: center;
 		border-bottom: solid #1b203d 1px;
