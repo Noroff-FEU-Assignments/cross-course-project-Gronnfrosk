@@ -4,7 +4,6 @@ body {
 }
 /* Top navigation */
 .logo {
-	height: 112px;
 	padding-top: 10px;
 	padding-left: 10px;
 	float: left;
@@ -20,8 +19,7 @@ nav {
 	display: flex;
 	font-weight: bold;
 	float: right;
-	margin-top: 5px;
-	margin-right: 30px;
+	margin-right: 20px;
 }
 .icon {
 	padding: 7px;
@@ -43,6 +41,21 @@ nav a {
 	font-size: 12px;
 	color: #1b203d;
 }
+nav .fa-circle {
+	display: none;
+}
+
+/* Clicked icon effects
+
+.fa-heart .fa-circle {
+	color: #5bd2ff;
+	margin: -14px 0 5px 15px;
+}
+.fa-shopping-cart .fa-circle {
+	color: #5bd2ff;
+	margin: -25px 0 17px 7px;
+}
+*/
 
 li {
 	list-style-type: none;
@@ -51,22 +64,29 @@ li {
 	width: 311px;
 	height: 53px;
 	border-radius: 15px;
+	border-width: 3px;
+	margin: 10px;
 }
 .search-bar {
 	border-top: solid 23px #1b203d;
 	margin-top: 58px;
-	display: relative;
-	padding-top: 60px;
+	padding: 6px 0 0 0;
+	background-image: linear-gradient(
+			to bottom,
+			rgb(255 255 255) 0%,
+			rgb(255 255 255) 100%
+		),
+		linear-gradient(to top, #1b203d, #1b203d 50%, #1b203d 75%, #45047a 75%);
+	background-clip: content-box, padding-box;
 }
-.search {
-	max-width: 311px;
+header .search {
+	max-width: 590px;
 	margin: 0 auto;
 }
 .fa-search {
-	position: absolute;
-	margin-top: -45px;
-	margin-left: 280px;
+	margin-left: -54px;
 }
+
 h1,
 h2,
 h3,
@@ -77,7 +97,6 @@ a {
 }
 h1 {
 	color: #1b203d;
-	text-align: center;
 }
 h2 {
 	text-transform: uppercase;
@@ -86,27 +105,91 @@ a {
 	color: black;
 }
 /* Game lists */
-/*section .game-list {
-	width: 273px;
-	
-}*/
-
+.list {
+	width: 300px;
+	display: grid;
+	grid-template-areas:
+		"head head"
+		"product details"
+		"scrolldots scrolldots"
+		"button button";
+}
+.border h2 {
+	border-top: solid 1px #1b203d;
+}
+h2 {
+	grid-area: head;
+	font-size: 12px;
+}
+.product {
+	grid-area: product;
+}
 .product-img {
 	height: 194px;
+	box-shadow: 5px 4px 6px rgb(158, 158, 158);
+}
+.details {
+	grid-area: details;
+	width: 95px;
+}
+.list .fa-heart {
+	float: right;
+}
+.title {
+	font-size: 12px;
+	margin-top: 25px;
+}
+.description,
+.rating {
+	font-size: 9px;
+}
+.description {
+	margin: 0px;
+}
+.rating {
+	margin-top: 15px;
+	margin-bottom: 0;
+}
+.fa-star {
+	font-size: 10px;
+	color: #5bd2ff;
+}
+.prize {
+	font-size: 20px;
+	color: #45047a;
+	font-weight: bold;
+	margin: 15px auto 0 auto;
+	text-align: center;
 }
 .one {
 	background-color: #baff3b;
 	border: none;
 	border-radius: 2px;
-	width: 75px;
-	height: 22px;
-	color: black;
-	text-align: center;
+	width: 80px;
+	height: 25px;
 	font-size: 11px;
 	font-weight: bold;
-	cursor: pointer;
+}
+.ctatextone {
+	margin: 0 auto;
+}
+.ctatexttwo {
+	display: none;
+}
+.fa-circle {
+	font-size: 9px;
+	color: black;
+	text-align: center;
+}
+.dots {
+	grid-area: scrolldots;
+	text-align: center;
+}
+.dots i {
+	margin: 3px;
 }
 .two {
+	grid-area: button;
 	background-color: #1b203d;
 	border: none;
 	width: 146px;
@@ -114,12 +197,31 @@ a {
 	color: white;
 	text-align: center;
 	font-size: 1em;
+
+	margin: 10px auto;
+}
+.one:hover {
+	box-shadow: 0 10px 20px rgb(0, 0, 0);
+	cursor: pointer;
+}
+.two:hover {
+	box-shadow: 0 10px 20px rgb(0, 0, 0);
 	cursor: pointer;
 }
 
-.two:hover {
+/* Clicked button effects
+.one {
+	color: #baff3b;
+	background-color: black;
 	box-shadow: 0 10px 20px rgb(0, 0, 0);
 }
+.ctatextone {
+	display: none;
+}
+.ctatexttwo {
+	display: contents;
+	margin: 0 auto;
+*/
 
 /* Slogan and selling point */
 .slogan {
@@ -127,6 +229,9 @@ a {
 	text-align: center;
 	margin: 50px auto;
 	max-width: 679px;
+	background-image: url(/images/Logoslogan.jpg);
+	background-repeat: no-repeat;
+	background-position: bottom right;
 }
 section .text {
 	margin: auto auto;
@@ -135,11 +240,6 @@ section .text {
 .text-link {
 	text-decoration: underline;
 	padding: 20px;
-}
-.slogan .logoone {
-	height: 63px;
-	position: relative;
-	top: 34px;
 }
 
 /* footer */
@@ -173,8 +273,21 @@ footer p {
 /*mobile styles*/
 
 @media only screen and (max-width: 990px) {
+	/* Top navigation*/
+	select {
+		display: none;
+	}
+	/* Game lists */
+	h2,
+	.product,
+	.product-one,
+	.product-two {
+		margin-left: 30px;
+		width: 150px;
+	}
+	/* Slogan and selling point */
 	.slogan {
-		height: 169px;
+		height: 130px;
 	}
 	main h1,
 	.pointb,
@@ -187,6 +300,10 @@ footer p {
 	h2 {
 		font-size: 17px;
 	}
+	.desktop {
+		display: none;
+	}
+	/* footer */
 	.topbutton {
 		margin-right: 35px;
 	}
@@ -212,8 +329,128 @@ footer p {
 /*desktop/tablet styles*/
 
 @media only screen and (min-width: 991px) {
+	/* Top navigation*/
+	.phone {
+		display: none;
+	}
+	.logo {
+		margin: 70px 0 0 50px;
+		height: 160px;
+	}
+	.nav-top {
+		margin: 90px 16vmin 0 0;
+		padding: 0 5px 25px 5px;
+		background-image: url(/images/Slogan.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: bottom center;
+	}
+	.icon {
+		padding: 10px;
+	}
+	.search-bar {
+		border-top: solid 50px #1b203d;
+		padding: 6px 0 50px 0;
+		border-bottom: solid 6px #45047a;
+		margin: 0;
+	}
+	header .search {
+		display: flex;
+		margin: 30px auto;
+	}
+	.game-search {
+		z-index: 2;
+		border-width: 2px;
+		border-color: #1b203d;
+		width: 450px;
+		margin: 10px 10px 0 0;
+	}
+	.search a {
+		z-index: 3;
+		margin-top: 25px;
+	}
+	select {
+		height: 59px;
+		min-width: 170px;
+		border-radius: 0 15px 15px 0;
+		border: none;
+		text-align: center;
+		background: #1b203d;
+		color: white;
+		font-size: 15px;
+		font-weight: bold;
+		margin: 10px 0 10px -20px;
+		z-index: 1;
+	}
+	h1 {
+		text-align: center;
+		border-bottom: solid #1b203d 1px;
+		margin: 50px auto 0 auto;
+		padding-bottom: 10px;
+		width: 700px;
+	}
+
+	h2 {
+		font-size: 25px;
+		width: 100%;
+		padding-top: 30px;
+		margin: 0;
+	}
+	/* Game lists */
+	.list {
+		margin: 0 auto 20px auto;
+		width: max-content;
+		display: flex;
+		flex-wrap: wrap;
+		border: solid 10px white;
+	}
+	.product-img {
+		width: 200px;
+		height: auto;
+	}
+	.product,
+	.product-one,
+	.product-two {
+		margin-left: 0;
+		min-width: 160px;
+		max-width: 20%;
+	}
+	.details,
+	.details-one,
+	.details-two {
+		width: 95px;
+		margin-right: 2%;
+		margin-left: 10px;
+		width: 100px;
+	}
+	.title {
+		font-size: 20px;
+	}
+	.description,
+	.rating,
+	.one {
+		font-size: 14px;
+	}
+	.one {
+		width: 100%;
+		height: 30px;
+	}
+	.dots {
+		display: none;
+	}
+	section .desktop {
+		min-width: 80px;
+		height: auto;
+		margin: 0;
+		font-size: 50px;
+		overflow: hidden;
+	}
+	section .mobile {
+		display: none;
+	}
+	/* Slogan and selling point */
 	.slogan {
-		height: 247px;
+		height: 200px;
 		align-items: center;
 	}
 	.text {
@@ -222,11 +459,8 @@ footer p {
 	.points {
 		display: none;
 	}
-	.slogan .logoone {
-		height: 69px;
-		position: relative;
-		top: 34px;
-	}
+
+	/* footer */
 	.navb {
 		max-width: 1425px;
 	}
@@ -250,5 +484,6 @@ footer p {
 		border-top: solid 1px #1b203d;
 		border-left: hidden;
 		border-right: hidden;
+		margin-top: 100px;
 	}
 }

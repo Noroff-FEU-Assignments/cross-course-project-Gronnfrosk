@@ -20,16 +20,36 @@
 	<body>
 		<!-- Header-->
 		<header>
-			<img src="/images/GameHub_Logo.png" alt="Logo image" class="logo" />
+			<img src="/images/Logo_small.png" alt="Logo image" class="logo phone" />
+			<img src="/images/Logo_desktop.png" alt="Logo image" class="logo desktop" />
 			<nav class="nav-top">
-				<a href="" class="icon"><i class="fas fa-heart"></i>Saved</a>
+				<a href="" class="icon"
+					><i class="fas fa-heart"><i class="fas fa-circle"></i></i>Saved</a
+				>
 				<a href="" class="icon"><i class="fas fa-user"></i>Sign in</a>
-				<a href="" class="icon"><i class="fas fa-shopping-cart"></i>Cart</a>
+				<a href="" class="icon"
+					><i class="fas fa-shopping-cart"><i class="fas fa-circle"></i></i
+					>Cart</a
+				>
 			</nav>
 			<div class="search-bar">
 				<div class="search">
-					<input type="text" class="game-search" name="game-search" />
-					<i class="fas fa-search"></i>
+					<input
+						type="text"
+						placeholder=""
+						class="game-search"
+						name="game-search"
+					/>
+					<a href=""><i class="fas fa-search"></i></a>
+					<select name="game categories">
+						<option value="all">All Categories</option>
+						<option value="all">Action</option>
+						<option value="all">Adventure</option>
+						<option value="all">Sport</option>
+						<option value="all">strategy</option>
+						<option value="all">RPG</option>
+						<option value="all">Simulation</option>
+					</select>
 				</div>
 			</div>
 		</header>
@@ -37,30 +57,90 @@
 		<main>
 			<h1>What computer game do you want to play?</h1>
 			<!-- Popular games-->
-			<section class="game-list">
+			<section class="list">
 				<h2>Popular games</h2>
 				<div class="product">
-					<img
-						src="images/GameHub_covers5.jpg"
-						alt="Computer game called Assassin"
-						class="product-img"
-					/>
+					<a href=""
+						><img
+							src="images/GameHub_covers5.jpg"
+							alt="Computer game called Assassin"
+							class="product-img"
+					/></a>
 				</div>
 				<div class="details">
 					<i class="fas fa-heart"></i>
-					<h4>Assasin</h4>
-					<p>- New</p>
-					<p>- Playbox One X Enhanced</p>
-					<p>Rating</p>
+					<p class="title">Assassin</p>
+					<p class="description">- New</p>
+					<p class="description">- Playbox One X Enhanced</p>
+					<p class="rating">Rating</p>
 					<i class="fas fa-star"></i>
 					<i class="fas fa-star"></i>
 					<i class="fas fa-star"></i>
 					<i class="fas fa-star"></i>
 					<i class="far fa-star"></i>
-					<p>500 kr</p>
-					<button class="cta one">Add to cart</button>
+					<p class="prize">500 kr</p>
+					<button class="cta one">
+						<p class="ctatextone">Add to cart</p>
+						<p class="ctatexttwo">Added</p>
+					</button>
 				</div>
-				<button href="" class="cta two">+ More</button>
+				<div class="product-one">
+					<a href=""
+						><img
+							src="images/GameHub_covers7.jpg"
+							alt="Computer game called Assassin"
+							class="product-img"
+					/></a>
+				</div>
+				<div class="details-one">
+					<i class="fas fa-heart"></i>
+					<p class="title">Racing</p>
+					<p class="description">- New</p>
+					<p class="description">- Playbox One X Enhanced</p>
+					<p class="rating">Rating</p>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<p class="prize">500 kr</p>
+					<button class="cta one">
+						<p class="ctatextone">Add to cart</p>
+						<p class="ctatexttwo">Added</p>
+					</button>
+				</div>
+				<div class="product-two">
+					<a href=""
+						><img
+							src="images/GameHub_covers8.jpg"
+							alt="Computer game called Assassin"
+							class="product-img"
+					/></a>
+				</div>
+				<div class="details-two">
+					<i class="fas fa-heart"></i>
+					<p class="title">Boxer</p>
+					<p class="description">- New</p>
+					<p class="description">- Playbox One X Enhanced</p>
+					<p class="rating">Rating</p>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="far fa-star"></i>
+					<p class="prize">500 kr</p>
+					<button class="cta one">
+						<p class="ctatextone">Add to cart</p>
+						<p class="ctatexttwo">Added</p>
+					</button>
+				</div>
+				<div class="dots">
+					<i class="fas fa-circle"></i>
+					<i class="fas fa-circle"></i>
+					<i class="fas fa-circle"></i>
+				</div>
+				<button href="" class="cta two mobile">+ More</button>
+				<button href="" class="cta two desktop">+</button>
 			</section>
 			<!-- Selling point-->
 			<section class="slogan">
@@ -75,15 +155,250 @@
 					</p>
 					<a href="" class="text-link">Join us now -></a>
 				</div>
-				<img src="/images/GameHub_Logo.png" alt="logo" class="logoone" />
 			</section>
-			<!-- Pre-order games-->
-			<section class="products pre-order"></section>
+			<!-- pre-order games-->
+			<section class="list">
+				<h2>Pre-order games</h2>
+				<div class="product">
+					<a href=""
+						><img
+							src="images/GameHub_covers6.jpg"
+							alt="Computer game called Assassin"
+							class="product-img"
+					/></a>
+				</div>
+				<div class="details">
+					<i class="fas fa-heart"></i>
+					<p class="title">Space War</p>
+					<p class="description">- New</p>
+					<p class="description">- Playbox One X Enhanced</p>
+					<p class="rating">Release Date: 12/12/2021</p>
+					<p class="prize">600 kr</p>
+					<button class="cta one">
+						<p class="ctatextone">Add to cart</p>
+						<p class="ctatexttwo">Added</p>
+					</button>
+				</div>
+				<div class="product-one">
+					<a href=""
+						><img
+							src="images/GameHub_covers9.jpg"
+							alt="Computer game called Assassin"
+							class="product-img"
+					/></a>
+				</div>
+				<div class="details-one">
+					<i class="fas fa-heart"></i>
+					<p class="title">Cyberpunk</p>
+					<p class="description">- New</p>
+					<p class="description">- Playbox One X Enhanced</p>
+					<p class="rating">Release Date: 12/11/2021</p>
+					<p class="prize">600 kr</p>
+					<button class="cta one">
+						<p class="ctatextone">Add to cart</p>
+						<p class="ctatexttwo">Added</p>
+					</button>
+				</div>
+				<div class="product-two">
+					<a href=""
+						><img
+							src="images/GameHub_covers10.jpg"
+							alt="Computer game called Assassin"
+							class="product-img"
+					/></a>
+				</div>
+				<div class="details-two">
+					<i class="fas fa-heart"></i>
+					<p class="title">Forge Lengend</p>
+					<p class="description">- New</p>
+					<p class="description">- Playbox One X Enhanced</p>
+					<p class="rating">Release Date: 12/10/2021</p>
+					<p class="prize">600 kr</p>
+					<button class="cta one">
+						<p class="ctatextone">Add to cart</p>
+						<p class="ctatexttwo">Added</p>
+					</button>
+				</div>
+				<div class="dots">
+					<i class="fas fa-circle"></i>
+					<i class="fas fa-circle"></i>
+					<i class="fas fa-circle"></i>
+				</div>
+				<button href="" class="cta two mobile">+ More</button>
+				<button href="" class="cta two desktop">+</button>
+			</section>
 			<!-- Brand new games-->
-			<section class="products brand-new"></section>
+			<section class="list border">
+				<h2>Brand new games</h2>
+				<div class="product">
+					<a href=""
+						><img
+							src="images/GameHub_covers2.jpg"
+							alt="Computer game called Assassin"
+							class="product-img"
+					/></a>
+				</div>
+				<div class="details">
+					<i class="fas fa-heart"></i>
+					<p class="title">Super Duper</p>
+					<p class="description">- New</p>
+					<p class="description">- Playbox One X Enhanced</p>
+					<p class="rating">Rating</p>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="far fa-star"></i>
+					<p class="prize">500 kr</p>
+					<button class="cta one">
+						<p class="ctatextone">Add to cart</p>
+						<p class="ctatexttwo">Added</p>
+					</button>
+				</div>
+				<div class="product-one">
+					<a href=""
+						><img
+							src="images/GameHub_covers3.jpg"
+							alt="Computer game called Assassin"
+							class="product-img"
+					/></a>
+				</div>
+				<div class="details-one">
+					<i class="fas fa-heart"></i>
+					<p class="title">Black</p>
+					<p class="description">- New</p>
+					<p class="description">- Playbox One X Enhanced</p>
+					<p class="rating">Rating</p>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="far fa-star"></i>
+					<p class="prize">500 kr</p>
+					<button class="cta one">
+						<p class="ctatextone">Add to cart</p>
+						<p class="ctatexttwo">Added</p>
+					</button>
+				</div>
+				<div class="product-two">
+					<a href=""
+						><img
+							src="images/GameHub_covers4.jpg"
+							alt="Computer game called Assassin"
+							class="product-img"
+					/></a>
+				</div>
+				<div class="details-two">
+					<i class="fas fa-heart"></i>
+					<p class="title">Furious</p>
+					<p class="description">- New</p>
+					<p class="description">- Playbox One X Enhanced</p>
+					<p class="rating">Rating</p>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<p class="prize">500 kr</p>
+					<button class="cta one">
+						<p class="ctatextone">Add to cart</p>
+						<p class="ctatexttwo">Added</p>
+					</button>
+				</div>
+				<div class="dots">
+					<i class="fas fa-circle"></i>
+					<i class="fas fa-circle"></i>
+					<i class="fas fa-circle"></i>
+				</div>
+				<button href="" class="cta two mobile">+ More</button>
+				<button href="" class="cta two desktop">+</button>
+			</section>
 			<!-- Pre-used games-->
-			<section class="products pre-used"></section>
-		</main>
+			<section class="list border">
+				<h2>Pre-used games</h2>
+				<div class="product">
+					<a href=""
+						><img
+							src="images/GameHub_covers5.jpg"
+							alt="Computer game called Assassin"
+							class="product-img"
+					/></a>
+				</div>
+				<div class="details">
+					<i class="fas fa-heart"></i>
+					<p class="title">Assassin</p>
+					<p class="description">- New</p>
+					<p class="description">- Playbox One X Enhanced</p>
+					<p class="rating">Rating</p>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="far fa-star"></i>
+					<p class="prize">500 kr</p>
+					<button class="cta one">
+						<p class="ctatextone">Add to cart</p>
+						<p class="ctatexttwo">Added</p>
+					</button>
+				</div>
+				<div class="product-one">
+					<a href=""
+						><img
+							src="images/GameHub_covers4.jpg"
+							alt="Computer game called Assassin"
+							class="product-img"
+					/></a>
+				</div>
+				<div class="details-one">
+					<i class="fas fa-heart"></i>
+					<p class="title">Furious</p>
+					<p class="description">- New</p>
+					<p class="description">- Playbox One X Enhanced</p>
+					<p class="rating">Rating</p>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<p class="prize">500 kr</p>
+					<button class="cta one">
+						<p class="ctatextone">Add to cart</p>
+						<p class="ctatexttwo">Added</p>
+					</button>
+				</div>
+				<div class="product-two">
+					<a href=""
+						><img
+							src="images/GameHub_covers8.jpg"
+							alt="Computer game called Assassin"
+							class="product-img"
+					/></a>
+				</div>
+				<div class="details-two">
+					<i class="fas fa-heart"></i>
+					<p class="title">Boxer</p>
+					<p class="description">- New</p>
+					<p class="description">- Playbox One X Enhanced</p>
+					<p class="rating">Rating</p>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="far fa-star"></i>
+					<p class="prize">500 kr</p>
+					<button class="cta one">
+						<p class="ctatextone">Add to cart</p>
+						<p class="ctatexttwo">Added</p>
+					</button>
+				</div>
+				<div class="dots">
+					<i class="fas fa-circle"></i>
+					<i class="fas fa-circle"></i>
+					<i class="fas fa-circle"></i>
+				</div>
+				<button href="" class="cta two mobile">+ More</button>
+				<button href="" class="cta two desktop">+</button>
+			</section>
 		<!-- Footer-->
 		<footer>
 			<div class="navb">
@@ -108,7 +423,7 @@
 			</div>
 			<div class="last">
 				<a href="index.html"
-					><img src="/images/GameHub_Logo.png" alt="logo" class="logotwo"
+					><img src="/images/Logo_small.png" alt="logo" class="logotwo"
 				/></a>
 				<p>&copy;Copyright 2021 GameHub</p>
 			</div>
