@@ -56,6 +56,7 @@ nav .fa-circle {
 	border-width: 2px;
 	border-color: #1b203d;
 }
+
 .search-bar {
 	background-image: linear-gradient(
 			to bottom,
@@ -64,6 +65,9 @@ nav .fa-circle {
 		),
 		linear-gradient(to top, #1b203d, #1b203d 50%, #1b203d 75%, #45047a 75%);
 	background-clip: content-box, padding-box;
+}
+input[type="text" i] {
+	padding: 1px 0 1px 20px;
 }
 header .search {
 	max-width: 590px;
