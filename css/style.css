@@ -29,6 +29,7 @@ i:hover,
 a:hover {
 	color: #5bd2ff;
 }
+
 a {
 	text-decoration: none;
 }
@@ -36,27 +37,12 @@ nav a {
 	font-size: 12px;
 	color: #1b203d;
 }
-/* Clicked icon effects*/
-nav .fa-circle {
-	display: none;
-}
-/* Added to cart and saved icon effects
-.fa-heart .fa-circle {
-	color: #5bd2ff;
-	margin: -14px 0 5px 15px;
-}
-.fa-shopping-cart .fa-circle {
-	color: #5bd2ff;
-	margin: -25px 0 17px 7px;
-}
-*/
 .game-search {
 	height: 53px;
 	border-radius: 15px;
 	border-width: 2px;
 	border-color: #1b203d;
 }
-
 .search-bar {
 	background-image: linear-gradient(
 			to bottom,
@@ -80,7 +66,8 @@ h2,
 h3,
 h4,
 p,
-a {
+a,
+label {
 	font-family: "Roboto", sans-serif;
 }
 h1 {
@@ -101,8 +88,43 @@ a {
 	height: 194px;
 	box-shadow: 5px 4px 6px rgb(158, 158, 158);
 }
-.list .fa-heart {
+label.heart {
 	float: right;
+	padding: 0;
+	background-color: white;
+}
+label.heart:hover {
+	box-shadow: none;
+}
+#save:checked ~ label .fa-heart,
+#save-one:checked ~ label .fa-heart,
+#save-two:checked ~ label .fa-heart,
+#save-three:checked ~ label .fa-heart,
+#save-four:checked ~ label .fa-heart,
+#save-five:checked ~ label .fa-heart,
+#save-six:checked ~ label .fa-heart,
+#save-seven:checked ~ label .fa-heart,
+#save-eight:checked ~ label .fa-heart,
+#save-nine:checked ~ label .fa-heart,
+#save-ten:checked ~ label .fa-heart,
+#save-eleven:checked ~ label .fa-heart {
+	color: #5bd2ff;
+}
+.circle-heart i.fa-circle,
+.circle-heart-one i.fa-circle,
+.circle-heart-two i.fa-circle,
+.circle-heart-three i.fa-circle,
+.circle-heart-four i.fa-circle,
+.circle-heart-five i.fa-circle,
+.circle-heart-six i.fa-circle,
+.circle-heart-seven i.fa-circle,
+.circle-heart-eight i.fa-circle,
+.circle-heart-nine i.fa-circle,
+.circle-heart-ten i.fa-circle,
+.circle-heart-eleven i.fa-circle {
+	visibility: hidden;
+	top: 112px;
+	right: 273px;
 }
 .title {
 	margin-top: 25px;
@@ -122,52 +144,118 @@ a {
 	font-size: 20px;
 	color: #45047a;
 	font-weight: bold;
-	margin: 15px auto 0 auto;
+	margin: 5px auto 5px auto;
 	text-align: center;
 }
-.one {
+
+label {
+	position: relative;
 	background-color: #baff3b;
 	border: none;
 	border-radius: 2px;
 	font-weight: bold;
+	color: black;
+	padding: 5px 7px;
 }
-.ctatextone {
-	margin: 0 auto;
+
+label:hover {
+	box-shadow: 0 10px 20px rgb(0, 0, 0);
+	cursor: pointer;
 }
-.ctatexttwo {
+.one-added,
+.one-one-added,
+.one-two-added,
+.one-three-added,
+.one-four-added,
+.one-five-added,
+.one-six-added,
+.one-seven-added,
+.one-eight-added,
+.one-nine-added,
+.one-ten-added,
+.one-eleven-added {
+	visibility: hidden;
+	background-color: black;
+	color: #baff3b;
+	box-shadow: 0 10px 20px rgb(0, 0, 0);
+}
+#add-to-cart,
+#add-to-cart-one,
+#add-to-cart-two,
+#add-to-cart-three,
+#add-to-cart-four,
+#add-to-cart-five,
+#add-to-cart-six,
+#add-to-cart-seven,
+#add-to-cart-eight,
+#add-to-cart-nine,
+#add-to-cart-ten,
+#add-to-cart-eleven,
+#save,
+#save-one,
+#save-two,
+#save-three,
+#save-four,
+#save-five,
+#save-six,
+#save-seven,
+#save-eight,
+#save-nine,
+#save-ten,
+#save-eleven {
 	display: none;
+}
+#add-to-cart:checked ~ .one-added,
+#add-to-cart-one:checked ~ .one-one-added,
+#add-to-cart-two:checked ~ .one-two-added,
+#add-to-cart-three:checked ~ .one-three-added,
+#add-to-cart-four:checked ~ .one-four-added,
+#add-to-cart-five:checked ~ .one-five-added,
+#add-to-cart-six:checked ~ .one-six-added,
+#add-to-cart-seven:checked ~ .one-seven-added,
+#add-to-cart-eight:checked ~ .one-eight-added,
+#add-to-cart-nine:checked ~ .one-nine-added,
+#add-to-cart-ten:checked ~ .one-ten-added,
+#add-to-cart-eleven:checked ~ .one-eleven-added {
+	visibility: visible;
+}
+.details .fa-circle,
+.details-one .fa-circle,
+.details-two .fa-circle,
+.details-three .fa-circle,
+.details-four .fa-circle,
+.details-five .fa-circle,
+.details-six .fa-circle,
+.details-seven .fa-circle,
+.details-eight .fa-circle,
+.details-nine .fa-circle,
+.details-ten .fa-circle,
+.details-eleven .fa-circle {
+	visibility: hidden;
+	color: #5bd2ff;
+	position: absolute;
+	right: 171px;
+	top: 100px;
 }
 .fa-circle {
 	font-size: 9px;
 	color: black;
 	text-align: center;
 }
-.two {
+a.two {
 	background-color: #1b203d;
 	border: none;
-	width: 146px;
 	color: white;
 	text-align: center;
 }
-.one:hover,
 .two:hover {
 	box-shadow: 0 10px 20px rgb(0, 0, 0);
+	border: solid 2px #1b203d;
+	background-color: white;
+	color: black;
 	cursor: pointer;
+	transition: 0.2s;
 }
-/* Clicked button effects. Added to cart.
-.one {
-	color: #baff3b;
-	background-color: black;
-	box-shadow: 0 10px 20px rgb(0, 0, 0);
-}
-.ctatextone {
-	display: none;
-}
-.ctatexttwo {
-	display: contents;
-	margin: 0 auto;
-}
-*/
 /* Slogan and selling point */
 .slogan {
 	border: solid #1b203d 20px;
@@ -250,16 +338,16 @@ footer p {
 		padding: 6px 0 0 0;
 	}
 	/* Game lists */
-	.list {
+	.scrolling {
+		overflow: auto;
+		max-width: 900px;
+		height: 225px;
+		margin-right: 30px;
+		padding-right: 5px;
 		display: grid;
-		grid-template-areas:
-			"head head head head head head"
-			"one two three four five six"
-			"dots dots dots dots dots dots"
-			"button button button button button button";
+		grid-template-areas: "product details product-one details-one product-two details-two";
 	}
 	h2 {
-		grid-area: head;
 		padding-top: 20px;
 		width: 95%;
 		font-size: 17px;
@@ -270,41 +358,21 @@ footer p {
 	.product-two {
 		margin-left: 30px;
 	}
+	.game,
+	.game-one,
+	.game-two {
+		display: inline-block;
+	}
 	.details,
 	.details-one,
 	.details-two {
+		position: relative;
 		margin-left: 10px;
 		width: 95px;
 	}
-	.product {
-		grid-area: one;
-	}
-	.product-one {
-		grid-area: three;
-	}
-	.product-two {
-		grid-area: five;
-	}
-	.details {
-		grid-area: two;
-	}
-	.details-one {
-		grid-area: four;
-	}
-	.details-two {
-		grid-area: six;
-	}
-	.dots {
-		grid-area: dots;
-	}
-	.two {
-		grid-area: button;
-	}
-	.list {
-		overflow: auto;
-	}
-	#gamepad /*Tried to use class tag but ut got bugged when reloading*/ {
-		display: none;
+	a.cta,
+	label {
+		font-size: 12px;
 	}
 	.title {
 		font-size: 12px;
@@ -313,10 +381,40 @@ footer p {
 	.rating {
 		font-size: 9px;
 	}
-	.one {
+	.pre .prize {
+		margin-top: 23px;
+	}
+	.one,
+	.one-one,
+	.one-two,
+	.one-three,
+	.one-four,
+	.one-five,
+	.one-six,
+	.one-seven,
+	.one-eight,
+	.one-nine,
+	.one-ten,
+	.one.eleven {
 		width: 80px;
 		height: 25px;
 		font-size: 11px;
+	}
+	.one-added,
+	.one-one-added,
+	.one-two-added,
+	.one-three-added,
+	.one-four-added,
+	.one-five-added,
+	.one-six-added,
+	.one-seven-added,
+	.one-eight-added,
+	.one-nine-added,
+	.one-ten-added,
+	.one-eleven-added {
+		visibility: hidden;
+		top: -17.8px;
+		padding: 4.5px 18px;
 	}
 	.dots {
 		text-align: center;
@@ -325,14 +423,18 @@ footer p {
 		margin: 3px;
 	}
 	.two {
-		background-color: #1b203d;
-		border: none;
+		display: block;
 		width: 146px;
-		height: 35px;
-		color: white;
-		text-align: center;
+		height: 25px;
 		font-size: 1em;
 		margin: 10px auto;
+		padding: 10px 0;
+	}
+	.big {
+		display: none;
+	}
+	#gamepad /*Tried to use class tag but ut got bugged when reloading*/ {
+		display: none;
 	}
 	/* Slogan and selling point */
 	.slogan {
@@ -379,7 +481,7 @@ footer p {
 		height: 160px;
 	}
 	.nav-top {
-		margin: 90px 16vmin 0 0;
+		margin: 90px 150px 0 100px;
 		padding: 0 5px 25px 5px;
 		background-image: url(/images/Slogan.png);
 		background-repeat: no-repeat;
@@ -435,16 +537,22 @@ footer p {
 	h2 {
 		font-size: 25px;
 		width: 100%;
-		padding-top: 30px;
+		padding-top: 50px;
 		margin: 0;
 	}
 	/* Game lists */
+	main {
+		overflow: hidden;
+	}
 	.list {
 		margin: 0 auto 20px auto;
-		width: 1300px;
+		width: 1115px;
 		display: flex;
 		flex-wrap: wrap;
 		border: solid 10px white;
+	}
+	.scrolling {
+		display: flex;
 	}
 	.product-img {
 		width: 200px;
@@ -453,29 +561,79 @@ footer p {
 	.details,
 	.details-one,
 	.details-two {
-		margin-right: 1.5%;
+		margin-right: 2%;
 		margin-left: 10px;
-		width: 100px;
+		width: 118px;
 	}
 	.title {
 		font-size: 18px;
 	}
 	.description,
-	.rating,
-	.one {
+	.rating {
 		font-size: 14px;
 	}
 	.prize {
 		margin-top: 27px;
 	}
-	.one {
-		width: 100%;
-		height: 30px;
-	}
 	.pre .title {
-		margin-bottom: 45px;
+		margin-bottom: 40px;
+	}
+	.forge .title {
+		margin-bottom: 20px;
+	}
+	.brand .prize {
+		margin-top: 7px;
+	}
+	.one-added,
+	.one-one-added,
+	.one-two-added,
+	.one-three-added,
+	.one-four-added,
+	.one-five-added,
+	.one-six-added,
+	.one-seven-added,
+	.one-eight-added,
+	.one-nine-added,
+	.one-ten-added,
+	.one-eleven-added {
+		top: -19px;
+		padding: 5.5px 25px;
+	}
+	#add-to-cart:checked ~ .fa-circle,
+	#add-to-cart-one:checked ~ .fa-circle,
+	#add-to-cart-two:checked ~ .fa-circle,
+	#add-to-cart-three:checked ~ .fa-circle,
+	#add-to-cart-four:checked ~ .fa-circle,
+	#add-to-cart-five:checked ~ .fa-circle,
+	#add-to-cart-six:checked ~ .fa-circle,
+	#add-to-cart-seven:checked ~ .fa-circle,
+	#add-to-cart-eight:checked ~ .fa-circle,
+	#add-to-cart-nine:checked ~ .fa-circle,
+	#add-to-cart-ten:checked ~ .fa-circle,
+	#add-to-cart-eleven:checked ~ .fa-circle,
+	#save:checked ~ .circle-heart i.fa-circle,
+	#save-one:checked ~ .circle-heart-one i.fa-circle,
+	#save-two:checked ~ .circle-heart-two i.fa-circle,
+	#save-three:checked ~ .circle-heart-three i.fa-circle,
+	#save-four:checked ~ .circle-heart-four i.fa-circle,
+	#save-five:checked ~ .circle-heart-five i.fa-circle,
+	#save-six:checked ~ .circle-heart-six i.fa-circle,
+	#save-seven:checked ~ .circle-heart-seven i.fa-circle,
+	#save-eight:checked ~ .circle-heart-eight i.fa-circle,
+	#save-nine:checked ~ .circle-heart-nine i.fa-circle,
+	#save-ten:checked ~ .circle-heart-ten i.fa-circle,
+	#save-eleven:checked ~ .circle-heart-eleven i.fa-circle {
+		visibility: visible;
 	}
 	.dots {
+		display: none;
+	}
+	.two {
+		font-size: 50px;
+		padding: 95px 0;
+		min-width: 125px;
+	}
+	.small {
 		display: none;
 	}
 	section .desktop {
@@ -512,6 +670,9 @@ footer p {
 	}
 	.text {
 		min-width: 400px;
+	}
+	.text h2 {
+		width: 95%;
 	}
 	.points {
 		display: none;
