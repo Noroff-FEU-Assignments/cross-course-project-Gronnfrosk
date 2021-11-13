@@ -1,0 +1,53 @@
+main {
+	width: 85%;
+}
+
+h2 {
+	margin-top: 10px;
+}
+p {
+	margin-bottom: 20px;
+}
+.cta-contact {
+	border: solid 2px #8c8e9d;
+	padding: 25px;
+	border-radius: 50%;
+	text-align: center;
+	display: grid;
+	width: max-content;
+	margin: 100px auto 10px auto;
+}
+.fa-headphones-alt {
+	font-size: 45px;
+	padding: 10px;
+}
+/*mobile styles*/
+
+@media only screen and (max-width: 990px) {
+	main {
+		flex-direction: column;
+		max-width: 70%;
+		margin: 0 auto;
+	}
+}
+/*desktop/tablet styles*/
+
+@media only screen and (min-width: 991px) {
+	h1 {
+		display: none;
+	}
+	main {
+		justify-content: space-around;
+		display: flex;
+		margin: 15px auto;
+	}
+	main section {
+		flex: 1;
+		min-width: 242px;
+		max-width: 342px;
+		margin: 0 3%;
+	}
+	footer {
+		margin-top: 200px;
+	}
+}

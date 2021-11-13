@@ -4,51 +4,27 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta
-			name="description"
-			content="This is Home page for the Online shop to GameHub"
-		/>
-		<link rel="stylesheet" href="/CSS/style.css" />
-		<script
-			src="https://kit.fontawesome.com/97c20a411c.js"
-			crossorigin="anonymous"
-		></script>
+		<meta name="description" content="This is Home page for the Online shop to GameHub"/>
+		<link rel="stylesheet" href="/css/style.css" />
+		<script src="https://kit.fontawesome.com/97c20a411c.js" crossorigin="anonymous"></script>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-			rel="stylesheet"
-		/>
-		<title>GameHub | Home</title>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
+		<title>GameHub | Home page</title>
 	</head>
 	<body>
 		<!-- Header-->
 		<header>
 			<img src="/images/Logo_small.png" alt="Logo image" class="logo phone" />
-			<img
-				src="/images/Logo_desktop.png"
-				alt="Logo image"
-				class="logo desktop"
-			/>
+			<img src="/images/Logo_desktop.png" alt="Logo image" class="logo desktop"/>
 			<nav class="nav-top">
-				<a href="/html/gamelist.html" class="icon"
-					><i class="fas fa-heart"></i>Saved</a
-				>
-				<a href="/html/profile.html" class="icon"
-					><i class="fas fa-user"></i>Sign in</a
-				>
+				<a href="/html/gamelist.html" class="icon"><i class="fas fa-heart"></i>Saved</a>
+				<a href="/html/signin.html" class="icon"><i class="fas fa-user"></i>Sign in</a>
 				<a href="/html/checkout.html" class="icon" id="cart"><i class="fas fa-shopping-cart"></i>Cart</a>
 			</nav>
 			<div class="search-bar">
 				<div class="search">
-					<input
-						type="text"
-						placeholder="Search games..."
-						class="game-search"
-						name="game-search"
-						id="game-search"
-					/>
-
+					<input type="text" placeholder="Search games..." class="game-search" name="game-search" id="game-search"/>
 					<a href="/html/gamelist.html"><i class="fas fa-search"></i></a>
 					<select name="game categories">
 						<option value="all">All Categories</option>
@@ -68,105 +44,82 @@
 			<!-- Popular games-->
 			<section class="list">
 				<h2>Popular games</h2>
-				<div class="scrolling">
-					<div class="product game">
-						<a href="/html/furious.html">
-							<img
-								src="/images/GameHub_covers5_desktop.png"
-								alt="Computer game called Assassin"
-								class="product-img"
-							/>
-						</a>
+				<div class="popular-games-list">
+					<div class= "game">
+						<div class="product">
+							<a href="/html/furious.html"><img src="/images/GameHub_covers5_desktop.png" alt="Assasin game" class="product-img"/></a>
+						</div>
+							<div class="details">
+							<input type="checkbox" id="save" />
+							<label for="save" class="heart"><i class="fas fa-heart"></i></label>
+							<div class=circle-heart><i class="fas fa-circle"></i></div>
+							<p class="title">Assassin</p>
+							<p class="description">- New</p>
+							<p class="description">- Playbox One X Enhanced</p>
+							<p class="rating">Rating</p>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="far fa-star"></i>
+							<p class="prize">500 kr</p>
+							<input type="checkbox" id="add-to-cart" />
+							<label for="add-to-cart" class="one">Add to Cart</label>
+							<label for="add-to-cart" class="one-added">Added</label>
+							<i class="fas fa-circle"></i>
+						</div>
 					</div>
-					<div class="details game">
-						<input type="checkbox" id="save" />
-						<label for="save" class="heart">
-							<i class="fas fa-heart"></i>
-						</label>
-						<div class=circle-heart><i class="fas fa-circle"></i></div>
-						<p class="title">Assassin</p>
-						<p class="description">- New</p>
-						<p class="description">- Playbox One X Enhanced</p>
-						<p class="rating">Rating</p>
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-						<i class="far fa-star"></i>
-						<p class="prize">500 kr</p>
-						<input type="checkbox" id="add-to-cart" />
-						<label for="add-to-cart" class="one">Add to Cart</label>
-						<label for="add-to-cart" class="one-added">Added</label>
-						<i class="fas fa-circle"></i>
+					<div class="game-one">
+						<div class="product-one">
+							<a href="/html/furious.html"><img src="/images/GameHub_covers7_desktop.png" alt="racing game" class="product-img"/></a>
+						</div>
+						<div class="details-one">
+							<input type="checkbox" id="save-one" />
+							<label for="save-one" class="heart"><i class="fas fa-heart"></i></label>
+							<div class=circle-heart-one><i class="fas fa-circle"></i></div>
+							<p class="title">Racing</p>
+							<p class="description">- New</p>
+							<p class="description">- Playbox One X Enhanced</p>
+							<p class="rating">Rating</p>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<p class="prize">500 kr</p>
+							<input type="checkbox" id="add-to-cart-one" />
+							<label for="add-to-cart-one" class="one-one">Add to Cart</label>
+							<label for="add-to-cart-one" class="one-one-added">Added</label>
+							<i class="fas fa-circle"></i>
+						</div>
 					</div>
-					<div class="product-one game-one">
-						<a href="/html/furious.html">
-							<img
-								src="/images/GameHub_covers7_desktop.png"
-								alt="Computer game called Assassin"
-								class="product-img"
-							/>
-						</a>
+					<div class="game-two">
+						<div class="product-two">
+							<a href="/html/furious.html"><img src="/images/GameHub_covers8_desktop.png" alt="boxer game" class="product-img"/></a>
+						</div>
+						<div class="details-two">
+							<input type="checkbox" id="save-two" />
+							<label for="save-two" class="heart"><i class="fas fa-heart"></i></label>
+							<div class=circle-heart-two><i class="fas fa-circle"></i></div>
+							<p class="title">Boxer</p>
+							<p class="description">- New</p>
+							<p class="description">- Playbox One X Enhanced</p>
+							<p class="rating">Rating</p>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="far fa-star"></i>
+							<p class="prize">500 kr</p>
+							<input type="checkbox" id="add-to-cart-two" />
+							<label for="add-to-cart-two" class="one-two">Add to Cart</label>
+							<label for="add-to-cart-two" class="one-two-added">Added</label>
+							<i class="fas fa-circle"></i>
+						</div>
 					</div>
-					<div class="details-one game-one">
-						<input type="checkbox" id="save-one" />
-						<label for="save-one" class="heart">
-							<i class="fas fa-heart"></i>
-						</label>
-						<div class=circle-heart-one><i class="fas fa-circle"></i></div>
-						<p class="title">Racing</p>
-						<p class="description">- New</p>
-						<p class="description">- Playbox One X Enhanced</p>
-						<p class="rating">Rating</p>
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-						<p class="prize">500 kr</p>
-						<input type="checkbox" id="add-to-cart-one" />
-						<label for="add-to-cart-one" class="one-one">Add to Cart</label>
-						<label for="add-to-cart-one" class="one-one-added">Added</label>
-						<i class="fas fa-circle"></i>
-					</div>
-					<div class="product-two game-two">
-						<a href="/html/furious.html">
-							<img
-								src="/images/GameHub_covers8_desktop.png"
-								alt="Computer game called Assassin"
-								class="product-img"
-							/>
-						</a>
-					</div>
-					<div class="details-two game-two">
-						<input type="checkbox" id="save-two" />
-						<label for="save-two" class="heart">
-							<i class="fas fa-heart"></i>
-						</label>
-						<div class=circle-heart-two><i class="fas fa-circle"></i></div>
-						<p class="title">Boxer</p>
-						<p class="description">- New</p>
-						<p class="description">- Playbox One X Enhanced</p>
-						<p class="rating">Rating</p>
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-						<i class="far fa-star"></i>
-						<p class="prize">500 kr</p>
-						<input type="checkbox" id="add-to-cart-two" />
-						<label for="add-to-cart-two" class="one-two">Add to Cart</label>
-						<label for="add-to-cart-two" class="one-two-added">Added</label>
-						<i class="fas fa-circle"></i>
-					</div>
-				</div>
-				<div class="dots">
-					<i class="fas fa-circle"></i>
-					<i class="fas fa-circle"></i>
-					<i class="fas fa-circle"></i>
+					<a href=/html/gamelist.html class="two big">+</a>
 				</div>
 				<a href=/html/gamelist.html class="two small">+ More</a>
-				<a href=/html/gamelist.html class="two big">+</a>
 			</section>
 			<i class="fas fa-gamepad" id="gamepad"></i>
 			<!-- Selling point-->
@@ -180,335 +133,262 @@
 					<p class="points">
 						Be able to regain some money back by selling the games back to us.
 					</p>
-					<a href="/html/profile.html" class="text-link">Join us now -></a>
+					<a href="/html/signin.html" class="text-link">Join us now -></a>
 				</div>
 			</section>
 			<!-- pre-order games-->
 			<section class="list">
 				<h2>Pre-order games</h2>
-				<div class="scrolling">
-					<div class="product game">
-						<a href="/products/furious.html">
-							<img
-								src="/images/GameHub_covers6_desktop.png"
-								alt="Computer game called Assassin"
-								class="product-img"
-							/>
-						</a>
+				<div class="pre-order-games-list">
+					<div class="game">
+						<div class="product">
+							<a href="/products/furious.html"><img src="/images/GameHub_covers6_desktop.png" alt="space war game" class="product-img"/></a>
+						</div>
+						<div class="details pre doble">
+							<input type="checkbox" id="save-three" />
+							<label for="save-three" class="heart"><i class="fas fa-heart"></i></label>
+							<div class=circle-heart-three><i class="fas fa-circle"></i></div>
+							<p class="title">Space War</p>
+							<p class="description">- Playbox One X Enhanced</p>
+							<p class="rating">Release Date: 12/12/2021</p>
+							<p class="prize">600 kr</p>
+							<input type="checkbox" id="add-to-cart-three" />
+							<label for="add-to-cart-three" class="one-three">Add to Cart</label>
+							<label for="add-to-cart-three" class="one-three-added">Added</label>
+							<i class="fas fa-circle"></i>
+						</div>
 					</div>
-					<div class="details game doble">
-						<input type="checkbox" id="save-three" />
-						<label for="save-three" class="heart">
-							<i class="fas fa-heart"></i>
-						</label>
-						<div class=circle-heart-three><i class="fas fa-circle"></i></div>
-						<p class="title">Space War</p>
-						<p class="description">- Playbox One X Enhanced</p>
-						<p class="rating">Release Date: 12/12/2021</p>
-						<p class="prize">600 kr</p>
-						<input type="checkbox" id="add-to-cart-three" />
-						<label for="add-to-cart-three" class="one-three">Add to Cart</label>
-						<label for="add-to-cart-three" class="one-three-added">Added</label>
-						<i class="fas fa-circle"></i>
+					<div class="game-one">	
+						<div class="product-one">
+							<a href="/html/furious.html"><img src="/images/GameHub_covers9_desktop.png" alt="cyberpunk game" class="product-img"/></a>
+						</div>
+						<div class="details-one pre">
+							<input type="checkbox" id="save-four" />
+							<label for="save-four" class="heart"><i class="fas fa-heart"></i></label>
+							<div class=circle-heart-four><i class="fas fa-circle"></i></div>
+							<p class="title">Cyberpunk</p>
+							<p class="description">- Playbox One X Enhanced</p>
+							<p class="rating">Release Date: 12/11/2021</p>
+							<p class="prize">600 kr</p>
+							<input type="checkbox" id="add-to-cart-four" />
+							<label for="add-to-cart-four" class="one-four">Add to Cart</label>
+							<label for="add-to-cart-four" class="one-four-added">Added</label>
+							<i class="fas fa-circle"></i>
+						</div>
+					</div>	
+					<div class="game-two">
+						<div class="product-two">
+							<a href="/html/furious.html"><img src="/images/GameHub_covers10_desktop.png" alt="forge legende game" class="product-img"/></a>
+						</div>
+						<div class="details-two doble">
+							<input type="checkbox" id="save-five" />
+							<label for="save-five" class="heart"><i class="fas fa-heart"></i></label>
+							<div class=circle-heart-five><i class="fas fa-circle"></i></div>
+							<p class="title">Forge Lengend</p>
+							<p class="description">- Playbox One X Enhanced</p>
+							<p class="rating">Release Date: 12/10/2021</p>
+							<p class="prize">600 kr</p>
+							<input type="checkbox" id="add-to-cart-five" />
+							<label for="add-to-cart-five" class="one-five">Add to Cart</label>
+							<label for="add-to-cart-five" class="one-five-added">Added</label>
+							<i class="fas fa-circle"></i>
+						</div>
 					</div>
-					<div class="product-one game-one">
-						<a href="/html/furious.html">
-							<img
-								src="/images/GameHub_covers9_desktop.png"
-								alt="Computer game called Assassin"
-								class="product-img"
-							/>
-						</a>
-					</div>
-					<div class="details-one pre game-one">
-						<input type="checkbox" id="save-four" />
-						<label for="save-four" class="heart">
-							<i class="fas fa-heart"></i>
-						</label>
-						<div class=circle-heart-four><i class="fas fa-circle"></i></div>
-						<p class="title">Cyberpunk</p>
-						<p class="description">- Playbox One X Enhanced</p>
-						<p class="rating">Release Date: 12/11/2021</p>
-						<p class="prize">600 kr</p>
-						<input type="checkbox" id="add-to-cart-four" />
-						<label for="add-to-cart-four" class="one-four">Add to Cart</label>
-						<label for="add-to-cart-four" class="one-four-added">Added</label>
-						<i class="fas fa-circle"></i>
-					</div>
-					<div class="product-two game-two">
-						<a href="/html/furious.html">
-							<img
-								src="/images/GameHub_covers10_desktop.png"
-								alt="Computer game called Assassin"
-								class="product-img"
-							/>
-						</a>
-					</div>
-					<div class="details-two game-two doble">
-						<input type="checkbox" id="save-five" />
-						<label for="save-five" class="heart">
-							<i class="fas fa-heart"></i>
-						</label>
-						<div class=circle-heart-five><i class="fas fa-circle"></i></div>
-						<p class="title">Forge Lengend</p>
-						<p class="description">- Playbox One X Enhanced</p>
-						<p class="rating">Release Date: 12/10/2021</p>
-						<p class="prize">600 kr</p>
-						<input type="checkbox" id="add-to-cart-five" />
-						<label for="add-to-cart-five" class="one-five">Add to Cart</label>
-						<label for="add-to-cart-five" class="one-five-added">Added</label>
-						<i class="fas fa-circle"></i>
-					</div>
+					<a href=/html/gamelist.html class="two big">+</a>
 				</div>
-				<div class="dots">
-					<i class="fas fa-circle"></i>
-					<i class="fas fa-circle"></i>
-					<i class="fas fa-circle"></i>
-				</div>
-				<a href=/html/gamelist.html class="two small">+ More</a>
-				<a href=/html/gamelist.html class="two big">+</a>
+				<a href=/html/gamelist.html class="two small">+ More</a>	
 			</section>
 			<!-- Brand new games-->
 			<section class="list border">
 				<h2>Brand new games</h2>
-				<div class="scrolling">
-					<div class="product game">
-						<a href="/html/furious.html">
-							<img
-								src="/images/GameHub_covers2_desktop.png"
-								alt="Computer game called Assassin"
-								class="product-img"
-							/>
-						</a>
+				<div class="brand-new-games-list">
+					<div class="game">
+						<div class="product">
+							<a href="/html/furious.html"><img src="/images/GameHub_covers2_desktop.png" alt="super duper game" class="product-img"/></a>
+						</div>
+						<div class="details brand">
+							<input type="checkbox" id="save-six" />
+							<label for="save-six" class="heart"><i class="fas fa-heart"></i></label>
+							<div class=circle-heart-six><i class="fas fa-circle"></i></div>
+							<p class="title">Super Duper</p>
+							<p class="description">- New</p>
+							<p class="description">- Playbox One X Enhanced</p>
+							<p class="rating">Rating</p>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="far fa-star"></i>
+							<p class="prize">500 kr</p>
+							<input type="checkbox" id="add-to-cart-six" />
+							<label for="add-to-cart-six" class="one-six">Add to Cart</label>
+							<label for="add-to-cart-six" class="one-six-added">Added</label>
+							<i class="fas fa-circle"></i>
+						</div>
 					</div>
-					<div class="details game brand">
-						<input type="checkbox" id="save-six" />
-						<label for="save-six" class="heart">
-							<i class="fas fa-heart"></i>
-						</label>
-						<div class=circle-heart-six><i class="fas fa-circle"></i></div>
-						<p class="title">Super Duper</p>
-						<p class="description">- New</p>
-						<p class="description">- Playbox One X Enhanced</p>
-						<p class="rating">Rating</p>
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-						<i class="far fa-star"></i>
-						<p class="prize">500 kr</p>
-						<input type="checkbox" id="add-to-cart-six" />
-						<label for="add-to-cart-six" class="one-six">Add to Cart</label>
-						<label for="add-to-cart-six" class="one-six-added">Added</label>
-						<i class="fas fa-circle"></i>
+					<div class="game-one">
+						<div class="product-one">
+							<a href="/html/furious.html"><img src="/images/GameHub_covers3_desktop.png" alt="black game" class="product-img"/></a>
+						</div>
+						<div class="details-one">
+							<input type="checkbox" id="save-seven" />
+							<label for="save-seven" class="heart"><i class="fas fa-heart"></i></label>
+							<div class=circle-heart-seven><i class="fas fa-circle"></i></div>
+							<p class="title">Black</p>
+							<p class="description">- New</p>
+							<p class="description">- Playbox One X Enhanced</p>
+							<p class="rating">Rating</p>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="far fa-star"></i>
+							<p class="prize">500 kr</p>
+							<input type="checkbox" id="add-to-cart-seven" />
+							<label for="add-to-cart-seven" class="one-seven">Add to Cart</label>
+							<label for="add-to-cart-seven" class="one-seven-added">Added</label>
+							<i class="fas fa-circle"></i>
+						</div>
 					</div>
-					<div class="product-one game-one">
-						<a href="/html/furious.html">
-							<img
-								src="/images/GameHub_covers3_desktop.png"
-								alt="Computer game called Assassin"
-								class="product-img"
-							/>
-						</a>
+					<div class="game-two">
+						<div class="product-two">
+							<a href="/html/furious.html"><img src="/images/GameHub_covers4_desktop.png" alt="furious game" class="product-img"/></a>
+						</div>
+						<div class="details-two">
+							<input type="checkbox" id="save-eight" />
+							<label for="save-eight" class="heart"><i class="fas fa-heart"></i></label>
+							<div class=circle-heart-eight><i class="fas fa-circle"></i></div>
+							<p class="title">Furious</p>
+							<p class="description">- New</p>
+							<p class="description">- Playbox One X Enhanced</p>
+							<p class="rating">Rating</p>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<p class="prize">500 kr</p>
+							<input type="checkbox" id="add-to-cart-eight" />
+							<label for="add-to-cart-eight" class="one-eight">Add to Cart</label>
+							<label for="add-to-cart-eight" class="one-eight-added">Added</label>
+							<i class="fas fa-circle"></i>
+						</div>
 					</div>
-					<div class="details-one game-one">
-						<input type="checkbox" id="save-seven" />
-						<label for="save-seven" class="heart">
-							<i class="fas fa-heart"></i>
-						</label>
-						<div class=circle-heart-seven><i class="fas fa-circle"></i></div>
-						<p class="title">Black</p>
-						<p class="description">- New</p>
-						<p class="description">- Playbox One X Enhanced</p>
-						<p class="rating">Rating</p>
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-						<i class="far fa-star"></i>
-						<p class="prize">500 kr</p>
-						<input type="checkbox" id="add-to-cart-seven" />
-						<label for="add-to-cart-seven" class="one-seven">Add to Cart</label>
-						<label for="add-to-cart-seven" class="one-seven-added">Added</label>
-						<i class="fas fa-circle"></i>
-					</div>
-					<div class="product-two game-two">
-						<a href="/html/furious.html">
-							<img
-								src="/images/GameHub_covers4_desktop.png"
-								alt="Computer game called Assassin"
-								class="product-img"
-							/>
-						</a>
-					</div>
-					<div class="details-two game-two">
-						<input type="checkbox" id="save-eight" />
-						<label for="save-eight" class="heart">
-							<i class="fas fa-heart"></i>
-						</label>
-						<div class=circle-heart-eight><i class="fas fa-circle"></i></div>
-						<p class="title">Furious</p>
-						<p class="description">- New</p>
-						<p class="description">- Playbox One X Enhanced</p>
-						<p class="rating">Rating</p>
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-						<p class="prize">500 kr</p>
-						<input type="checkbox" id="add-to-cart-eight" />
-						<label for="add-to-cart-eight" class="one-eight">Add to Cart</label>
-						<label for="add-to-cart-eight" class="one-eight-added">Added</label>
-						<i class="fas fa-circle"></i>
-					</div>
-				</div>
-				<div class="dots">
-					<i class="fas fa-circle"></i>
-					<i class="fas fa-circle"></i>
-					<i class="fas fa-circle"></i>
+					<a href=/html/gamelist.html class="two big">+</a>
 				</div>
 				<a href=/html/gamelist.html class="two small">+ More</a>
-				<a href=/html/gamelist.html class="two big">+</a>
+				
 			</section>
 			<!-- Pre-used games-->
 			<section class="list border">
 				<h2>Pre-used games</h2>
-				<div class="scrolling">
-					<div class="product game">
+				<div class="pre-used-games-list">
+					<div class="game">
+						<div class="product">
+							<a href="/html/furious.html">
+								<img src="/images/GameHub_covers5_desktop.png" alt="assassin game" class="product-img"/>
+							</a>
+						</div>
+						<div class="details">
+							<input type="checkbox" id="save-nine" />
+							<label for="save-nine" class="heart"><i class="fas fa-heart"></i></label>
+							<div class=circle-heart-nine><i class="fas fa-circle"></i></div>
+							<p class="title">Assassin</p>
+							<p class="description">- Pre-used</p>
+							<p class="description">- Playbox One X Enhanced</p>
+							<p class="rating">Rating</p>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="far fa-star"></i>
+							<p class="prize">500 kr</p>
+							<input type="checkbox" id="add-to-cart-nine" />
+							<label for="add-to-cart-nine" class="one-nine">Add to Cart</label>
+							<label for="add-to-cart-nine" class="one-nine-added">Added</label>
+							<i class="fas fa-circle"></i>
+						</div>
+					</div>
+					<div class="game-one">
+						<div class="product-one">
+							<a href="/html/furious.html">
+								<img src="/images/GameHub_covers4_desktop.png" alt="furious game" class="product-img"/>
+							</a>
+						</div>
+						<div class="details-one">
+							<input type="checkbox" id="save-ten" />
+							<label for="save-ten" class="heart"><i class="fas fa-heart"></i></label>
+							<div class=circle-heart-ten><i class="fas fa-circle"></i></div>
+							<p class="title">Furious</p>
+							<p class="description">- Pre-used</p>
+							<p class="description">- Playbox One X Enhanced</p>
+							<p class="rating">Rating</p>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<p class="prize">500 kr</p>
+							<input type="checkbox" id="add-to-cart-ten" />
+							<label for="add-to-cart-ten" class="one-ten">Add to Cart</label>
+							<label for="add-to-cart-ten" class="one-ten-added">Added</label>
+							<i class="fas fa-circle"></i>
+						</div>
+					</div>
+					<div class="game-two">
+					<div class="product-two">
 						<a href="/html/furious.html">
-							<img
-								src="/images/GameHub_covers5_desktop.png"
-								alt="Computer game called Assassin"
-								class="product-img"
-							/>
+							<img src="/images/GameHub_covers8_desktop.png" alt="boxer" class="product-img"/>
 						</a>
 					</div>
-					<div class="details game">
-						<input type="checkbox" id="save-nine" />
-						<label for="save-nine" class="heart">
-							<i class="fas fa-heart"></i>
-						</label>
-						<div class=circle-heart-nine><i class="fas fa-circle"></i></div>
-						<p class="title">Assassin</p>
-						<p class="description">- Pre-used</p>
-						<p class="description">- Playbox One X Enhanced</p>
-						<p class="rating">Rating</p>
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-						<i class="far fa-star"></i>
-						<p class="prize">500 kr</p>
-						<input type="checkbox" id="add-to-cart-nine" />
-						<label for="add-to-cart-nine" class="one-nine">Add to Cart</label>
-						<label for="add-to-cart-nine" class="one-nine-added">Added</label>
-						<i class="fas fa-circle"></i>
+						<div class="details-two">
+							<input type="checkbox" id="save-eleven" />
+							<label for="save-eleven" class="heart"><i class="fas fa-heart"></i></label>
+							<div class=circle-heart-eleven><i class="fas fa-circle"></i></div>
+							<p class="title">Boxer</p>
+							<p class="description">- Pre-used</p>
+							<p class="description">- Playbox One X Enhanced</p>
+							<p class="rating">Rating</p>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="far fa-star"></i>
+							<p class="prize">500 kr</p>
+							<input type="checkbox" id="add-to-cart-eleven" />
+							<label for="add-to-cart-eleven" class="one-eleven">Add to Cart</label>
+							<label for="add-to-cart-eleven" class="one-eleven-added">Added</label>
+							<i class="fas fa-circle"></i>
+						</div>
 					</div>
-					<div class="product-one game-one">
-						<a href="/html/furious.html">
-							<img
-								src="/images/GameHub_covers4_desktop.png"
-								alt="Computer game called Assassin"
-								class="product-img"
-							/>
-						</a>
-					</div>
-					<div class="details-one game-one">
-						<input type="checkbox" id="save-ten" />
-						<label for="save-ten" class="heart">
-							<i class="fas fa-heart"></i>
-						</label>
-						<div class=circle-heart-ten><i class="fas fa-circle"></i></div>
-						<p class="title">Furious</p>
-						<p class="description">- Pre-used</p>
-						<p class="description">- Playbox One X Enhanced</p>
-						<p class="rating">Rating</p>
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-						<p class="prize">500 kr</p>
-						<input type="checkbox" id="add-to-cart-ten" />
-						<label for="add-to-cart-ten" class="one-ten">Add to Cart</label>
-						<label for="add-to-cart-ten" class="one-ten-added">Added</label>
-						<i class="fas fa-circle"></i>
-					</div>
-					<div class="product-two game-two">
-						<a href="/html/furious.html">
-							<img
-								src="/images/GameHub_covers8_desktop.png"
-								alt="Computer game called Assassin"
-								class="product-img"
-							/>
-						</a>
-					</div>
-					<div class="details-two game-two">
-						<input type="checkbox" id="save-eleven" />
-						<label for="save-eleven" class="heart">
-							<i class="fas fa-heart"></i>
-						</label>
-						<div class=circle-heart-eleven><i class="fas fa-circle"></i></div>
-						<p class="title">Boxer</p>
-						<p class="description">- Pre-used</p>
-						<p class="description">- Playbox One X Enhanced</p>
-						<p class="rating">Rating</p>
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-						<i class="fas fa-star"></i>
-						<i class="far fa-star"></i>
-						<p class="prize">500 kr</p>
-						<input type="checkbox" id="add-to-cart-eleven" />
-						<label for="add-to-cart-eleven" class="one-eleven">Add to Cart</label>
-						<label for="add-to-cart-eleven" class="one-eleven-added">Added</label>
-						<i class="fas fa-circle"></i>
-					</div>
-				</div>
-				<div class="dots">
-					<i class="fas fa-circle"></i>
-					<i class="fas fa-circle"></i>
-					<i class="fas fa-circle"></i>
+					<a href=/html/gamelist.html class="two big">+</a>
 				</div>
 				<a href=/html/gamelist.html class="two small">+ More</a>
-				<a href=/html/gamelist.html class="two big">+</a>
+				
 			</section>
 		</main>
 		<!-- Footer-->
 		<footer>
 			<div class="navb">
-				<a href="/index.html" class="topbutton"
-					><i class="fas fa-chevron-circle-up"></i
-				></a>
+				<a href="/index.html" class="topbutton"><i class="fas fa-chevron-circle-up"></i></a>
 				<div class="navbottom">
 					<ul class="navlinks">
 						<li><a href="/html/contact.html">- Contact us</a></li>
 						<li><a href="/html/information.html">- About us</a></li>
-						<li><a href="/html/profile.html">- My account</a></li>
-						<li>
-							<a href="/html/information.html"
-								>- Terms of transaction and delivery</a
-							>
-						</li>
+						<li><a href="/html/signin.html">- My account</a></li>
+						<li><a href="/html/information.html">- Terms of transaction and delivery</a></li>
 						<li><a href="/html/information.html">- Privacy policy</a></li>
 					</ul>
 					<div class="social">
-						<a href="http://www.Facebook.com/"
-							><i class="fab fa-facebook-f"></i
-						></a>
+						<a href="http://www.Facebook.com/"><i class="fab fa-facebook-f"></i></a>
 						<a href="http://www.twitter.com/"><i class="fab fa-twitter"></i></a>
-						<a href="http://www.instagram.com/"
-							><i class="fab fa-instagram"></i
-						></a>
+						<a href="http://www.instagram.com/"><i class="fab fa-instagram"></i></a>
 						<a href="http://www.youtube.com/"><i class="fab fa-youtube"></i></a>
 					</div>
 				</div>
 			</div>
 			<div class="last">
-				<a href="index.html"
-					><img src="/images/Logo_small.png" alt="logo" class="logotwo"
-				/></a>
+				<a href="index.html"><img src="/images/Logo_small.png" alt="logo" class="logotwo"/></a>
 				<p>&copy;Copyright 2021 GameHub</p>
 			</div>
 		</footer>

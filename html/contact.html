@@ -4,18 +4,76 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="/CSS/style.css" type="text/css" />
-		<script
-			src="https://kit.fontawesome.com/97c20a411c.js"
-			crossorigin="anonymous"
-		></script>
+		<meta name="description" content="This is contact page for the Online shop of GameHub" />
+		<link rel="stylesheet" href="/css/style.css" />
+		<link rel="stylesheet" href="/css/contact.css" />
+		<script src="https://kit.fontawesome.com/97c20a411c.js" crossorigin="anonymous"></script>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-			rel="stylesheet"
-		/>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
 		<title>GameHub | Contact</title>
 	</head>
-	<body></body>
+	<body>
+		<!-- Header-->
+		<header>
+			<a href="/index.html" alt="Home">
+				<img src="/images/Logo_small.png" alt="Logo image" class="logo phone" />
+				<img src="/images/Logo_desktop.png" alt="Logo image" class="logo desktop" />
+			</a>
+			<nav class="nav-top">
+				<a href="/html/gamelist.html" class="icon"><i class="fas fa-heart"></i>Saved</a>
+				<a href="/html/profile.html" class="icon"><i class="fas fa-user"></i>Sign in</a>
+				<a href="/html/checkout.html" class="icon" id="cart"><i class="fas fa-shopping-cart"></i>Cart</a>
+			</nav>
+			<div class="search-bar">
+				<div class="search">
+					<input type="text" placeholder="Search games..." class="game-search" name="game-search" id="game-search" />
+					<a href="/html/gamelist.html"><i class="fas fa-search"></i></a>
+					<select name="game categories">
+						<option value="all">All Categories</option>
+						<option value="all">Action</option>
+						<option value="all">Adventure</option>
+						<option value="all">Sport</option>
+						<option value="all">strategy</option>
+						<option value="all">RPG</option>
+						<option value="all">Simulation</option>
+					</select>
+				</div>
+			</div>
+			<section class="mobile-nav">
+				<a href="#" class="previous"></a><i class="fas fa-chevron-circle-left"></i></a>
+				<div class="contact-us">
+					<h1>Contact us</h1>
+					<p>Send us a message and we will contact you as soon as possible.</p>
+				</div>
+			</section>
+		</header>
+		<!-- Main-->
+		<main>
+			<section class="contact">
+				<div class="contacts">
+					<h2>Phone</h2>
+					<p>+47 000 000 000</p>
+					<p>monday-friday: 08:00 - 18:00</p>
+					<h2>Email</h2>
+					<p>support@gamehub.com</p>
+				</div>
+				<form action="submit.html" method="post">
+					<label for="fullname">Full name</label>
+					<input type="text" name="fullname" id="fullname" />
+					<label for="email">Email</label>
+					<input type="email" name="email" id="email" />
+					<label for="message" class="message">Message</label>
+					<textarea name="message" id="message" cols="75" rows="7"></textarea>
+					<input type="checkbox" name="submit" id="submit" />
+					<label for="submit" class="cta">Submit</label>
+					<div class="submitted">
+						<h1>Thank you!</h1>
+						<p>Your message was submitted and we will contact you as soon as possible.</p>
+						<a href="/html/information.html" class="text-link">For more information click here -></a>
+					</div>
+				</form>
+			</section>
+		</main>
+	</body>
 </html>

@@ -1,0 +1,169 @@
+h2 {
+	padding: 15px 0 0 0;
+}
+p {
+	margin: 5px 0 0 0;
+}
+.contact-us {
+	width: 241px;
+}
+.contact {
+	display: flex;
+	flex-direction: column;
+	max-width: 700px;
+	margin: 5px auto;
+	border: solid 30px white;
+	border-top: none;
+}
+.contact > * {
+	flex-direction: column;
+}
+form {
+	display: flex;
+	margin: 40px 0 0 0;
+}
+.cta {
+	width: 100%;
+	max-width: 315px;
+	padding: 13px 0;
+	text-align: center;
+	font-size: 27px;
+	margin: 20px auto;
+}
+.cta:hover {
+	box-shadow: 0 10px 20px rgb(0, 0, 0);
+	background-color: black;
+	color: #baff3b;
+	cursor: pointer;
+}
+#submit {
+	display: none;
+}
+#submit:checked ~ .submitted {
+	display: block;
+}
+#submit:checked ~ .cta {
+	background-color: black;
+	color: black;
+}
+label {
+	background-color: white;
+}
+input {
+	margin-bottom: 10px;
+}
+input:hover,
+label:hover {
+	box-shadow: none;
+	background: lightgray;
+}
+form input[type="text" i],
+form input[type="email" i] {
+	padding: 0;
+}
+.message {
+	margin-top: 10px;
+}
+.message:hover {
+	background-color: white;
+}
+.contact input,
+main input {
+	border-top: none;
+	border-left: none;
+	border-right: none;
+}
+.submitted {
+	display: none;
+	height: 290px;
+	width: 100%;
+	margin-top: 20px;
+	text-align: center;
+	background-color: white;
+	position: absolute;
+	left: 0;
+}
+.submitted h1 {
+	text-align: center;
+	margin-top: 100px;
+}
+.submitted p {
+	text-align: center;
+	max-width: 425px;
+	margin: 0 auto 40px auto;
+}
+/*mobile styles*/
+
+@media only screen and (max-width: 990px) {
+	.logo,
+	.search-bar,
+	.nav-top {
+		display: none;
+	}
+	.fa-chevron-circle-left {
+		position: absolute;
+		left: 7%;
+	}
+	.fa-chevron-circle-left:hover {
+		cursor: pointer;
+	}
+	h1 {
+		text-align: center;
+		margin: 15px 0 10px 0;
+	}
+	.contact {
+		padding-top: 10px;
+	}
+	h2 {
+		margin: 0;
+	}
+	.contact-us h1,
+	.checkout h1 {
+		height: 40px;
+		border-bottom: solid 6px #45047a;
+		padding-bottom: 23px;
+		background-image: linear-gradient(to bottom, rgb(255 255 255) 0%, rgb(255 255 255) 100%),
+			linear-gradient(to top, #1b203d, #1b203d 50%, #1b203d 75%, #45047a 75%);
+		background-clip: content-box, padding-box;
+	}
+	.contact-us {
+		display: inline;
+		margin: 0;
+	}
+	.contact-us p {
+		margin: 5px auto 0 auto;
+		width: 241px;
+	}
+	form {
+		margin-top: 30px;
+	}
+	.submitted h1 {
+		display: block;
+	}
+	.submitted {
+		top: 255px;
+	}
+	.contacts {
+		z-index: 2;
+	}
+}
+
+/*desktop/tablet styles*/
+
+@media only screen and (min-width: 991px) {
+	h1 {
+		border-bottom: none;
+		text-align: left;
+		margin-top: 25px;
+	}
+	.fa-chevron-circle-left {
+		color: white;
+		position: absolute;
+	}
+	.contact-us {
+		margin: 20px 0 0 100px;
+	}
+	.submitted {
+		top: 515px;
+	}
+}

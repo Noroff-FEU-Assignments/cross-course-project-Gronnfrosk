@@ -28,6 +28,7 @@ i {
 i:hover,
 a:hover {
 	color: #5bd2ff;
+	cursor: pointer;
 }
 
 a {
@@ -44,16 +45,16 @@ nav a {
 	border-color: #1b203d;
 }
 .search-bar {
-	background-image: linear-gradient(
-			to bottom,
-			rgb(255 255 255) 0%,
-			rgb(255 255 255) 100%
-		),
+	background-image: linear-gradient(to bottom, rgb(255 255 255) 0%, rgb(255 255 255) 100%),
 		linear-gradient(to top, #1b203d, #1b203d 50%, #1b203d 75%, #45047a 75%);
 	background-clip: content-box, padding-box;
 }
-input[type="text" i] {
+input[type="text" i],
+input[type="email" i],
+input[type="tel" i] {
 	padding: 1px 0 1px 20px;
+	font-size: 20px;
+	font-family: "Roboto", sans-serif;
 }
 header .search {
 	max-width: 590px;
@@ -81,11 +82,26 @@ a {
 }
 /* Game lists */
 
+.popular-games-list,
+.pre-order-games-list,
+.brand-new-games-list,
+.pre-used-games-list {
+	display: flex;
+	gap: 1%;
+	justify-content: center;
+}
+.game,
+.game-one,
+.game-two {
+	display: flex;
+	gap: 3%;
+	width: 370px;
+}
 .border h2 {
 	border-top: solid 1px #1b203d;
 }
 .product-img {
-	height: 194px;
+	width: 100%;
 	box-shadow: 5px 4px 6px rgb(158, 158, 158);
 }
 label.heart {
@@ -110,22 +126,6 @@ label.heart:hover {
 #save-eleven:checked ~ label .fa-heart {
 	color: #5bd2ff;
 }
-.circle-heart i.fa-circle,
-.circle-heart-one i.fa-circle,
-.circle-heart-two i.fa-circle,
-.circle-heart-three i.fa-circle,
-.circle-heart-four i.fa-circle,
-.circle-heart-five i.fa-circle,
-.circle-heart-six i.fa-circle,
-.circle-heart-seven i.fa-circle,
-.circle-heart-eight i.fa-circle,
-.circle-heart-nine i.fa-circle,
-.circle-heart-ten i.fa-circle,
-.circle-heart-eleven i.fa-circle {
-	visibility: hidden;
-	top: 112px;
-	right: 273px;
-}
 .title {
 	margin-top: 25px;
 }
@@ -147,8 +147,11 @@ label.heart:hover {
 	margin: 5px auto 5px auto;
 	text-align: center;
 }
-
-label {
+.popular-games-list label,
+.pre-order-games-list label,
+.brand-new-games-list label,
+.pre-used-games-list label,
+.cta {
 	position: relative;
 	background-color: #baff3b;
 	border: none;
@@ -157,27 +160,44 @@ label {
 	color: black;
 	padding: 5px 7px;
 }
-
-label:hover {
+.popular-games-list .heart,
+.pre-order-games-list .heart,
+.brand-new-games-list .heart,
+.pre-used-games-list .heart {
+	background-color: white;
+}
+.one:hover,
+.one-one:hover,
+.one-two:hover,
+.one-three:hover,
+.one-four:hover,
+.one-five:hover,
+.one-six:hover,
+.one-seven:hover,
+.one-eight:hover,
+.one-nine:hover,
+.one-ten:hover,
+.one-eleven:hover {
 	box-shadow: 0 10px 20px rgb(0, 0, 0);
 	cursor: pointer;
 }
-.one-added,
-.one-one-added,
-.one-two-added,
-.one-three-added,
-.one-four-added,
-.one-five-added,
-.one-six-added,
-.one-seven-added,
-.one-eight-added,
-.one-nine-added,
-.one-ten-added,
-.one-eleven-added {
+.popular-games-list label.one-added,
+.popular-games-list label.one-one-added,
+.popular-games-list label.one-two-added,
+.pre-order-games-list label.one-three-added,
+.pre-order-games-list label.one-four-added,
+.pre-order-games-list label.one-five-added,
+.brand-new-games-list label.one-six-added,
+.brand-new-games-list label.one-seven-added,
+.brand-new-games-list label.one-eight-added,
+.pre-used-games-list label.one-nine-added,
+.pre-used-games-list label.one-ten-added,
+.pre-used-games-list label.one-eleven-added {
 	visibility: hidden;
 	background-color: black;
 	color: #baff3b;
 	box-shadow: 0 10px 20px rgb(0, 0, 0);
+	padding: 5.5px 25px;
 }
 #add-to-cart,
 #add-to-cart-one,
@@ -234,8 +254,34 @@ label:hover {
 	visibility: hidden;
 	color: #5bd2ff;
 	position: absolute;
-	right: 171px;
+	right: 97px;
 	top: 100px;
+}
+#add-to-cart:checked ~ .fa-circle,
+#add-to-cart-one:checked ~ .fa-circle,
+#add-to-cart-two:checked ~ .fa-circle,
+#add-to-cart-three:checked ~ .fa-circle,
+#add-to-cart-four:checked ~ .fa-circle,
+#add-to-cart-five:checked ~ .fa-circle,
+#add-to-cart-six:checked ~ .fa-circle,
+#add-to-cart-seven:checked ~ .fa-circle,
+#add-to-cart-eight:checked ~ .fa-circle,
+#add-to-cart-nine:checked ~ .fa-circle,
+#add-to-cart-ten:checked ~ .fa-circle,
+#add-to-cart-eleven:checked ~ .fa-circle,
+#save:checked ~ .circle-heart i.fa-circle,
+#save-one:checked ~ .circle-heart-one i.fa-circle,
+#save-two:checked ~ .circle-heart-two i.fa-circle,
+#save-three:checked ~ .circle-heart-three i.fa-circle,
+#save-four:checked ~ .circle-heart-four i.fa-circle,
+#save-five:checked ~ .circle-heart-five i.fa-circle,
+#save-six:checked ~ .circle-heart-six i.fa-circle,
+#save-seven:checked ~ .circle-heart-seven i.fa-circle,
+#save-eight:checked ~ .circle-heart-eight i.fa-circle,
+#save-nine:checked ~ .circle-heart-nine i.fa-circle,
+#save-ten:checked ~ .circle-heart-ten i.fa-circle,
+#save-eleven:checked ~ .circle-heart-eleven i.fa-circle {
+	visibility: visible;
 }
 .fa-circle {
 	font-size: 9px;
@@ -272,11 +318,11 @@ section .text {
 }
 .text-link {
 	text-decoration: underline;
-	padding: 20px;
+	padding: 10px;
 }
 /* footer */
 footer {
-	border: solid 21px #5bd2ff;
+	border-bottom: solid 21px #5bd2ff;
 	border-top: solid 1px #1b203d;
 	border-left: hidden;
 	border-right: hidden;
@@ -328,9 +374,25 @@ footer p {
 	select {
 		display: none;
 	}
+	header .search {
+		max-width: 100%;
+		text-align: center;
+	}
+	.search a {
+		position: absolute;
+		top: 200px;
+	}
 	.game-search {
+		display: block;
 		width: 311px;
-		margin: 20px 0 0 30px;
+		margin: 55px auto 10px auto;
+	}
+	.fa-search {
+		position: relative;
+		left: 165px;
+		top: -57px;
+		padding: 15px;
+		text-align: center;
 	}
 	.search-bar {
 		border-top: solid 23px #1b203d;
@@ -338,18 +400,15 @@ footer p {
 		padding: 6px 0 0 0;
 	}
 	/* Game lists */
-	.scrolling {
-		overflow: auto;
-		max-width: 900px;
-		height: 225px;
-		margin-right: 30px;
-		padding-right: 5px;
-		display: grid;
-		grid-template-areas: "product details product-one details-one product-two details-two";
+	.list {
+		width: fit-content;
+		margin: 0 auto;
 	}
 	h2 {
-		padding-top: 20px;
-		width: 95%;
+		display: grid;
+		margin: 0 auto;
+		position: relative;
+		padding: 20px 173px 20px 0;
 		font-size: 17px;
 	}
 	h2,
@@ -358,19 +417,29 @@ footer p {
 	.product-two {
 		margin-left: 30px;
 	}
+	.product-img {
+		width: 151px;
+	}
+	.popular-games-list,
+	.pre-order-games-list,
+	.brand-new-games-list,
+	.pre-used-games-list {
+		flex-direction: column;
+	}
 	.game,
 	.game-one,
 	.game-two {
-		display: inline-block;
+		margin-bottom: 20px;
+		width: fit-content;
 	}
 	.details,
 	.details-one,
 	.details-two {
 		position: relative;
 		margin-left: 10px;
-		width: 95px;
+		min-width: 95px;
+		width: 100px;
 	}
-	a.cta,
 	label {
 		font-size: 12px;
 	}
@@ -416,11 +485,19 @@ footer p {
 		top: -17.8px;
 		padding: 4.5px 18px;
 	}
-	.dots {
-		text-align: center;
-	}
-	.dots i {
-		margin: 3px;
+	.details .fa-circle,
+	.details-one .fa-circle,
+	.details-two .fa-circle,
+	.details-three .fa-circle,
+	.details-four .fa-circle,
+	.details-five .fa-circle,
+	.details-six .fa-circle,
+	.details-seven .fa-circle,
+	.details-eight .fa-circle,
+	.details-nine .fa-circle,
+	.details-ten .fa-circle,
+	.details-eleven .fa-circle {
+		display: none;
 	}
 	.two {
 		display: block;
@@ -481,7 +558,7 @@ footer p {
 		height: 160px;
 	}
 	.nav-top {
-		margin: 90px 150px 0 100px;
+		margin: 90px 75px 0 0;
 		padding: 0 5px 25px 5px;
 		background-image: url(/images/Slogan.png);
 		background-repeat: no-repeat;
@@ -527,43 +604,49 @@ footer p {
 		cursor: pointer;
 		background-color: black;
 	}
+
+	/* Game lists */
 	h1 {
 		text-align: center;
 		border-bottom: solid #1b203d 1px;
-		margin: 100px auto 0 auto;
+		margin: 75px auto 0 auto;
 		padding-bottom: 10px;
 		width: 700px;
 	}
 	h2 {
 		font-size: 25px;
 		width: 100%;
-		padding-top: 50px;
+		padding-top: 40px;
 		margin: 0;
-	}
-	/* Game lists */
-	main {
-		overflow: hidden;
 	}
 	.list {
 		margin: 0 auto 20px auto;
-		width: 1115px;
-		display: flex;
-		flex-wrap: wrap;
+		max-width: 1170px;
 		border: solid 10px white;
 	}
-	.scrolling {
-		display: flex;
-	}
 	.product-img {
-		width: 200px;
-		height: auto;
+		width: 100%;
 	}
 	.details,
 	.details-one,
 	.details-two {
-		margin-right: 2%;
-		margin-left: 10px;
-		width: 118px;
+		min-width: 125px;
+		width: 125px;
+	}
+	.circle-heart i.fa-circle,
+	.circle-heart-one i.fa-circle,
+	.circle-heart-two i.fa-circle,
+	.circle-heart-three i.fa-circle,
+	.circle-heart-four i.fa-circle,
+	.circle-heart-five i.fa-circle,
+	.circle-heart-six i.fa-circle,
+	.circle-heart-seven i.fa-circle,
+	.circle-heart-eight i.fa-circle,
+	.circle-heart-nine i.fa-circle,
+	.circle-heart-ten i.fa-circle,
+	.circle-heart-eleven i.fa-circle {
+		top: 112px;
+		right: 199px;
 	}
 	.title {
 		font-size: 18px;
@@ -573,7 +656,7 @@ footer p {
 		font-size: 14px;
 	}
 	.prize {
-		margin-top: 27px;
+		margin-top: 20px;
 	}
 	.pre .title {
 		margin-bottom: 40px;
@@ -599,34 +682,20 @@ footer p {
 		top: -19px;
 		padding: 5.5px 25px;
 	}
-	#add-to-cart:checked ~ .fa-circle,
-	#add-to-cart-one:checked ~ .fa-circle,
-	#add-to-cart-two:checked ~ .fa-circle,
-	#add-to-cart-three:checked ~ .fa-circle,
-	#add-to-cart-four:checked ~ .fa-circle,
-	#add-to-cart-five:checked ~ .fa-circle,
-	#add-to-cart-six:checked ~ .fa-circle,
-	#add-to-cart-seven:checked ~ .fa-circle,
-	#add-to-cart-eight:checked ~ .fa-circle,
-	#add-to-cart-nine:checked ~ .fa-circle,
-	#add-to-cart-ten:checked ~ .fa-circle,
-	#add-to-cart-eleven:checked ~ .fa-circle,
-	#save:checked ~ .circle-heart i.fa-circle,
-	#save-one:checked ~ .circle-heart-one i.fa-circle,
-	#save-two:checked ~ .circle-heart-two i.fa-circle,
-	#save-three:checked ~ .circle-heart-three i.fa-circle,
-	#save-four:checked ~ .circle-heart-four i.fa-circle,
-	#save-five:checked ~ .circle-heart-five i.fa-circle,
-	#save-six:checked ~ .circle-heart-six i.fa-circle,
-	#save-seven:checked ~ .circle-heart-seven i.fa-circle,
-	#save-eight:checked ~ .circle-heart-eight i.fa-circle,
-	#save-nine:checked ~ .circle-heart-nine i.fa-circle,
-	#save-ten:checked ~ .circle-heart-ten i.fa-circle,
-	#save-eleven:checked ~ .circle-heart-eleven i.fa-circle {
-		visibility: visible;
-	}
-	.dots {
-		display: none;
+	.details .fa-circle,
+	.details-one .fa-circle,
+	.details-two .fa-circle,
+	.details-three .fa-circle,
+	.details-four .fa-circle,
+	.details-five .fa-circle,
+	.details-six .fa-circle,
+	.details-seven .fa-circle,
+	.details-eight .fa-circle,
+	.details-nine .fa-circle,
+	.details-ten .fa-circle,
+	.details-eleven .fa-circle {
+		right: 97px;
+		top: 100px;
 	}
 	.two {
 		font-size: 50px;

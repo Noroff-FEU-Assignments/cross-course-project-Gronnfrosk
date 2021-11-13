@@ -1,0 +1,214 @@
+main {
+	display: flex;
+}
+section img {
+	height: fit-content;
+}
+.fu-icon {
+	text-align: center;
+	width: min-content;
+	color: #1b203d;
+	font-weight: bold;
+}
+.fu-icon i {
+	font-size: 35px;
+}
+section {
+	margin: auto;
+}
+.part-one {
+	max-width: 270px;
+}
+.fa-circle {
+	visibility: hidden;
+	position: absolute;
+	color: #5bd2ff;
+}
+label.heart {
+	float: none;
+}
+#save:checked ~ label .fa-heart {
+	color: #5bd2ff;
+}
+.circle-heart i.fa-circle {
+	visibility: hidden;
+	top: 112px;
+	right: 199px;
+	font-size: 9px;
+}
+#youtube {
+	display: none;
+}
+.part-two {
+	max-width: 275px;
+	margin-right: 50px;
+}
+h1 {
+	font-size: 2em;
+	text-align: left;
+	margin-top: 50px;
+	width: 100%;
+}
+.part-two ul {
+	padding-left: 0;
+	font-family: "Roboto", sans-serif;
+	margin-bottom: 30px;
+}
+.fa-truck {
+	font-size: 15px;
+	padding: 0 7px;
+}
+.fu-rating {
+	margin-bottom: 5px;
+}
+.fu-prize {
+	font-size: 30px;
+	color: #45047a;
+	font-weight: bold;
+	text-align: right;
+	margin: 0;
+}
+.fa-star {
+	font-size: 15px;
+}
+.cta {
+	display: grid;
+	justify-content: center;
+	font-size: 27px;
+	padding: 14px 0;
+}
+.cta:hover {
+	box-shadow: 0 10px 20px rgb(0, 0, 0);
+	cursor: pointer;
+}
+.added {
+	display: none;
+	position: relative;
+	top: -61px;
+	color: #baff3b;
+	background-color: Black;
+}
+#youtube:checked ~ .youtube i {
+	position: absolute;
+	background-color: white;
+	font-size: 700px;
+	top: -400px;
+	left: -176px;
+	width: 1075px;
+	z-index: 2;
+}
+#add-to-cart:checked ~ .added {
+	display: flex;
+}
+#add-to-cart:checked ~ .fa-circle {
+	visibility: visible;
+	right: 97px;
+	top: 100px;
+}
+.part-three h2 {
+	font-size: 17px;
+	margin-top: 20px;
+	padding: 0;
+}
+.paragraph {
+	margin-top: 82px;
+	border-bottom: solid 1px #1b203d;
+}
+.paragraph p {
+	margin-bottom: 40px;
+}
+/*mobile styles*/
+
+@media only screen and (max-width: 990px) {
+	main {
+		flex-direction: column;
+	}
+	.part-one {
+		display: flex;
+	}
+	.fu-icon i {
+		padding: 5px 20px;
+	}
+	.fu-icon .fa-retweet {
+		margin-top: 88px;
+	}
+	.part-two {
+		display: flex;
+		flex-direction: column-reverse;
+		width: 80%;
+		max-width: 385px;
+		margin: 0 auto;
+	}
+	section img {
+		max-width: 257px;
+	}
+	section h1 {
+		display: block;
+		margin: 0px;
+	}
+	.part-three {
+		width: 80%;
+		max-width: 385px;
+		min-width: 243px;
+	}
+	.part-three .fa-retweet {
+		display: block;
+		text-align: center;
+		font-size: 35px;
+		margin-top: 30px;
+	}
+	.cta {
+		margin-top: 30px;
+		max-width: 300px;
+	}
+}
+/*desktop/tablet styles*/
+
+@media only screen and (min-width: 991px) {
+	main {
+		justify-content: center;
+		margin: auto;
+		gap: 45px;
+	}
+	section {
+		margin: 50px 0;
+		flex: 1;
+	}
+
+	.part-one img {
+		width: 100%;
+	}
+
+	.fu-icon .heart,
+	.fu-icon .youtube,
+	.fu-icon a {
+		position: relative;
+	}
+	.fu-icon a {
+		display: grid;
+		text-align: center;
+		top: -315px;
+		left: 545px;
+	}
+	label.heart {
+		top: -353px;
+		left: 311px;
+	}
+	label.youtube {
+		top: -30px;
+		left: 115px;
+	}
+	.youtube i {
+		font-size: 40px;
+	}
+
+	.part-three {
+		max-width: 225px;
+	}
+	.part-three .fa-retweet {
+		display: block;
+		text-align: right;
+		font-size: 35px;
+		margin-top: 30px;
+	}
+}

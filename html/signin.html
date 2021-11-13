@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="Sign in" />
+		<link rel="stylesheet" href="/css/style.css" />
+		<link rel="stylesheet" href="/css/sign_in.css" />
+		<script src="https://kit.fontawesome.com/97c20a411c.js" crossorigin="anonymous"></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+		<title>GameHub | Sign in</title>
+	</head>
+	<body>
+		<div class="whole-container" >
+			<div class="container">
+				<div class="top-top">
+					<a href="#" class="previous"></a><i class="fas fa-chevron-circle-left"></i></a>
+					<a href="/index.html"><img src="/images/Logo_small.png" alt="logo small"></a>
+				</div>
+				<input type="radio" id="sign-in" name="sign-register" value="sign-register" checked />
+				<h1><label for="sign-in" class="sign-in">Sign in</label></h1>
+				<input type="radio" id="register" name="sign-register" value="sign-register" />
+				<h1><label for="register" class="register">Register</label></h1>
+				<div class="radio sign-in-page">
+					<form action="" method="post">
+						<label for="fullname">Email</label>
+						<input type="text" name="fullname" id="fullname" />
+						<label for="email">Password</label>
+						<input type="email" name="email" id="email" />
+						<a href="/html/contact.html" class="text-link">Forgotten password?</a>
+						<div class="remember-me">
+							<input type="checkbox" name="payment" id="save-card" class="checkbox" />
+							<label for="save-card">Remember me</label>
+						</div>
+						<a href="/html/profile.html" class="cta continue-profile">Continue</a>
+						<p>Sign in or create your GameHub account to start trading and purchase games today!</p>
+					</form>
+				</div>
+				<div class="radio register-page">
+					<form action="" method="post">
+						<label for="fullname">Full name</label>
+						<input type="text" name="fullname" id="fullname" />
+						<label for="email">Email</label>
+						<input type="email" name="email" id="email" />
+						<label for="address">Address</label>
+						<input type="text" name="address" id="address" />
+						<div class="zip-city">
+							<div class="zip">
+								<label for="zip">Zip code</label>
+								<input type="text" name="zip" id="zip" />
+							</div>
+							<div class="city">
+								<label for="city">City</label>
+								<input type="text" name="city" id="city" />
+							</div>
+						</div>
+						<label for="state">State</label>
+						<input type="text" name="state" id="state" />
+						<label for="country">Country</label>
+						<input type="text" name="country" id="country" />
+						<label for="telephone">Phone</label>
+						<input type="tel" name="telephone" id="telephone" />
+						<a href="/html/profile.html" class="cta continue-profile">Continue</a>
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
