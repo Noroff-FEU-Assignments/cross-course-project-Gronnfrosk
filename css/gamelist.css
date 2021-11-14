@@ -34,10 +34,7 @@ main img {
 .more-one {
 	display: none;
 }
-#more:checked ~ .gamelist-more,
-#more-one:checked ~ .gamelist-more-one {
-	display: flex;
-}
+
 #more:checked ~ .more-one {
 	display: block;
 }
@@ -103,6 +100,10 @@ main img {
 	.gamelist-desktop {
 		display: none;
 	}
+	#more:checked ~ .gamelist-more,
+	#more-one:checked ~ .gamelist-more-one {
+		display: grid;
+	}
 }
 
 /*desktop/tablet styles*/
@@ -122,6 +123,10 @@ main img {
 		max-width: 15%;
 	}
 	.gamelist-desktop {
+		display: flex;
+	}
+	#more:checked ~ .gamelist-more,
+	#more-one:checked ~ .gamelist-more-one {
 		display: flex;
 	}
 }

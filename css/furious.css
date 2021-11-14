@@ -30,12 +30,7 @@ label.heart {
 #save:checked ~ label .fa-heart {
 	color: #5bd2ff;
 }
-.circle-heart i.fa-circle {
-	visibility: hidden;
-	top: 112px;
-	right: 199px;
-	font-size: 9px;
-}
+
 #youtube {
 	display: none;
 }
@@ -83,28 +78,18 @@ h1 {
 }
 .added {
 	display: none;
-	position: relative;
-	top: -61px;
 	color: #baff3b;
 	background-color: Black;
 }
 #youtube:checked ~ .youtube i {
 	position: absolute;
 	background-color: white;
-	font-size: 700px;
-	top: -400px;
-	left: -176px;
-	width: 1075px;
 	z-index: 2;
 }
 #add-to-cart:checked ~ .added {
 	display: flex;
 }
-#add-to-cart:checked ~ .fa-circle {
-	visibility: visible;
-	right: 97px;
-	top: 100px;
-}
+
 .part-three h2 {
 	font-size: 17px;
 	margin-top: 20px;
@@ -129,6 +114,12 @@ h1 {
 	.fu-icon i {
 		padding: 5px 20px;
 	}
+	.circle-heart i.fa-circle {
+		visibility: hidden;
+		top: 13px;
+		right: 104px;
+		font-size: 9px;
+	}
 	.fu-icon .fa-retweet {
 		margin-top: 88px;
 	}
@@ -146,6 +137,12 @@ h1 {
 		display: block;
 		margin: 0px;
 	}
+	.added {
+		top: -91px;
+	}
+	.product-buy {
+		height: 91px;
+	}
 	.part-three {
 		width: 80%;
 		max-width: 385px;
@@ -161,6 +158,22 @@ h1 {
 		margin-top: 30px;
 		max-width: 300px;
 	}
+	#youtube:checked ~ .youtube i {
+		display: block;
+		position: absolute;
+		font-size: 60px;
+		width: 90%;
+		top: 208px;
+		left: 5%;
+		padding: 164px 0;
+		color: white;
+		background-color: #1b203d;
+	}
+	#add-to-cart:checked ~ .fa-circle {
+		visibility: visible;
+		right: 34px;
+		top: 7px;
+	}
 }
 /*desktop/tablet styles*/
 
@@ -174,11 +187,18 @@ h1 {
 		margin: 50px 0;
 		flex: 1;
 	}
-
+	.circle-heart i.fa-circle {
+		visibility: hidden;
+		top: 112px;
+		right: 199px;
+		font-size: 9px;
+	}
 	.part-one img {
 		width: 100%;
 	}
-
+	.added {
+		top: -61px;
+	}
 	.fu-icon .heart,
 	.fu-icon .youtube,
 	.fu-icon a {
@@ -201,7 +221,11 @@ h1 {
 	.youtube i {
 		font-size: 40px;
 	}
-
+	#add-to-cart:checked ~ .fa-circle {
+		visibility: visible;
+		right: 97px;
+		top: 100px;
+	}
 	.part-three {
 		max-width: 225px;
 	}
@@ -210,5 +234,11 @@ h1 {
 		text-align: right;
 		font-size: 35px;
 		margin-top: 30px;
+	}
+	#youtube:checked ~ .youtube i {
+		font-size: 650px;
+		top: -400px;
+		left: -195px;
+		width: 998px;
 	}
 }
