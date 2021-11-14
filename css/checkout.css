@@ -109,6 +109,7 @@ header li,
 }
 .bottom-line {
 	border-bottom: 2px lightgray dashed;
+	height: 21px;
 }
 .cta {
 	margin: 56px auto 0 auto;

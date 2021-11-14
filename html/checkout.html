@@ -18,11 +18,10 @@
 		<!-- Header-->
 		<header>
 			<div class="search-bar">
-				<div class="search">
-				</div>
+				<div class="search"></div>
 			</div>
 			<section class="checkout-nav">
-				<a href="#" class="previous"></a>
+				<a href="#" class="previous">
 					<i class="fas fa-chevron-circle-left"></i>
 				</a>
 				<div class="checkout">
@@ -58,11 +57,11 @@
 					<h2>2. Transaction</h2>
 					<form action="/html/checkout_success.html" method="post">
 						<div class="pay-type">
-							<input type="radio" id="visa" value="visa" name="payment">
+							<input type="radio" id="visa" value="visa" name="payment" />
 							<label for="visa" class="visa"><i class="fab fa-cc-visa"></i></label>
-							<input type="radio" id="paypal" value="paypal" name="payment">
+							<input type="radio" id="paypal" value="paypal" name="payment" />
 							<label for="paypal" class="paypal"><i class="fab fa-cc-paypal"></i></label>
-						</div>	
+						</div>
 						<label for="card-number">Card number</label>
 						<input type="text" name="card-number" id="card-number" />
 						<label for="name-card">Card holders name</label>
@@ -89,13 +88,30 @@
 					<h2>3. Confirm</h2>
 					<h3 class="bottom-line">Details</h3>
 					<ol>
-						<li><div class="name-list">Buy games</div><div class="cost-list"> 1500 kr</div></li>
-						<li><div class="name-list">Trade in</div><div class="cost-list"> -1000 kr</div></li>
-						<li class="bottom-line"><div class="name-list">Shipping</div> <div class="cost-list">75 kr</div></li>
-						<li><div class="name-list">Sum payment</div><div class="cost-list"> 575 kr</div></li>
-						<li><div class="name-list">Sum recive</div><div class="cost-list"> 0 kr</div></li>
+						<li>
+							<div class="name-list">Buy games</div>
+							<div class="cost-list">1500 kr</div>
+						</li>
+						<li>
+							<div class="name-list">Trade in</div>
+							<div class="cost-list">-1000 kr</div>
+						</li>
+						<li>
+							<div class="bottom-line">
+								<div class="name-list">Shipping</div>
+								<div class="cost-list">75 kr</div>
+							</div>
+						</li>
+						<li>
+							<div class="name-list">Sum payment</div>
+							<div class="cost-list">575 kr</div>
+						</li>
+						<li>
+							<div class="name-list">Sum recive</div>
+							<div class="cost-list">0 kr</div>
+						</li>
 					</ol>
-					<a href="/html/checkout_success.html"><input type="submit" value="Confirm" class="cta"></a>
+					<a href="/html/checkout_success.html"><input type="submit" value="Confirm" class="cta" /></a>
 				</div>
 			</section>
 		</main>
@@ -119,7 +135,7 @@
 				</div>
 			</div>
 			<div class="last">
-				<a href="/index.html"><img src="/images/Logo_small.png" alt="logo" class="logotwo"/></a>
+				<a href="/index.html"><img src="/images/Logo_small.png" alt="logo" class="logotwo" /></a>
 				<p>&copy;Copyright 2021 GameHub</p>
 			</div>
 		</footer>
