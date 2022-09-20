@@ -57,13 +57,16 @@
 					<form action="submit.html" method="post">
 						<label for="fullname">Full name</label>
 						<input type="text" name="fullname" id="fullname" />
+						<div class="form-error" id="fullNameError">Please enter full name</div>
 						<label for="email">Email</label>
 						<input type="email" name="email" id="email" />
+						<div class="form-error" id="emailError">Please enter an email address</div>
 						<label for="address">Address</label>
 						<input type="text" name="address" id="address" />
+						<div class="form-error" id="addressError">Please enter your address</div>
 						<label for="telephone">Phone</label>
 						<input type="tel" name="telephone" id="telephone" />
-						<a href="/html/signin.html" class="text-link">Edit here</a>
+						<div class="form-error" id="phoneError">Please enter phone number</div>
 						<a href="/html/signin.html" class="two">Register</a>
 					</form>
 				</div>
@@ -80,16 +83,20 @@
 						</div>
 						<label for="card-number">Card number</label>
 						<input type="text" name="card-number" id="card-number" />
+						<div class="form-error" id="numberError">Please enter card number containing 16 numbers.</div>
 						<label for="name-card">Card holders name</label>
 						<input type="text" name="payment" id="name-card" />
+						<div class="form-error" id="holderError">Please enter card holders name</div>
 						<div class="date-cvv">
 							<div class="date">
 								<label for="expire-date">Expire date</label>
 								<input type="text" name="payment" id="expire-date" />
+								<div class="form-error" id="expireError">Please enter your card expire date</div>
 							</div>
 							<div class="cvv">
 								<label for="cvv">CVV</label>
 								<input type="text" name="payment" id="cvv" />
+								<div class="form-error" id="cvvError">Please the cvv that is 3 numbers.</div>
 							</div>
 						</div>
 						<div class="save-card">
@@ -155,5 +162,6 @@
 				<p>&copy;Copyright 2021 GameHub</p>
 			</div>
 		</footer>
+		<script src="/js/checkout.js"></script>
 	</body>
 </html>

@@ -30,6 +30,16 @@ main section {
 main .text-link {
 	text-align: right;
 }
+.form-error {
+	display: none;
+	color: red;
+	font-family: "Roboto", sans-serif;
+	font-size: 12px;
+	margin: auto;
+}
+form input[type="tel" i] {
+	padding: 0;
+}
 a.two {
 	margin: 35px auto 0 auto;
 	width: 166px;

@@ -126,7 +126,7 @@ label:hover {
 	background: lightgray;
 }
 form input[type="text" i],
-form input[type="email" i] {
+form input[type="email" i], form input[type="tel" i] {
 	padding: 0;
 }
 .container input {
@@ -135,6 +135,24 @@ form input[type="email" i] {
 	border-right: none;
 	margin-bottom: 10px;
 }
+#signInButton, #btn {
+	font-size: 20px;
+	padding: 15px 15px;
+	margin-top: 20px;
+	width: 100%;
+}
+.cta:hover {
+	cursor: pointer;
+	box-shadow: 0 10px 20px rgb(0, 0, 0);
+	background-color: #baff3b;
+}
+.form-error {
+	display: none;
+	color: red;
+	font-family: "Roboto", sans-serif;
+	font-size: 12px;
+}
+
 /* checkout */
 .remember-me {
 	display: flex;

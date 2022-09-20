@@ -33,7 +33,6 @@
 		<div class="whole-container">
 			<div class="container">
 				<div class="top-top">
-					<a href="#" class="previous"><i class="fas fa-chevron-circle-left"></i></a>
 					<a href="/index.html"><img src="/images/Logo_small.png" alt="logo small" /></a>
 				</div>
 				<input type="radio" id="sign-in" name="sign-register" value="sign-register" checked />
@@ -41,48 +40,62 @@
 				<input type="radio" id="register" name="sign-register" value="sign-register" />
 				<h1><label for="register" class="register">Register</label></h1>
 				<div class="radio sign-in-page">
-					<form action="#" method="post">
-						<label for="fullname">Email</label>
-						<input type="text" name="fullname" id="fullname" />
-						<label for="email">Password</label>
-						<input type="email" name="email" id="email" />
+					<form id="profileForm">
+						<label for="email">Email</label>
+						<input type="email" id="mail" />
+						<div class="form-error" id="somethingError">Please enter valid email address</div>
+						<label for="fullname">Password</label>
+						<input type="text" name="password" id="passw" />
+						<div class="form-error" id="passwError">Please enter password</div>
 						<a href="/html/contact.html" class="text-link">Forgotten password?</a>
 						<div class="remember-me">
 							<input type="checkbox" name="payment" id="save-card" class="checkbox" />
 							<label for="save-card">Remember me</label>
 						</div>
-						<a href="/html/profile.html" class="cta continue-profile">Continue</a>
-						<p>Sign in or create your GameHub account to start trading and purchase games today!</p>
+						<button onclick="location.href='/html/profile.html'" class="cta" id="signInButton">Continue</button>
+						<p>Sign in or create your own GameHub account to start trading and purchase games today!</p>
 					</form>
 				</div>
 				<div class="radio register-page">
-					<form action="" method="post">
+					<form id="profileForm">
 						<label for="fullname">Full name</label>
 						<input type="text" name="fullname" id="fullname" />
+						<div class="form-error" id="fullNameError">Please enter full name</div>
 						<label for="email">Email</label>
 						<input type="email" name="email" id="email" />
+						<div class="form-error" id="emailError">Please enter an email address</div>
 						<label for="address">Address</label>
 						<input type="text" name="address" id="address" />
+						<div class="form-error" id="addressError">Please enter your address</div>
 						<div class="zip-city">
 							<div class="zip">
 								<label for="zip">Zip code</label>
 								<input type="text" name="zip" id="zip" />
+								<div class="form-error" id="zipError">Please enter zip</div>
 							</div>
 							<div class="city">
 								<label for="city">City</label>
 								<input type="text" name="city" id="city" />
+								<div class="form-error" id="cityError">Please enter city</div>
 							</div>
 						</div>
-						<label for="state">State</label>
-						<input type="text" name="state" id="state" />
 						<label for="country">Country</label>
 						<input type="text" name="country" id="country" />
+						<div class="form-error" id="countryError">Please enter country</div>
 						<label for="telephone">Phone</label>
 						<input type="tel" name="telephone" id="telephone" />
-						<a href="/html/profile.html" class="cta continue-profile">Continue</a>
+						<div class="form-error" id="phoneError">Please enter phone number</div>
+						<label for="pass">Password</label>
+						<input type="text" name="pass" id="pass" />
+						<div class="form-error" id="passError">Please enter password. More than 7 characters.</div>
+						<label for="password">Confirm password</label>
+						<input type="text" name="ConfirmPassword" id="confirmPassword" />
+						<div class="form-error" id="confPasswordError">The passwords do not match.</div>
+						<button onclick="validate()" class="cta" id="btn">Continue</button>
 					</form>
 				</div>
 			</div>
 		</div>
+		<script src="/js/signin.js"></script>
 	</body>
 </html>
