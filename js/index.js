@@ -269,7 +269,7 @@ loadHeartNumbers();
 function showSaved() {
 	let saveItems = localStorage.getItem("saved");
 	saveItems = JSON.parse(saveItems);
-	let gameContainer = document.querySelector(".games");
+	let gameContainer = document.querySelector(".gameSavedList");
 
 	if (saveItems && gameContainer) {
 		gameContainer.innerHTML = "";
