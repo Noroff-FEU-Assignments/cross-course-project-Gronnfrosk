@@ -104,6 +104,9 @@ main img {
 	#more-one:checked ~ .gamelist-more-one {
 		display: grid;
 	}
+	.products img {
+		width: 60%;
+	}
 }
 
 /*desktop/tablet styles*/

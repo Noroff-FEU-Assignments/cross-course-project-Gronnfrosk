@@ -5,6 +5,10 @@ ol {
 	font-family: "Roboto", sans-serif;
 	font-size: 17px;
 }
+h5 {
+	font-family: "Roboto", sans-serif;
+	margin-bottom: 0;
+}
 .confirm .cta:hover {
 	background-color: #baff3b;
 	color: black;
@@ -121,6 +125,63 @@ header li,
 	border-bottom: 2px lightgray dashed;
 	height: 21px;
 }
+.confirm {
+	width: 100%;
+}
+
+.product-container {
+	max-width: 650px;
+	justify-content: space-around;
+	margin: auto;
+}
+.product-header {
+	width: 100%;
+	max-width: 650px;
+	display: flex;
+	justify-content: space-around;
+	border-bottom: 4px solid #5bd2ff;
+	margin: 0;
+}
+.product-title {
+	width: 45%;
+}
+.price {
+	width: 15%;
+
+	display: flex;
+	align-items: center;
+}
+.products {
+	font-family: "Roboto", sans-serif;
+	width: 45%;
+	display: flex;
+	flex-direction: column;
+	padding: 10px 0;
+	border-bottom: 1px solid #5bd2ff;
+	margin: 0;
+	width: 100%;
+}
+.product {
+	display: flex;
+	align-items: center;
+	margin-left: 0;
+	justify-content: space-between;
+}
+.products img {
+	width: 81px;
+	margin: 5px 0;
+}
+.titleName {
+	font-weight: bold;
+	width: 16%;
+}
+.price {
+	width: 15%;
+}
+.sumCart{
+	margin-top: 40px;
+	font-weight: bold;
+}
 .cta {
 	margin: 56px auto 0 auto;
 	bottom: 0px;
@@ -165,13 +226,9 @@ header li,
 	}
 	h1 {
 		text-align: left;
-		margin: 25px 0 20px 0;
+		margin: 25px 0 0 30px;
 		width: 300px;
-		padding-bottom: 23px;
-		border-bottom: solid 6px #45047a;
-		background-image: linear-gradient(to bottom, rgb(255 255 255) 0%, rgb(255 255 255) 100%),
-			linear-gradient(to top, #1b203d, #1b203d 50%, #1b203d 75%, #45047a 75%);
-		background-clip: content-box, padding-box;
+		padding-bottom: 0;
 	}
 	h2 {
 		border-bottom: 1px solid gray;

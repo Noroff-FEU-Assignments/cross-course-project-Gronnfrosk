@@ -33,13 +33,38 @@
 	<body>
 		<!-- Header-->
 		<header>
+			<a href="/index.html">
+				<img src="/images/Logo_small.png" alt="Logo image" class="logo phone" />
+				<img src="/images/Logo_desktop.png" alt="Logo image" class="logo desktop" />
+			</a>
+			<nav class="nav-top">
+				<a href="/html/gamelist.html" class="icon heart" id="heart"><i class="fas fa-heart"></i>Saved <span>0</span></a>
+				<div class=circle-heart><i class="fas fa-circle"></i></div>
+				<a href="/html/signin.html" class="icon"><i class="fas fa-user"></i>Sign in</a>
+				<a href="/html/checkout.html" class="icon" id="cart"><i class="fas fa-shopping-cart"></i>Cart <span>0</span></a>
+				<div class="cart-circle"><i class="fas fa-circle"></i></div>
+			</nav>
+			<div class="search-bar">
+				<div class="search">
+					<input type="text" placeholder="Search games..." class="game-search" name="game-search" id="game-search"/>
+					<a href="/html/gamelist.html"><i class="fas fa-search"></i></a>
+					<select name="game categories">
+						<option value="all">All Categories</option>
+						<option value="all">Action</option>
+						<option value="all">Adventure</option>
+						<option value="all">Sport</option>
+						<option value="all">strategy</option>
+						<option value="all">RPG</option>
+						<option value="all">Simulation</option>
+					</select>
+				</div>
+			</div>
+		</header>
+		<div>
 			<div class="search-bar">
 				<div class="search"></div>
 			</div>
 			<section class="checkout-nav">
-				<a href="#" class="previous">
-					<i class="fas fa-chevron-circle-left"></i>
-				</a>
 				<div class="checkout">
 					<h1>Checkout</h1>
 					<ol>
@@ -49,7 +74,7 @@
 					</ol>
 				</div>
 			</section>
-		</header>
+		</div>
 		<main>
 			<section>
 				<div class="container">
@@ -57,7 +82,7 @@
 					<form action="submit.html" method="post">
 						<label for="fullname">Full name</label>
 						<input type="text" name="fullname" id="fullname" />
-						<div class="form-error" id="fullNameError">Please enter full name</div>
+						<div class="form-error" id="fullNameError">Please enter full name. Atleast 5 characters.</div>
 						<label for="email">Email</label>
 						<input type="email" name="email" id="email" />
 						<div class="form-error" id="emailError">Please enter an email address</div>
@@ -107,36 +132,20 @@
 				</div>
 			</section>
 			<section class="confirm">
-				<div class="container">
+				<div class="container product-container">
 					<h2>3. Confirm</h2>
-					<h3 class="bottom-line">Details</h3>
-					<ol>
-						<li>
-							<div class="name-list">Buy games</div>
-							<div class="cost-list">1500 kr</div>
-						</li>
-						<li>
-							<div class="name-list">Trade in</div>
-							<div class="cost-list">-1000 kr</div>
-						</li>
-						<li>
-							<div class="bottom-line">
-								<div class="name-list">Shipping</div>
-								<div class="cost-list">75 kr</div>
-							</div>
-						</li>
-						<li>
-							<div class="name-list">Sum payment</div>
-							<div class="cost-list">575 kr</div>
-						</li>
-						<li>
-							<div class="name-list">Sum recive</div>
-							<div class="cost-list">0 kr</div>
-						</li>
-					</ol>
-					<a href="/html/checkout_success.html"><input type="submit" value="Confirm" class="cta" /></a>
+					<div class="product-container">
+						<div class="product-header">
+						<h5 class= "product-title">PRODUCT</h5>
+						<h5 class="price">PRICE</h5>
+						<h5 class="quantity">QUANTITY</h5>
+						<h5 class="TOTAL">TOTAL</h5>
+					</div>
 				</div>
+				<div class="products"></div>
+				<a href="/html/checkout_success.html"><input type="submit" value="Confirm" class="cta" /></a>
 			</section>
+			
 		</main>
 		<footer>
 			<div class="navb">
@@ -162,6 +171,7 @@
 				<p>&copy;Copyright 2021 GameHub</p>
 			</div>
 		</footer>
+		<script src="/js/index.js"></script>
 		<script src="/js/checkout.js"></script>
 	</body>
 </html>

@@ -29,9 +29,11 @@
 			<img src="/images/Logo_small.png" alt="Logo image" class="logo phone" />
 			<img src="/images/Logo_desktop.png" alt="Logo image" class="logo desktop"/>
 			<nav class="nav-top">
-				<a href="/html/gamelist.html" class="icon"><i class="fas fa-heart"></i>Saved</a>
+				<a href="/html/saved.html" class="icon heart"><i class="fas fa-heart"></i>Saved <span>0</span></a>
+				<div class=circle-heart><i class="fas fa-circle"></i></div>
 				<a href="/html/signin.html" class="icon"><i class="fas fa-user"></i>Sign in</a>
-				<a href="/html/checkout.html" class="icon" id="cart"><i class="fas fa-shopping-cart"></i>Cart</a>
+				<a href="/html/checkout.html" class="icon" id="cart"><i class="fas fa-shopping-cart"></i>Cart <span>0</span></a>
+				<div class="cart-circle"><i class="fas fa-circle"></i></div>
 			</nav>
 			<div class="search-bar">
 				<div class="search">
@@ -62,8 +64,7 @@
 						</div>
 							<div class="details">
 							<input type="checkbox" id="save" />
-							<label for="save" class="heart"><i class="fas fa-heart"></i></label>
-							<div class=circle-heart><i class="fas fa-circle"></i></div>
+							<label for="save" class="heart" id="heart"><i class="fas fa-heart"></i></label>
 							<p class="title">Assassin</p>
 							<p class="description">- New</p>
 							<p class="description">- Playbox One X Enhanced</p>
@@ -74,10 +75,7 @@
 							<i class="fas fa-star"></i>
 							<i class="far fa-star"></i>
 							<p class="prize">500 kr</p>
-							<input type="checkbox" id="add-to-cart" />
-							<label for="add-to-cart" class="one">Add to Cart</label>
-							<label for="add-to-cart" class="one-added">Added</label>
-							<i class="fas fa-circle"></i>
+							<a class="cta add-cart cart1" >Add to cart</a> 
 						</div>
 					</div>
 					<div class="game-one">
@@ -86,8 +84,7 @@
 						</div>
 						<div class="details-one">
 							<input type="checkbox" id="save-one" />
-							<label for="save-one" class="heart"><i class="fas fa-heart"></i></label>
-							<div class=circle-heart-one><i class="fas fa-circle"></i></div>
+							<label for="save-one" class="heart" id="heart"><i class="fas fa-heart"></i></label>
 							<p class="title">Racing</p>
 							<p class="description">- New</p>
 							<p class="description">- Playbox One X Enhanced</p>
@@ -98,10 +95,7 @@
 							<i class="fas fa-star"></i>
 							<i class="fas fa-star"></i>
 							<p class="prize">500 kr</p>
-							<input type="checkbox" id="add-to-cart-one" />
-							<label for="add-to-cart-one" class="one-one">Add to Cart</label>
-							<label for="add-to-cart-one" class="one-one-added">Added</label>
-							<i class="fas fa-circle"></i>
+							<a class="cta add-cart cart2" >Add to cart</a> 
 						</div>
 					</div>
 					<div class="game-two">
@@ -110,8 +104,7 @@
 						</div>
 						<div class="details-two">
 							<input type="checkbox" id="save-two" />
-							<label for="save-two" class="heart"><i class="fas fa-heart"></i></label>
-							<div class=circle-heart-two><i class="fas fa-circle"></i></div>
+							<label for="save-two" class="heart" id="heart"><i class="fas fa-heart"></i></label>
 							<p class="title">Boxer</p>
 							<p class="description">- New</p>
 							<p class="description">- Playbox One X Enhanced</p>
@@ -122,10 +115,7 @@
 							<i class="fas fa-star"></i>
 							<i class="far fa-star"></i>
 							<p class="prize">500 kr</p>
-							<input type="checkbox" id="add-to-cart-two" />
-							<label for="add-to-cart-two" class="one-two">Add to Cart</label>
-							<label for="add-to-cart-two" class="one-two-added">Added</label>
-							<i class="fas fa-circle"></i>
+							<a class="cta add-cart cart3" >Add to cart</a>
 						</div>
 					</div>
 					<a href=/html/gamelist.html class="two big">+</a>
@@ -157,16 +147,12 @@
 						</div>
 						<div class="details pre doble">
 							<input type="checkbox" id="save-three" />
-							<label for="save-three" class="heart"><i class="fas fa-heart"></i></label>
-							<div class=circle-heart-three><i class="fas fa-circle"></i></div>
+							<label for="save-three" class="heart" id="heart"><i class="fas fa-heart"></i></label>
 							<p class="title">Space War</p>
 							<p class="description">- Playbox One X Enhanced</p>
 							<p class="rating">Release Date: 12/12/2021</p>
 							<p class="prize">600 kr</p>
-							<input type="checkbox" id="add-to-cart-three" />
-							<label for="add-to-cart-three" class="one-three">Add to Cart</label>
-							<label for="add-to-cart-three" class="one-three-added">Added</label>
-							<i class="fas fa-circle"></i>
+							<a class="cta add-cart cart4" >Add to cart</a>
 						</div>
 					</div>
 					<div class="game-one">	
@@ -175,16 +161,12 @@
 						</div>
 						<div class="details-one pre">
 							<input type="checkbox" id="save-four" />
-							<label for="save-four" class="heart"><i class="fas fa-heart"></i></label>
-							<div class=circle-heart-four><i class="fas fa-circle"></i></div>
+							<label for="save-four" class="heart" id="heart"><i class="fas fa-heart"></i></label>
 							<p class="title">Cyberpunk</p>
 							<p class="description">- Playbox One X Enhanced</p>
 							<p class="rating">Release Date: 12/11/2021</p>
 							<p class="prize">600 kr</p>
-							<input type="checkbox" id="add-to-cart-four" />
-							<label for="add-to-cart-four" class="one-four">Add to Cart</label>
-							<label for="add-to-cart-four" class="one-four-added">Added</label>
-							<i class="fas fa-circle"></i>
+							<a class="cta add-cart cart5" >Add to cart</a>
 						</div>
 					</div>	
 					<div class="game-two">
@@ -193,16 +175,12 @@
 						</div>
 						<div class="details-two doble">
 							<input type="checkbox" id="save-five" />
-							<label for="save-five" class="heart"><i class="fas fa-heart"></i></label>
-							<div class=circle-heart-five><i class="fas fa-circle"></i></div>
-							<p class="title">Forge Lengend</p>
+							<label for="save-five" class="heart" id="heart"><i class="fas fa-heart"></i></label>
+							<p class="title">Forge Legend</p>
 							<p class="description">- Playbox One X Enhanced</p>
 							<p class="rating">Release Date: 12/10/2021</p>
 							<p class="prize">600 kr</p>
-							<input type="checkbox" id="add-to-cart-five" />
-							<label for="add-to-cart-five" class="one-five">Add to Cart</label>
-							<label for="add-to-cart-five" class="one-five-added">Added</label>
-							<i class="fas fa-circle"></i>
+							<a class="cta add-cart cart6">Add to cart</a>
 						</div>
 					</div>
 					<a href=/html/gamelist.html class="two big">+</a>
@@ -219,8 +197,7 @@
 						</div>
 						<div class="details brand">
 							<input type="checkbox" id="save-six" />
-							<label for="save-six" class="heart"><i class="fas fa-heart"></i></label>
-							<div class=circle-heart-six><i class="fas fa-circle"></i></div>
+							<label for="save-six" class="heart" id="heart"><i class="fas fa-heart"></i></label>
 							<p class="title">Super Duper</p>
 							<p class="description">- New</p>
 							<p class="description">- Playbox One X Enhanced</p>
@@ -231,10 +208,7 @@
 							<i class="fas fa-star"></i>
 							<i class="far fa-star"></i>
 							<p class="prize">500 kr</p>
-							<input type="checkbox" id="add-to-cart-six" />
-							<label for="add-to-cart-six" class="one-six">Add to Cart</label>
-							<label for="add-to-cart-six" class="one-six-added">Added</label>
-							<i class="fas fa-circle"></i>
+							<a class="cta add-cart cart7" >Add to cart</a>
 						</div>
 					</div>
 					<div class="game-one">
@@ -243,8 +217,7 @@
 						</div>
 						<div class="details-one">
 							<input type="checkbox" id="save-seven" />
-							<label for="save-seven" class="heart"><i class="fas fa-heart"></i></label>
-							<div class=circle-heart-seven><i class="fas fa-circle"></i></div>
+							<label for="save-seven" class="heart" id="heart"><i class="fas fa-heart"></i></label>
 							<p class="title">Black</p>
 							<p class="description">- New</p>
 							<p class="description">- Playbox One X Enhanced</p>
@@ -255,10 +228,7 @@
 							<i class="fas fa-star"></i>
 							<i class="far fa-star"></i>
 							<p class="prize">500 kr</p>
-							<input type="checkbox" id="add-to-cart-seven" />
-							<label for="add-to-cart-seven" class="one-seven">Add to Cart</label>
-							<label for="add-to-cart-seven" class="one-seven-added">Added</label>
-							<i class="fas fa-circle"></i>
+							<a class="cta add-cart cart8" >Add to cart</a>
 						</div>
 					</div>
 					<div class="game-two">
@@ -267,8 +237,7 @@
 						</div>
 						<div class="details-two">
 							<input type="checkbox" id="save-eight" />
-							<label for="save-eight" class="heart"><i class="fas fa-heart"></i></label>
-							<div class=circle-heart-eight><i class="fas fa-circle"></i></div>
+							<label for="save-eight" class="heart" id="heart"><i class="fas fa-heart"></i></label>
 							<p class="title">Furious</p>
 							<p class="description">- New</p>
 							<p class="description">- Playbox One X Enhanced</p>
@@ -279,10 +248,7 @@
 							<i class="fas fa-star"></i>
 							<i class="fas fa-star"></i>
 							<p class="prize">500 kr</p>
-							<input type="checkbox" id="add-to-cart-eight" />
-							<label for="add-to-cart-eight" class="one-eight">Add to Cart</label>
-							<label for="add-to-cart-eight" class="one-eight-added">Added</label>
-							<i class="fas fa-circle"></i>
+							<a class="cta add-cart cart9" >Add to cart</a>
 						</div>
 					</div>
 					<a href=/html/gamelist.html class="two big">+</a>
@@ -302,8 +268,7 @@
 						</div>
 						<div class="details">
 							<input type="checkbox" id="save-nine" />
-							<label for="save-nine" class="heart"><i class="fas fa-heart"></i></label>
-							<div class=circle-heart-nine><i class="fas fa-circle"></i></div>
+							<label for="save-nine" class="heart" id="heart"><i class="fas fa-heart"></i></label>
 							<p class="title">Assassin</p>
 							<p class="description">- Pre-used</p>
 							<p class="description">- Playbox One X Enhanced</p>
@@ -313,11 +278,8 @@
 							<i class="fas fa-star"></i>
 							<i class="fas fa-star"></i>
 							<i class="far fa-star"></i>
-							<p class="prize">500 kr</p>
-							<input type="checkbox" id="add-to-cart-nine" />
-							<label for="add-to-cart-nine" class="one-nine">Add to Cart</label>
-							<label for="add-to-cart-nine" class="one-nine-added">Added</label>
-							<i class="fas fa-circle"></i>
+							<p class="prize">400 kr</p>
+							<a class="cta add-cart cart10" >Add to cart</a>
 						</div>
 					</div>
 					<div class="game-one">
@@ -328,8 +290,7 @@
 						</div>
 						<div class="details-one">
 							<input type="checkbox" id="save-ten" />
-							<label for="save-ten" class="heart"><i class="fas fa-heart"></i></label>
-							<div class=circle-heart-ten><i class="fas fa-circle"></i></div>
+							<label for="save-ten" class="heart" id="heart"><i class="fas fa-heart"></i></label>
 							<p class="title">Furious</p>
 							<p class="description">- Pre-used</p>
 							<p class="description">- Playbox One X Enhanced</p>
@@ -339,11 +300,8 @@
 							<i class="fas fa-star"></i>
 							<i class="fas fa-star"></i>
 							<i class="fas fa-star"></i>
-							<p class="prize">500 kr</p>
-							<input type="checkbox" id="add-to-cart-ten" />
-							<label for="add-to-cart-ten" class="one-ten">Add to Cart</label>
-							<label for="add-to-cart-ten" class="one-ten-added">Added</label>
-							<i class="fas fa-circle"></i>
+							<p class="prize">400 kr</p>
+							<a class="cta add-cart cart11" >Add to cart</a>
 						</div>
 					</div>
 					<div class="game-two">
@@ -354,8 +312,7 @@
 					</div>
 						<div class="details-two">
 							<input type="checkbox" id="save-eleven" />
-							<label for="save-eleven" class="heart"><i class="fas fa-heart"></i></label>
-							<div class=circle-heart-eleven><i class="fas fa-circle"></i></div>
+							<label for="save-eleven" class="heart" id="heart"><i class="fas fa-heart"></i></label>
 							<p class="title">Boxer</p>
 							<p class="description">- Pre-used</p>
 							<p class="description">- Playbox One X Enhanced</p>
@@ -365,11 +322,8 @@
 							<i class="fas fa-star"></i>
 							<i class="fas fa-star"></i>
 							<i class="far fa-star"></i>
-							<p class="prize">500 kr</p>
-							<input type="checkbox" id="add-to-cart-eleven" />
-							<label for="add-to-cart-eleven" class="one-eleven">Add to Cart</label>
-							<label for="add-to-cart-eleven" class="one-eleven-added">Added</label>
-							<i class="fas fa-circle"></i>
+							<p class="prize">400 kr</p>
+							<a class="cta add-cart cart12" >Add to cart</a>
 						</div>
 					</div>
 					<a href=/html/gamelist.html class="two big">+</a>

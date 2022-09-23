@@ -112,20 +112,6 @@ label.heart {
 label.heart:hover {
 	box-shadow: none;
 }
-#save:checked ~ label .fa-heart,
-#save-one:checked ~ label .fa-heart,
-#save-two:checked ~ label .fa-heart,
-#save-three:checked ~ label .fa-heart,
-#save-four:checked ~ label .fa-heart,
-#save-five:checked ~ label .fa-heart,
-#save-six:checked ~ label .fa-heart,
-#save-seven:checked ~ label .fa-heart,
-#save-eight:checked ~ label .fa-heart,
-#save-nine:checked ~ label .fa-heart,
-#save-ten:checked ~ label .fa-heart,
-#save-eleven:checked ~ label .fa-heart {
-	color: #5bd2ff;
-}
 .title {
 	margin-top: 25px;
 }
@@ -177,27 +163,11 @@ label.heart:hover {
 .one-eight:hover,
 .one-nine:hover,
 .one-ten:hover,
-.one-eleven:hover {
+.one-eleven:hover,
+.cta:hover {
 	box-shadow: 0 10px 20px rgb(0, 0, 0);
 	cursor: pointer;
-}
-.popular-games-list label.one-added,
-.popular-games-list label.one-one-added,
-.popular-games-list label.one-two-added,
-.pre-order-games-list label.one-three-added,
-.pre-order-games-list label.one-four-added,
-.pre-order-games-list label.one-five-added,
-.brand-new-games-list label.one-six-added,
-.brand-new-games-list label.one-seven-added,
-.brand-new-games-list label.one-eight-added,
-.pre-used-games-list label.one-nine-added,
-.pre-used-games-list label.one-ten-added,
-.pre-used-games-list label.one-eleven-added {
-	visibility: hidden;
-	background-color: black;
-	color: #baff3b;
-	box-shadow: 0 10px 20px rgb(0, 0, 0);
-	padding: 5.5px 25px;
+	color: black;
 }
 #add-to-cart,
 #add-to-cart-one,
@@ -225,68 +195,11 @@ label.heart:hover {
 #save-eleven {
 	display: none;
 }
-#add-to-cart:checked ~ .one-added,
-#add-to-cart-one:checked ~ .one-one-added,
-#add-to-cart-two:checked ~ .one-two-added,
-#add-to-cart-three:checked ~ .one-three-added,
-#add-to-cart-four:checked ~ .one-four-added,
-#add-to-cart-five:checked ~ .one-five-added,
-#add-to-cart-six:checked ~ .one-six-added,
-#add-to-cart-seven:checked ~ .one-seven-added,
-#add-to-cart-eight:checked ~ .one-eight-added,
-#add-to-cart-nine:checked ~ .one-nine-added,
-#add-to-cart-ten:checked ~ .one-ten-added,
-#add-to-cart-eleven:checked ~ .one-eleven-added {
-	visibility: visible;
-}
-.details .fa-circle,
-.details-one .fa-circle,
-.details-two .fa-circle,
-.details-three .fa-circle,
-.details-four .fa-circle,
-.details-five .fa-circle,
-.details-six .fa-circle,
-.details-seven .fa-circle,
-.details-eight .fa-circle,
-.details-nine .fa-circle,
-.details-ten .fa-circle,
-.details-eleven .fa-circle {
+nav .fa-circle {
 	visibility: hidden;
+	font-size: 9px;
 	color: #5bd2ff;
 	position: absolute;
-	right: 97px;
-	top: 100px;
-}
-#add-to-cart:checked ~ .fa-circle,
-#add-to-cart-one:checked ~ .fa-circle,
-#add-to-cart-two:checked ~ .fa-circle,
-#add-to-cart-three:checked ~ .fa-circle,
-#add-to-cart-four:checked ~ .fa-circle,
-#add-to-cart-five:checked ~ .fa-circle,
-#add-to-cart-six:checked ~ .fa-circle,
-#add-to-cart-seven:checked ~ .fa-circle,
-#add-to-cart-eight:checked ~ .fa-circle,
-#add-to-cart-nine:checked ~ .fa-circle,
-#add-to-cart-ten:checked ~ .fa-circle,
-#add-to-cart-eleven:checked ~ .fa-circle,
-#save:checked ~ .circle-heart i.fa-circle,
-#save-one:checked ~ .circle-heart-one i.fa-circle,
-#save-two:checked ~ .circle-heart-two i.fa-circle,
-#save-three:checked ~ .circle-heart-three i.fa-circle,
-#save-four:checked ~ .circle-heart-four i.fa-circle,
-#save-five:checked ~ .circle-heart-five i.fa-circle,
-#save-six:checked ~ .circle-heart-six i.fa-circle,
-#save-seven:checked ~ .circle-heart-seven i.fa-circle,
-#save-eight:checked ~ .circle-heart-eight i.fa-circle,
-#save-nine:checked ~ .circle-heart-nine i.fa-circle,
-#save-ten:checked ~ .circle-heart-ten i.fa-circle,
-#save-eleven:checked ~ .circle-heart-eleven i.fa-circle {
-	visibility: visible;
-}
-.fa-circle {
-	font-size: 9px;
-	color: black;
-	text-align: center;
 }
 a.two {
 	background-color: #1b203d;
@@ -365,11 +278,22 @@ footer p {
 	.nav-top {
 		margin-top: -58px;
 	}
+	.logo {
+		width: 108px;
+	}
 	nav {
 		margin-right: 20px;
 	}
 	.icon {
 		padding: 7px;
+	}
+	.circle-heart .fa-circle{
+		top: 17px;
+		right:135px;
+	}
+	.cart-circle .fa-circle {
+		top: 6px;
+		right: 36px;
 	}
 	select {
 		display: none;
@@ -469,36 +393,6 @@ footer p {
 		height: 25px;
 		font-size: 11px;
 	}
-	.one-added,
-	.one-one-added,
-	.one-two-added,
-	.one-three-added,
-	.one-four-added,
-	.one-five-added,
-	.one-six-added,
-	.one-seven-added,
-	.one-eight-added,
-	.one-nine-added,
-	.one-ten-added,
-	.one-eleven-added {
-		visibility: hidden;
-		top: -17.8px;
-		padding: 4.5px 18px;
-	}
-	.details .fa-circle,
-	.details-one .fa-circle,
-	.details-two .fa-circle,
-	.details-three .fa-circle,
-	.details-four .fa-circle,
-	.details-five .fa-circle,
-	.details-six .fa-circle,
-	.details-seven .fa-circle,
-	.details-eight .fa-circle,
-	.details-nine .fa-circle,
-	.details-ten .fa-circle,
-	.details-eleven .fa-circle {
-		display: none;
-	}
 	.two {
 		display: block;
 		width: 146px;
@@ -568,6 +462,14 @@ footer p {
 	.icon {
 		padding: 10px;
 	}
+	.circle-heart .fa-circle{
+		top: 112px;
+		right: 206px;
+	}
+	.cart-circle .fa-circle {
+	right: 99px;
+	top: 99px;	
+	}
 	.search-bar {
 		border-top: solid 50px #1b203d;
 		padding: 6px 0 50px 0;
@@ -633,21 +535,6 @@ footer p {
 		min-width: 125px;
 		width: 125px;
 	}
-	.circle-heart i.fa-circle,
-	.circle-heart-one i.fa-circle,
-	.circle-heart-two i.fa-circle,
-	.circle-heart-three i.fa-circle,
-	.circle-heart-four i.fa-circle,
-	.circle-heart-five i.fa-circle,
-	.circle-heart-six i.fa-circle,
-	.circle-heart-seven i.fa-circle,
-	.circle-heart-eight i.fa-circle,
-	.circle-heart-nine i.fa-circle,
-	.circle-heart-ten i.fa-circle,
-	.circle-heart-eleven i.fa-circle {
-		top: 112px;
-		right: 199px;
-	}
 	.title {
 		font-size: 18px;
 	}
@@ -667,34 +554,8 @@ footer p {
 	.brand .prize {
 		margin-top: 7px;
 	}
-	.one-added,
-	.one-one-added,
-	.one-two-added,
-	.one-three-added,
-	.one-four-added,
-	.one-five-added,
-	.one-six-added,
-	.one-seven-added,
-	.one-eight-added,
-	.one-nine-added,
-	.one-ten-added,
-	.one-eleven-added {
-		top: -19px;
-		padding: 5.5px 25px;
-	}
-	.details .fa-circle,
-	.details-one .fa-circle,
-	.details-two .fa-circle,
-	.details-three .fa-circle,
-	.details-four .fa-circle,
-	.details-five .fa-circle,
-	.details-six .fa-circle,
-	.details-seven .fa-circle,
-	.details-eight .fa-circle,
-	.details-nine .fa-circle,
-	.details-ten .fa-circle,
-	.details-eleven .fa-circle {
-		right: 97px;
+	.details .fa-circle {
+		right: 102px;
 		top: 100px;
 	}
 	.two {
@@ -714,7 +575,7 @@ footer p {
 	section .mobile {
 		display: none;
 	}
-	#gamepad /*Tried to use class tag but ut got bugged when reloading*/ {
+	#gamepad /*Tried to use class tag but got bugged when reloading*/ {
 		color: #1b203d;
 		text-align: center;
 		background-color: #1b203d;
