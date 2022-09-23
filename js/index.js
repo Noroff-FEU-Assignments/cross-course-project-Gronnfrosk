@@ -276,7 +276,7 @@ function showSaved() {
 		Object.values(saveItems).map((item) => {
 			gameContainer.innerHTML += `
 		    <div class="gameSaved">
-                <a src="/html/furious.html><img src="/images/GameHub_covers${item.covers}_desktop.png"></a>
+                <a href="/html/furious.html"><img src="/images/GameHub_covers${item.covers}_desktop.png"></a>
             </div>
             `;
 		});
