@@ -137,13 +137,13 @@ function cartNumbers(product) {
 		document.querySelector("#cart span").textContent = 1;
 		document.querySelector(".cart-circle .fa-circle").style.visibility = "visible";
 	}
-	setItems(product);
+	setItemsCart(product);
 }
 
-function setItems(product) {
+function setItemsCart(product) {
 	let cartItems = localStorage.getItem("gamesInCart");
 	cartItems = JSON.parse(cartItems);
-
+	console.log(cartItems);
 	if (cartItems !== null) {
 		if (cartItems[product.name] === undefined) {
 			cartItems = {
@@ -183,7 +183,6 @@ function showCart() {
 	let cost = localStorage.getItem("expense");
 
 	if (cartItems && productContainer) {
-		console.log(cartItems);
 		productContainer.innerHTML = "";
 		Object.values(cartItems).map((item) => {
 			productContainer.innerHTML += `
@@ -277,7 +276,7 @@ function showSaved() {
 		Object.values(saveItems).map((item) => {
 			gameContainer.innerHTML += `
 		    <div class="gameSaved">
-                <a href="/html/furious.html"><img src="/images/GameHub_covers${item.covers}_desktop.png"></a>
+                <img src="/images/GameHub_covers${item.covers}_desktop.png">
             </div>
             `;
 		});
