@@ -28,6 +28,7 @@ i {
 i:hover,
 a:hover {
 	color: #5bd2ff;
+	transition: 0.2s;
 	cursor: pointer;
 }
 
@@ -168,6 +169,7 @@ label.heart:hover {
 	box-shadow: 0 10px 20px rgb(0, 0, 0);
 	cursor: pointer;
 	color: black;
+	transition: 0.2s;
 }
 #add-to-cart,
 #add-to-cart-one,
@@ -289,7 +291,7 @@ footer p {
 	}
 	.circle-heart .fa-circle{
 		top: 17px;
-		right:135px;
+		right:138px;
 	}
 	.cart-circle .fa-circle {
 		top: 6px;
@@ -464,7 +466,7 @@ footer p {
 	}
 	.circle-heart .fa-circle{
 		top: 112px;
-		right: 206px;
+		right: 214px;
 	}
 	.cart-circle .fa-circle {
 	right: 99px;
