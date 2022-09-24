@@ -222,7 +222,6 @@ for (let i = 0; i < hearts.length; i++) {
 function loadHeartNumbers() {
 	let heartNumbers = localStorage.getItem("saveNumbers");
 	if (heartNumbers) {
-		document.querySelector(".heart span").textContent = heartNumbers;
 		document.querySelector(".circle-heart .fa-circle").style.visibility = "visible";
 	}
 }
@@ -233,11 +232,11 @@ function saveNumbers(products) {
 
 	if (heartNumbers) {
 		localStorage.setItem("saveNumbers", heartNumbers + 1);
-		document.querySelector(".heart span").textContent = heartNumbers + 1;
+
 		document.querySelector(".circle-heart .fa-circle").style.visibility = "visible";
 	} else {
 		localStorage.setItem("saveNumbers", 1);
-		document.querySelector(".heart span").textContent = 1;
+
 		document.querySelector(".circle-heart .fa-circle").style.visibility = "visible";
 	}
 	setItems(products);

@@ -47,7 +47,7 @@ nav a {
 }
 .search-bar {
 	background-image: linear-gradient(to bottom, rgb(255 255 255) 0%, rgb(255 255 255) 100%),
-		linear-gradient(to top, #1b203d, #1b203d 50%, #1b203d 75%, #45047a 75%);
+		linear-gradient(to top, #1b203d, #1b203d 50%, #1b203d 75%, #1b203d 75%);
 	background-clip: content-box, padding-box;
 }
 input[type="text" i],
@@ -276,10 +276,6 @@ footer p {
 
 @media only screen and (max-width: 990px) {
 	/* Top navigation*/
-	.logo,
-	.nav-top {
-		margin-top: -58px;
-	}
 	.logo {
 		width: 108px;
 	}
@@ -291,7 +287,7 @@ footer p {
 	}
 	.circle-heart .fa-circle{
 		top: 17px;
-		right:132px;
+		right:129px;
 	}
 	.cart-circle .fa-circle {
 		top: 6px;
@@ -300,30 +296,26 @@ footer p {
 	select {
 		display: none;
 	}
+	header {
+		position: fixed;
+		width: 100%;
+		z-index: 1;
+		background: white;
+	}
 	header .search {
+		display: none;
 		max-width: 100%;
-		text-align: center;
-	}
-	.search a {
-		position: absolute;
-		top: 200px;
-	}
-	.game-search {
-		display: block;
-		width: 311px;
-		margin: 55px auto 10px auto;
-	}
-	.fa-search {
-		position: relative;
-		left: 165px;
-		top: -57px;
-		padding: 15px;
 		text-align: center;
 	}
 	.search-bar {
 		border-top: solid 23px #1b203d;
 		margin-top: 58px;
 		padding: 6px 0 0 0;
+		border-bottom: solid 6px #45047a;
+		
+	}
+	main {
+		padding-top: 100px;
 	}
 	/* Game lists */
 	.list {
@@ -466,7 +458,7 @@ footer p {
 	}
 	.circle-heart .fa-circle{
 		top: 112px;
-		right: 208px;
+		right: 204px;
 	}
 	.cart-circle .fa-circle {
 	right: 99px;
