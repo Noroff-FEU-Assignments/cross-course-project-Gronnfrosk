@@ -1,110 +1,4 @@
-let products = [
-	{
-		name: "Assassin",
-		category: "popular game",
-		condition: "new",
-		rating: 4,
-		price: 500,
-		inCart: 0,
-		covers: 5,
-	},
-	{
-		name: "Racing",
-		category: "popular game",
-		condition: "new",
-		rating: 5,
-		price: 500,
-		inCart: 0,
-		covers: 7,
-	},
-	{
-		name: "Boxer",
-		category: "popular game",
-		condition: "new",
-		rating: 4,
-		price: 500,
-		inCart: 0,
-		covers: 8,
-	},
-	{
-		name: "Space War",
-		category: "Pre-order game",
-		condition: "new",
-		price: 600,
-		inCart: 0,
-		covers: 6,
-	},
-	{
-		name: "Cyberpunk",
-		category: "Pre-order game",
-		condition: "new",
-		price: 600,
-		inCart: 0,
-		covers: 9,
-	},
-	{
-		name: "Forge Legends",
-		category: "Pre-order game",
-		condition: "new",
-		price: 600,
-		inCart: 0,
-		covers: 10,
-	},
-	{
-		name: "Super Duper",
-		category: "Brand new",
-		condition: "new",
-		rating: 4,
-		price: 500,
-		inCart: 0,
-		covers: 2,
-	},
-	{
-		name: "Black",
-		category: "popular game",
-		condition: "new",
-		rating: 4,
-		price: 500,
-		inCart: 0,
-		covers: 3,
-	},
-	{
-		name: "Furious",
-		category: "popular game",
-		condition: "new",
-		rating: 5,
-		price: 500,
-		inCart: 0,
-		covers: 4,
-	},
-	{
-		name: "Assassin",
-		category: "Pre-used game",
-		condition: "used",
-		rating: 4,
-		price: 400,
-		inCart: 0,
-		covers: 5,
-	},
-	{
-		name: "Furious",
-		category: "Pre-used game",
-		condition: "used",
-		rating: 5,
-		price: 400,
-		inCart: 0,
-		covers: 4,
-	},
-	{
-		name: "Boxer",
-		category: "Pre-used game",
-		condition: "used",
-		rating: 4,
-		price: 400,
-		inCart: 0,
-		covers: 8,
-	},
-];
+import { products } from "./products.js";
 
 // Shopping cart
 let carts = document.querySelectorAll(".add-cart");
@@ -232,11 +126,9 @@ function saveNumbers(products) {
 
 	if (heartNumbers) {
 		localStorage.setItem("saveNumbers", heartNumbers + 1);
-
 		document.querySelector(".circle-heart .fa-circle").style.visibility = "visible";
 	} else {
 		localStorage.setItem("saveNumbers", 1);
-
 		document.querySelector(".circle-heart .fa-circle").style.visibility = "visible";
 	}
 	setItems(products);
@@ -283,3 +175,19 @@ function showSaved() {
 }
 
 showSaved();
+
+// products
+
+function gameShowProduct() {
+	const pictures = document.querySelectorAll("div .prodPic");
+	console.log(products);
+	for (let y = 0; y < pictures.length; y++) {
+		pictures[y].innerHTML = "";
+		pictures[y].innerHTML += `
+	<div class="gameProduct">
+                <a href="/html/details.html?id=${products[y].id}"><img src="${products[y].image}" class="product-img"></a>
+            </div>
+	`;
+	}
+}
+gameShowProduct();

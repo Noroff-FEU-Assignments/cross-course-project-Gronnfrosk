@@ -358,6 +358,9 @@ footer p {
 		min-width: 95px;
 		width: 100px;
 	}
+	.gameProduct:hover {
+		cursor: pointer;
+	}
 	label {
 		font-size: 12px;
 	}
