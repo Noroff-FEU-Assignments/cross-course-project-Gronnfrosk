@@ -106,7 +106,7 @@ function showCart() {
 showCart();
 
 // Save favorite game
-let hearts = document.querySelectorAll("#heart");
+let hearts = document.querySelectorAll(".heart-click");
 
 for (let i = 0; i < hearts.length; i++) {
 	hearts[i].addEventListener("click", () => {
