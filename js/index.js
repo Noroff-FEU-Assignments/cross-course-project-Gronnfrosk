@@ -185,7 +185,7 @@ function gameShowProduct() {
 		pictures[y].innerHTML = "";
 		pictures[y].innerHTML += `
 	<div class="gameProduct">
-                <a href="/html/details.html?id=${products[y].id}"><img src="${products[y].image}" class="product-img alt="Picture of the game ${products[y].name} and click for more details""></a>
+                <a href="/html/details.html?id=${products[y].id}" title="Click here for more details about the game ${products[y].name}"><img src="${products[y].image}" class="product-img alt="Picture of the game ${products[y].name} and click for more details""></a>
             </div>
 	`;
 	}
