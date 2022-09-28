@@ -35,5 +35,3 @@ rating.innerHTML += `${products[id - 1].stars}
 price.innerHTML += `${products[id - 1].price}kr`;
 
 productDetails.innerHTML += `${products[id - 1].details}`;
-
-// Add cart

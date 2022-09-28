@@ -4,7 +4,11 @@ export let products = [
 		category: "popular game",
 		condition: "New",
 		rating: 4.0,
-		stars: `<i class="far fa-star"></i>`,
+		stars: `<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="far fa-star"></i>`,
 		price: 500,
 		inCart: 0,
 		covers: 5,
@@ -18,7 +22,11 @@ export let products = [
 		category: "popular game",
 		condition: "New",
 		rating: 5.0,
-		stars: `<i class="fas fa-star"></i>`,
+		stars: `<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>`,
 		price: 500,
 		inCart: 0,
 		covers: 7,
@@ -32,7 +40,11 @@ export let products = [
 		category: "popular game",
 		condition: "New",
 		rating: 4.0,
-		stars: `<i class="far fa-star"></i>`,
+		stars: `<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="far fa-star"></i>`,
 		price: 500,
 		inCart: 0,
 		covers: 8,
@@ -45,6 +57,12 @@ export let products = [
 		name: "Space War",
 		category: "Pre-order game",
 		condition: "New",
+		rating: 3.0,
+		stars: `<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="far fa-star"></i>
+			<i class="far fa-star"></i>`,
 		price: 600,
 		inCart: 0,
 		covers: 6,
@@ -57,6 +75,12 @@ export let products = [
 		name: "Cyberpunk",
 		category: "Pre-order game",
 		condition: "New",
+		rating: 4.0,
+		stars: `<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="far fa-star"></i>`,
 		price: 600,
 		inCart: 0,
 		covers: 9,
@@ -69,6 +93,12 @@ export let products = [
 		name: "Forge Legends",
 		category: "Pre-order game",
 		condition: "New",
+		rating: 5.0,
+		stars: `<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>`,
 		price: 600,
 		inCart: 0,
 		covers: 10,
@@ -82,7 +112,11 @@ export let products = [
 		category: "Brand new",
 		condition: "New",
 		rating: 4.0,
-		stars: `<i class="far fa-star"></i>`,
+		stars: `<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="far fa-star"></i>`,
 		price: 500,
 		inCart: 0,
 		covers: 2,
@@ -96,7 +130,11 @@ export let products = [
 		category: "popular game",
 		condition: "New",
 		rating: 4.0,
-		stars: `<i class="far fa-star"></i>`,
+		stars: `<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="far fa-star"></i>`,
 		price: 500,
 		inCart: 0,
 		covers: 3,
@@ -110,7 +148,11 @@ export let products = [
 		category: "popular game",
 		condition: "New",
 		rating: 5.0,
-		stars: `<i class="fas fa-star"></i>`,
+		stars: `<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>`,
 		price: 500,
 		inCart: 0,
 		covers: 4,
@@ -124,7 +166,11 @@ export let products = [
 		category: "Pre-used game",
 		condition: "Pre-used",
 		rating: 4.0,
-		stars: `<i class="far fa-star"></i>`,
+		stars: `<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="far fa-star"></i>`,
 		price: 400,
 		inCart: 0,
 		covers: 5,
@@ -138,7 +184,11 @@ export let products = [
 		category: "Pre-used game",
 		condition: "Pre-used",
 		rating: 5.0,
-		stars: `<i class="fas fa-star"></i>`,
+		stars: `<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>`,
 		price: 400,
 		inCart: 0,
 		covers: 4,
@@ -152,7 +202,11 @@ export let products = [
 		category: "Pre-used game",
 		condition: "Pre-used",
 		rating: 4.0,
-		stars: `<i class="far fa-star"></i>`,
+		stars: `<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="far fa-star"></i>`,
 		price: 400,
 		inCart: 0,
 		covers: 8,

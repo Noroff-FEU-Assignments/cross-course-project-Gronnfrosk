@@ -81,7 +81,7 @@ function showCart() {
 		Object.values(cartItems).map((item) => {
 			productContainer.innerHTML += `
 		    <div class="product">
-                <img src="/images/GameHub_covers${item.covers}_desktop.png">
+                <img src="/images/GameHub_covers${item.covers}_desktop.png" alt="Picture of ${item.name}">
                 <span class="titleName">${item.name}</span>
                 <div class="price">
                     ${item.price}kr
@@ -167,7 +167,7 @@ function showSaved() {
 		Object.values(saveItems).map((item) => {
 			gameContainer.innerHTML += `
 		    <div class="gameSaved">
-                <a href="/html/furious.html"><img src="/images/GameHub_covers${item.covers}_desktop.png"></a>
+                <a href="/html/details.html?id=${item.id}"><img src="/images/GameHub_covers${item.covers}_desktop.png" alt="Picture of the game ${item.name} and click for more details"></a>
             </div>
             `;
 		});
@@ -185,7 +185,7 @@ function gameShowProduct() {
 		pictures[y].innerHTML = "";
 		pictures[y].innerHTML += `
 	<div class="gameProduct">
-                <a href="/html/details.html?id=${products[y].id}"><img src="${products[y].image}" class="product-img"></a>
+                <a href="/html/details.html?id=${products[y].id}"><img src="${products[y].image}" class="product-img alt="Picture of the game ${products[y].name} and click for more details""></a>
             </div>
 	`;
 	}
