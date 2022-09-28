@@ -130,9 +130,12 @@ header li,
 }
 
 .product-container {
+	font-family: "Roboto", sans-serif;
 	max-width: 650px;
 	justify-content: space-around;
 	margin: auto;
+	font-weight: bold;
+	padding-top: 1em;
 }
 .product-header {
 	width: 100%;

@@ -176,7 +176,7 @@ function showSaved() {
 
 showSaved();
 
-// products
+// Display products/games on homepage
 
 function gameShowProduct() {
 	const pictures = document.querySelectorAll("div .prodPic");
