@@ -47,7 +47,7 @@ function setItemsCart(product) {
 		}
 		cartItems[product.name].inCart += 1;
 	} else {
-		product.inCart = 1;
+		product.inCart += 1;
 		cartItems = {
 			[product.name]: product,
 		};
