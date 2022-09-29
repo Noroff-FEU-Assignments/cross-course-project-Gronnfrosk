@@ -162,7 +162,7 @@ export let products = [
 			"Born from the world of science finally, furious finally manages to escape. As a gorilla you must find a place in the human world. meanwhile gathering resources to fight against the same scientific research center which you escaped from.",
 	},
 	{
-		name: "Assassin",
+		name: "Assassin*",
 		category: "Pre-used game",
 		condition: "Pre-used",
 		rating: 4.0,
@@ -180,7 +180,7 @@ export let products = [
 			"You are born assassin. trying to get revenge on those who betrayed you even though you have to travel to the end of the world. Looking far and wide and having to defeat many opponents will you the deadly assassin finally find peace.",
 	},
 	{
-		name: "Furious",
+		name: "Furious*",
 		category: "Pre-used game",
 		condition: "Pre-used",
 		rating: 5.0,
@@ -198,7 +198,7 @@ export let products = [
 			"Born from the world of science finally, furious finally manages to escape. As a gorilla you must find a place in the human world. meanwhile gathering resources to fight against the same scientific research center which you escaped from.",
 	},
 	{
-		name: "Boxer",
+		name: "Boxer*",
 		category: "Pre-used game",
 		condition: "Pre-used",
 		rating: 4.0,

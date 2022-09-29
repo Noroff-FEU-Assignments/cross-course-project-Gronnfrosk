@@ -37,7 +37,7 @@ function cartNumbers(product) {
 function setItemsCart(product) {
 	let cartItems = localStorage.getItem("gamesInCart");
 	cartItems = JSON.parse(cartItems);
-	console.log(cartItems);
+
 	if (cartItems !== null) {
 		if (cartItems[product.name] === undefined) {
 			cartItems = {
@@ -81,7 +81,7 @@ function showCart() {
 		Object.values(cartItems).map((item) => {
 			productContainer.innerHTML += `
 		    <div class="product">
-                <img src="/images/GameHub_covers${item.covers}_desktop.png" alt="Picture of ${item.name}">
+                <img src="/images/GameHub_covers${item.covers}_desktop.png" alt="Picture of game in cart">
                 <span class="titleName">${item.name}</span>
                 <div class="price">
                     ${item.price}kr
@@ -113,6 +113,7 @@ for (let i = 0; i < hearts.length; i++) {
 		saveNumbers(products[i]);
 	});
 }
+
 function loadHeartNumbers() {
 	let heartNumbers = localStorage.getItem("saveNumbers");
 	if (heartNumbers) {
@@ -137,7 +138,6 @@ function saveNumbers(products) {
 function setItems(products) {
 	let saveItems = localStorage.getItem("saved");
 	saveItems = JSON.parse(saveItems);
-	console.log(saveItems);
 
 	if (saveItems !== null) {
 		if (saveItems[products.name] === undefined) {
@@ -167,7 +167,7 @@ function showSaved() {
 		Object.values(saveItems).map((item) => {
 			gameContainer.innerHTML += `
 		    <div class="gameSaved">
-                <a href="/html/details.html?id=${item.id}"><img src="/images/GameHub_covers${item.covers}_desktop.png" alt="Picture of the game ${item.name} and click for more details"></a>
+                <a href="/html/details.html?id=${item.id}"><img src="/images/GameHub_covers${item.covers}_desktop.png" alt="Picture of the game and click for more details"></a>
             </div>
             `;
 		});
@@ -180,7 +180,6 @@ showSaved();
 
 function gameShowProduct() {
 	const pictures = document.querySelectorAll("div .prodPic");
-	console.log(products);
 	for (let y = 0; y < pictures.length; y++) {
 		pictures[y].innerHTML = "";
 		pictures[y].innerHTML += `

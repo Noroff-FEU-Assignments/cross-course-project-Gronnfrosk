@@ -98,8 +98,6 @@ pass.onkeyup = function () {
 confirmPassword.onkeyup = function () {
 	const pw1 = document.querySelector("#pass");
 	const pw2 = document.querySelector("#confirmPassword");
-	console.dir(pw2.value);
-	console.dir(pw1.value);
 	if (pw1.value != pw2.value) {
 		confPasswordError.style.display = "block";
 		return false;
