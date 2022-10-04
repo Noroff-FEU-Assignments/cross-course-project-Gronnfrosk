@@ -97,9 +97,10 @@ function showCart() {
 		});
 		productContainer.innerHTML += `
         <div class="totalContainer>
-            <div class="sumCart"></div>
+		<div class="sumCart"></div>
             <div class="sumCart">Cart Total ${cost}kr</div>
-        </div>`;
+        </div>
+		`;
 	}
 }
 

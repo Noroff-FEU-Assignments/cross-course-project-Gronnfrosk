@@ -47,6 +47,20 @@ main img {
 	box-shadow: 0 10px 20px rgb(0, 0, 0);
 	cursor: pointer;
 }
+.btn {
+	margin-top: 35px;
+	width: 50%;
+	color: white;
+	background: #1b203d;
+}
+.btn:hover {
+	color: white;
+}
+.savedText {
+	font-family: "Roboto", sans-serif;
+	font-size: 0.75em;
+	margin-top: 10px;
+}
 /*mobile styles*/
 
 @media only screen and (max-width: 990px) {

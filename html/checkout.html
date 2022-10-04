@@ -143,6 +143,16 @@
 					</div>
 				</div>
 				<div class="products"></div>
+				<button onclick="deleteItems()" class="deleteButton">x</button>
+				<script>
+					function deleteItems() {
+						localStorage.removeItem("gamesInCart");
+						localStorage.removeItem("expense");
+						localStorage.removeItem("cartNumbers");
+						window.location.reload();
+					};
+				</script>
+				<div class="deleteText">Remove all items from cart</div>
 				<a href="/html/checkout_success.html" title="Checkout button to check out"><input type="submit" value="Confirm" class="cta" /></a>
 			</section>
 		</main>

@@ -63,6 +63,15 @@
 		<main>
 			<h1>Saved games</h1>
 			<div class="games gamelist gameSavedList"></div>
+			<button onclick="deleteSaved()" class="cta btn">x</button>
+			<script>
+				function deleteSaved() {
+					localStorage.removeItem("saved");
+					localStorage.removeItem("saveNumbers");
+					window.location.reload();
+				}
+			</script>
+			<div class="savedText">Remove all saved games</div>
 		</main>
 		<!-- Footer-->
 		<footer>
