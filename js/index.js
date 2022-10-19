@@ -1,14 +1,36 @@
-import { products } from "./products.js";
+// Display products/games on homepage
+const url = "https://gronnfrosk.one/gamehub/wp-json/wc/store/products?per_page=20";
+
+async function gameShowProduct() {
+	const picture = document.querySelectorAll(".prodPic");
+	const response = await fetch(url);
+	const products = await response.json();
+
+	for (let i = 0; i < picture.length; i++) {
+		picture[i].innerHTML += `
+	<div class="gameProduct">
+                <a href="/html/details.html?id=${products[i].id}" title="Click here for more details about the game"><img src="${products[i].images[0].src}" class="product-img alt="Picture of the game and click for more details""></a>
+            </div>
+	`;
+	}
+}
+gameShowProduct();
 
 // Shopping cart
 let carts = document.querySelectorAll(".add-cart");
 
-for (let i = 0; i < carts.length; i++) {
-	carts[i].addEventListener("click", () => {
-		cartNumbers(products[i]);
-		expense(products[i]);
-	});
+async function fetchGames() {
+	const response = await fetch(url);
+	const products = await response.json();
+
+	for (let i = 0; i < carts.length; i++) {
+		carts[i].addEventListener("click", () => {
+			cartNumbers(products[i]);
+			expense(products[i]);
+		});
+	}
 }
+fetchGames();
 
 function loadCartNumbers() {
 	let productNumbers = localStorage.getItem("cartNumbers");
@@ -45,9 +67,9 @@ function setItemsCart(product) {
 				[product.name]: product,
 			};
 		}
-		cartItems[product.name].inCart += 1;
+		cartItems[product.name].parent += 1;
 	} else {
-		product.inCart += 1;
+		product.parent += 1;
 		cartItems = {
 			[product.name]: product,
 		};
@@ -60,12 +82,13 @@ loadCartNumbers();
 // total cost cart
 function expense(product) {
 	let cost = localStorage.getItem("expense");
+	product.prices.price = parseInt(product.prices.price);
 
 	if (cost !== null) {
 		cost = parseInt(cost);
-		localStorage.setItem("expense", cost + product.price);
+		localStorage.setItem("expense", cost + product.prices.price);
 	} else {
-		localStorage.setItem("expense", product.price);
+		localStorage.setItem("expense", product.prices.price);
 	}
 }
 
@@ -81,16 +104,16 @@ function showCart() {
 		Object.values(cartItems).map((item) => {
 			productContainer.innerHTML += `
 		    <div class="product">
-                <img src="/images/GameHub_covers${item.covers}_desktop.png" alt="Picture of game in cart">
+                <img src="${item.images[0].src}" alt="Picture of game in cart">
                 <span class="titleName">${item.name}</span>
                 <div class="price">
-                    ${item.price}kr
+                    ${item.prices.price}kr
                 </div>
                 <div class="quantity">
-                    <span>${item.inCart}</span>
+                    <span>${item.parent}</span>
                 </div>
                 <div class="total">
-                    ${item.inCart * item.price}kr
+                    ${item.parent * item.prices.price}kr
                 </div>
             </div>
             `;
@@ -109,11 +132,18 @@ showCart();
 // Save favorite game
 let hearts = document.querySelectorAll(".heart-click");
 
-for (let i = 0; i < hearts.length; i++) {
-	hearts[i].addEventListener("click", () => {
-		saveNumbers(products[i]);
-	});
+async function fetchSavedGames() {
+	const response = await fetch(url);
+	const products = await response.json();
+
+	for (let i = 0; i < hearts.length; i++) {
+		hearts[i].addEventListener("click", () => {
+			saveNumbers(products[i]);
+		});
+	}
 }
+
+fetchSavedGames();
 
 function loadHeartNumbers() {
 	let heartNumbers = localStorage.getItem("saveNumbers");
@@ -122,7 +152,7 @@ function loadHeartNumbers() {
 	}
 }
 
-function saveNumbers(products) {
+function saveNumbers(product) {
 	let heartNumbers = localStorage.getItem("saveNumbers");
 	heartNumbers = parseInt(heartNumbers);
 
@@ -133,23 +163,23 @@ function saveNumbers(products) {
 		localStorage.setItem("saveNumbers", 1);
 		document.querySelector(".circle-heart .fa-circle").style.visibility = "visible";
 	}
-	setItems(products);
+	setItems(product);
 }
 
-function setItems(products) {
+function setItems(product) {
 	let saveItems = localStorage.getItem("saved");
 	saveItems = JSON.parse(saveItems);
 
 	if (saveItems !== null) {
-		if (saveItems[products.name] === undefined) {
+		if (saveItems[product.name] === undefined) {
 			saveItems = {
 				...saveItems,
-				[products.name]: products,
+				[product.name]: product,
 			};
 		}
 	} else {
 		saveItems = {
-			[products.name]: products,
+			[product.name]: product,
 		};
 	}
 	localStorage.setItem("saved", JSON.stringify(saveItems));
@@ -168,7 +198,7 @@ function showSaved() {
 		Object.values(saveItems).map((item) => {
 			gameContainer.innerHTML += `
 		    <div class="gameSaved">
-                <a href="/html/details.html?id=${item.id}"><img src="/images/GameHub_covers${item.covers}_desktop.png" alt="Picture of the game and click for more details"></a>
+                <a href="/html/details.html?id=${item.id}"><img src="${item.images[0].src}" alt="Picture of the game and click for more details" class="product-img"></a>
             </div>
             `;
 		});
@@ -176,18 +206,3 @@ function showSaved() {
 }
 
 showSaved();
-
-// Display products/games on homepage
-
-function gameShowProduct() {
-	const pictures = document.querySelectorAll("div .prodPic");
-	for (let y = 0; y < pictures.length; y++) {
-		pictures[y].innerHTML = "";
-		pictures[y].innerHTML += `
-	<div class="gameProduct">
-                <a href="/html/details.html?id=${products[y].id}" title="Click here for more details about the game ${products[y].name}"><img src="${products[y].image}" class="product-img alt="Picture of the game ${products[y].name} and click for more details""></a>
-            </div>
-	`;
-	}
-}
-gameShowProduct();

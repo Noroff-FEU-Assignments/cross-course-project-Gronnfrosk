@@ -146,4 +146,7 @@ main img {
 	#more-one:checked ~ .gamelist-more-one {
 		display: flex;
 	}
+	.product-img {
+		max-width: 175px;
+	}
 }

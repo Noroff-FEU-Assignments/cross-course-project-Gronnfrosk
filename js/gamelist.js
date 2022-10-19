@@ -1,17 +1,14 @@
-import { products } from "./products.js";
+const listGames = document.querySelector(".gameList");
+const url = "https://gronnfrosk.one/gamehub/wp-json/wc/store/products?per_page=20";
 
-let gamesToRender = products;
+async function renderGames() {
+	const response = await fetch(url);
+	const products = await response.json();
 
-function renderGames() {
-	const listGames = document.querySelector(".gamelist");
-	listGames.innerHTML = "";
-
-	gamesToRender.forEach(function (game) {
+	products.forEach(function (product) {
 		listGames.innerHTML += `
-	    <div class="">
-                  <a href="/html/details.html?id=${game.id}"><img src="${game.image}" class="product-img"></a>
-             </div>
-	    `;
+                  <a href="/html/details.html?id=${product.id}"><img src="${product.images[0].src}" class="product-img"></a>
+		`;
 	});
 }
 renderGames();

@@ -1,16 +1,4 @@
-import { products } from "./products.js";
-
 // Details game page
-const queryString = document.location.search;
-const params = new URLSearchParams(queryString);
-
-const id = params.get("id");
-parseInt(id);
-
-if (id === null) {
-	location.href = "/index.html";
-}
-
 const images = document.querySelector(".imgContainer");
 const title = document.querySelector(".title");
 const condition = document.querySelector(".part-two ul");
@@ -18,136 +6,163 @@ const rating = document.querySelector(".details-game");
 const price = document.querySelector(".part-two p");
 const productDetails = document.querySelector(".paragraph p");
 
-images.innerHTML += `<img src="/images/GameHub_covers${products[id - 1].covers}_desktop.png" alt="Picture of the game">
-`;
+const queryString = document.location.search;
+const params = new URLSearchParams(queryString);
 
-title.innerHTML += `<h1>${products[id - 1].name}</h1>`;
+const id = params.get("id");
+parseInt(id);
 
-condition.innerHTML += `<li>Condition: ${products[id - 1].condition}</li>
-                        <li>Game type: Playbox</li>
-						<li><a href="/html/information.html">Shipping details<i class="fas fa-truck"></a></i></li>
-`;
+const url = "https://gronnfrosk.one/gamehub/wp-json/wc/store/products/" + id;
 
-rating.innerHTML += `${products[id - 1].stars}
-<p> Rating <strong>${products[id - 1].rating}</strong></p>
-`;
+async function fetchGame() {
+	const response = await fetch(url);
+	const products = await response.json();
 
-price.innerHTML += `${products[id - 1].price}kr`;
+	images.innerHTML += `<img src="${products.images[0].src}" alt="Picture of the game">`;
 
-productDetails.innerHTML += `${products[id - 1].details}`;
+	title.innerHTML += `<h1>${products.name}</h1>`;
+
+	condition.innerHTML += `<li>Condition: ${products.categories[0].name}</li>
+	                        <li>Game type: Playbox</li>
+							<li><a href="/html/information.html">Shipping details<i class="fas fa-truck"></a></i></li>
+	`;
+
+	price.innerHTML += `${products.prices.price}kr`;
+
+	productDetails.innerHTML += `${products.description}`;
+}
+
+fetchGame();
+
+if (id === null) {
+	location.href = "/index.html";
+}
 
 // Add to cart
 let cartDetails = document.querySelector(".cart1");
 
-cartDetails.addEventListener("click", () => {
-	cartNumbers(products[id - 1]);
-	expense(products[id - 1]);
-});
+async function fetchGames() {
+	const response = await fetch(url);
+	const products = await response.json();
+	console.log(products);
 
-function loadCartNumbers() {
-	let productNumbers = localStorage.getItem("cartNumbers");
-	if (productNumbers) {
-		document.querySelector("#cart span").textContent = productNumbers;
-		document.querySelector(".cart-circle .fa-circle").style.visibility = "visible";
+	cartDetails.addEventListener("click", () => {
+		cartNumbers(products[id]);
+		expense(products[id]);
+	});
+
+	function loadCartNumbers() {
+		let productNumbers = localStorage.getItem("cartNumbers");
+		if (productNumbers) {
+			document.querySelector("#cart span").textContent = productNumbers;
+			document.querySelector(".cart-circle .fa-circle").style.visibility = "visible";
+		}
 	}
-}
 
-function cartNumbers(product) {
-	let productNumbers = localStorage.getItem("cartNumbers");
-	productNumbers = parseInt(productNumbers);
+	function cartNumbers(product) {
+		let productNumbers = localStorage.getItem("cartNumbers");
+		productNumbers = parseInt(productNumbers);
 
-	if (productNumbers) {
-		localStorage.setItem("cartNumbers", productNumbers + 1);
-		document.querySelector("#cart span").textContent = productNumbers + 1;
-		document.querySelector(".cart-circle .fa-circle").style.visibility = "visible";
-	} else {
-		localStorage.setItem("cartNumbers", 1);
-		document.querySelector("#cart span").textContent = 1;
-		document.querySelector(".cart-circle .fa-circle").style.visibility = "visible";
+		if (productNumbers) {
+			localStorage.setItem("cartNumbers", productNumbers + 1);
+			document.querySelector("#cart span").textContent = productNumbers + 1;
+			document.querySelector(".cart-circle .fa-circle").style.visibility = "visible";
+		} else {
+			localStorage.setItem("cartNumbers", 1);
+			document.querySelector("#cart span").textContent = 1;
+			document.querySelector(".cart-circle .fa-circle").style.visibility = "visible";
+		}
+		setItemsCart(product);
 	}
-	setItemsCart(product);
-}
 
-function setItemsCart(product) {
-	let cartItems = localStorage.getItem("gamesInCart");
-	cartItems = JSON.parse(cartItems);
+	function setItemsCart(product) {
+		let cartItems = localStorage.getItem("gamesInCart");
+		cartItems = JSON.parse(cartItems);
 
-	if (cartItems !== null) {
-		if (cartItems[product.name] === undefined) {
+		if (cartItems !== null) {
+			if (cartItems[products.name] === undefined) {
+				cartItems = {
+					...cartItems,
+					[products.name]: products,
+				};
+			}
+			cartItems[products.name].parent += 1;
+		} else {
+			products.parent += 1;
 			cartItems = {
-				...cartItems,
-				[product.name]: product,
+				[products.name]: products,
 			};
 		}
-		cartItems[product.name].inCart += 1;
-	} else {
-		products.inCart += 1;
-		cartItems = {
-			[product.name]: product,
-		};
+		localStorage.setItem("gamesInCart", JSON.stringify(cartItems));
 	}
-	localStorage.setItem("gamesInCart", JSON.stringify(cartItems));
-}
 
-loadCartNumbers();
+	loadCartNumbers();
 
-function expense(product) {
-	let cost = localStorage.getItem("expense");
+	function expense(product) {
+		let cost = localStorage.getItem("expense");
+		products.prices.price = parseInt(products.prices.price);
 
-	if (cost !== null) {
-		cost = parseInt(cost);
-		localStorage.setItem("expense", cost + product.price);
-	} else {
-		localStorage.setItem("expense", product.price);
+		if (cost !== null) {
+			cost = parseInt(cost);
+			localStorage.setItem("expense", cost + products.prices.price);
+		} else {
+			localStorage.setItem("expense", products.prices.price);
+		}
 	}
 }
-
+fetchGames();
 // Save game
 let detailsHeart = document.querySelector(".details-heart");
 
-detailsHeart.addEventListener("click", () => {
-	detailsNumbers(products[id - 1]);
-});
+async function fetchSavedGames() {
+	const response = await fetch(url);
+	const products = await response.json();
 
-function loadHeartNumbersTwo() {
-	let heartNumbers = localStorage.getItem("saveNumbers");
-	if (heartNumbers) {
-		document.querySelector(".circle-heart .fa-circle").style.visibility = "visible";
+	detailsHeart.addEventListener("click", () => {
+		detailsNumbers(products[id]);
+	});
+
+	function loadHeartNumbersTwo() {
+		let heartNumbers = localStorage.getItem("saveNumbers");
+		if (heartNumbers) {
+			document.querySelector(".circle-heart .fa-circle").style.visibility = "visible";
+		}
 	}
-}
 
-function detailsNumbers(product) {
-	localStorage.setItem("saveNumbers", 1);
-	let heartNumbers = localStorage.getItem("saveNumbers");
-	heartNumbers = parseInt(heartNumbers);
-
-	if (heartNumbers) {
-		localStorage.setItem("saveNumbers", heartNumbers + 1);
-		document.querySelector(".circle-heart .fa-circle").style.visibility = "visible";
-	} else {
+	function detailsNumbers(product) {
 		localStorage.setItem("saveNumbers", 1);
-		document.querySelector(".circle-heart .fa-circle").style.visibility = "visible";
+		let heartNumbers = localStorage.getItem("saveNumbers");
+		heartNumbers = parseInt(heartNumbers);
+
+		if (heartNumbers) {
+			localStorage.setItem("saveNumbers", heartNumbers + 1);
+			document.querySelector(".circle-heart .fa-circle").style.visibility = "visible";
+		} else {
+			localStorage.setItem("saveNumbers", 1);
+			document.querySelector(".circle-heart .fa-circle").style.visibility = "visible";
+		}
+		setItems(product);
 	}
-	setItems(product);
-}
 
-function setItems(product) {
-	let saveItems = localStorage.getItem("saved");
-	saveItems = JSON.parse(saveItems);
+	function setItems(product) {
+		let saveItems = localStorage.getItem("saved");
+		saveItems = JSON.parse(saveItems);
 
-	if (saveItems !== null) {
-		if (saveItems[product.name] === undefined) {
+		if (saveItems !== null) {
+			if (saveItems[products.name] === undefined) {
+				saveItems = {
+					...saveItems,
+					[products.name]: products,
+				};
+			}
+		} else {
 			saveItems = {
-				...saveItems,
-				[product.name]: product,
+				[products.name]: products,
 			};
 		}
-	} else {
-		saveItems = {
-			[product.name]: product,
-		};
+		localStorage.setItem("saved", JSON.stringify(saveItems));
 	}
-	localStorage.setItem("saved", JSON.stringify(saveItems));
-}
 
-loadHeartNumbersTwo();
+	loadHeartNumbersTwo();
+}
+fetchSavedGames();
