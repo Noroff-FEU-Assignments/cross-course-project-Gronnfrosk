@@ -17,7 +17,7 @@ GameHub is an online shop where users can purchase computer games. This gaming m
 - Chechout page
 - Chechout success page
 
-### The website is:
+### The website key points:
 - Responsive across screen sizes.
 - Neat and semantic HTML.
 - Following WCAG principles and DRY priciple.
