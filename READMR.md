@@ -5,7 +5,7 @@
 This project is a website built as a fictional online game shop, the universe of games. 
 
 ## Description
-GameHub is an online shop where users can purchase computer games. This gaming marketplace lets you buy tons of video games online for any device. Target audience are gamers aged 18 to 25, that would either like to purchase games or would like to sell games they have finished playing. The website contains pages such as:
+GameHub is an online shop where users can purchase computer games. This gaming marketplace lets you buy tons of video games online for any device. Target audience are gamers aged 18 to 25, that would either like to purchase games or would like to sell games they have finished playing. The website contains 10 pages such as:
 - Homa page
 - Contact page
 - Game list page
