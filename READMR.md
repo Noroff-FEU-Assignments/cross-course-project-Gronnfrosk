@@ -5,9 +5,9 @@
 This project is a website built as a fictional online game shop, the universe of games. 
 
 ## Description
-GameHub is an online shop where users can purchase computer games.Target audience are gamers aged 18 to 25, that would either like to purchase new games or used games. The online shop have an add to cart and save game feature which are stored in the local storage. The products are fetched from a WordPress API and the details page is dynamical built showing the game that was clicked. 
+GameHub is an online shop where users can purchase computer games. Target audience are gamers aged 18 to 25, that would either like to purchase new games or used games. The online shop have an add to cart and save game feature which are stored in the local storage. The products are fetched from a WordPress API and the details page is dynamical built showing the game that was clicked. 
 
-The website contains 10 pages such as:
+The website contains 10 pages:
 1. Home page
 2. Contact page
 3. Game list page
@@ -30,6 +30,7 @@ The website contains 10 pages such as:
 - HTML
 - CSS
 - JavaScript
+- WordPress
 
 ## Getting Started
 
