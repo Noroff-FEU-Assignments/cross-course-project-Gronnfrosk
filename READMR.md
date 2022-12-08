@@ -24,7 +24,7 @@ The website contains 10 differnet pages:
 - Neat and semantic HTML.
 - Following WCAG principles and DRY priciple.
 - Design grade: 10/10
-- Tecnical grade: 9.5/10
+- Technical grade: 9.5/10
 
 ## Built With
 - HTML
