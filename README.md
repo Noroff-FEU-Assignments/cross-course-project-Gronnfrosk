@@ -2,12 +2,12 @@
 
 ![GameHubSmall](https://user-images.githubusercontent.com/91615712/205653641-c80a76b1-8b7c-49dd-8109-15fd2f07642e.png)
 
-This project is a website built as a fictional online game shop, the universe of games. 
+This Noroff project is a website of a online game shop, GameHub. 
 
 ## Description
-GameHub is an online shop where users can purchase computer games. Target audience are gamers aged 18 to 25, that would either like to purchase new games or used games. The online shop have an add to cart and save game feature which are stored in the local storage. The products are fetched from a WordPress API and the details page is dynamical built showing the game that was clicked. 
+GameHub is an online shop where users can purchase computer games. Target audience are gamers aged 18 to 25, that would either like to purchase new games or used games. The online shop have an add to cart and save game feature which are stored in the local storage. The products are fetched from a WordPress API and the details page is dynamical built showing the game that was clicked. The site should be responsive across screen sizes and follow WCAG principles. 
 
-The website contains 10 differnet pages:
+#### The architecture of website:
 1. Home page
 2. Contact page
 3. Game list page
@@ -19,24 +19,16 @@ The website contains 10 differnet pages:
 9. Chechout page
 10. Chechout success page
 
-### More about the website:
-- Responsive across screen sizes.
-- Neat and semantic HTML.
-- Following WCAG principles and DRY priciple.
-
 ## Built With
 - HTML
 - CSS
 - JavaScript
-- WordPress
 
 ## Getting Started
 
-### Installing
+Clone the repo through github website or CLI command:
 
-1. Clone the repo:
-
-```bash
+```
 git clone https://github.com/Noroff-FEU-Assignments/cross-course-project-Gronnfrosk.git
 ```
 
