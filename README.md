@@ -2,7 +2,7 @@
 
 ![GameHubSmall](https://user-images.githubusercontent.com/91615712/205653641-c80a76b1-8b7c-49dd-8109-15fd2f07642e.png)
 
-This Noroff project is a website of a online game shop, GameHub. 
+This Noroff project is a website of a online game shop, GameHub. Live demo of site: https://determined-mirzakhani-cd7f68.netlify.app/ 
 
 ## Description
 GameHub is an online shop where users can purchase computer games. Target audience are gamers aged 18 to 25, that would either like to purchase new games or used games. The online shop have an add to cart and save game feature which are stored in the local storage. The products are fetched from a WordPress API and the details page is dynamical built showing the game that was clicked. The site should be responsive across screen sizes and follow WCAG principles. 
