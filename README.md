@@ -5,7 +5,7 @@
 This Noroff project is a website of a online game shop, GameHub. Live demo of site: https://determined-mirzakhani-cd7f68.netlify.app/ 
 
 ## Description
-GameHub is an online shop where users can purchase computer games. Target audience are gamers aged 18 to 25, that would either like to purchase new games or used games. The online shop have an add to cart and save game feature which are stored in the local storage. The products are fetched from a WordPress API and the details page is dynamical built showing the game that was clicked. The site should be responsive across screen sizes and follow WCAG principles. 
+GameHub is a shop where users can purchase computer games online. The online shop have an add to cart and save favorite games features by using the local storage. The products are fetched from a WordPress API. The website focuses on being responsive across screen sizes, follow WCAG principles and DRY principles. No actual products or services are sold on those page.
 
 #### The architecture of website:
 1. Home page
@@ -31,6 +31,12 @@ Clone the repo through github website or CLI command:
 ```
 git clone https://github.com/Noroff-FEU-Assignments/cross-course-project-Gronnfrosk.git
 ```
+
+### Live server
+For viewing project in your local browser, you can use Live Server extension in VS Code or CLI commands:
+
+1. Run ```npm i live-server``` to install all dependencies.
+2. Write ```npx live-server``` Open [http://localhost:3000](http://localhost:3000) to view project in your browser.
 
 ## Contact
 I can be reached at:
