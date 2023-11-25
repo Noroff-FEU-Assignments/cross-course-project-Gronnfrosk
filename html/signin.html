@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="Sign in or register to your personal profile" />
+		<link rel="stylesheet" href="/css/style.css" />
+		<link rel="stylesheet" href="/css/sign_in.css" />
+		<script src="https://kit.fontawesome.com/97c20a411c.js" crossorigin="anonymous"></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+		<title>GameHub | Sign in</title>
+		<!-- Hotjar Tracking Code for https://determined-mirzakhani-cd7f68.netlify.app/ -->
+		<script>
+			(function (h, o, t, j, a, r) {
+				h.hj =
+					h.hj ||
+					function () {
+						(h.hj.q = h.hj.q || []).push(arguments);
+					};
+				h._hjSettings = { hjid: 3153643, hjsv: 6 };
+				a = o.getElementsByTagName("head")[0];
+				r = o.createElement("script");
+				r.async = 1;
+				r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+				a.appendChild(r);
+			})(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+		</script>
+	</head>
+	<body>
+		<div class="whole-container">
+			<div class="container">
+				<div class="top-top">
+					<a href="/index.html"><img src="/images/Logo_small.png" alt="logo small" /></a>
+				</div>
+				<input type="radio" id="sign-in" name="sign-register" value="sign-register" checked />
+				<h1><label for="sign-in" class="sign-in">Sign in</label></h1>
+				<input type="radio" id="register" name="sign-register" value="sign-register" />
+				<h1><label for="register" class="register">Register</label></h1>
+				<div class="radio sign-in-page">
+					<form id="profileForm">
+						<label for="email">Email</label>
+						<input type="email" id="mail" />
+						<div class="form-error" id="somethingError">Please enter valid email address</div>
+						<label for="fullname">Password</label>
+						<input type="text" name="password" id="passw" />
+						<div class="form-error" id="passwError">Please enter password</div>
+						<a href="/html/contact.html" class="text-link">Forgotten password?</a>
+						<div class="remember-me">
+							<input type="checkbox" name="payment" id="save-card" class="checkbox" />
+							<label for="save-card">Remember me</label>
+						</div>
+						<button onclick="location.href='/html/profile.html'" class="cta" id="signInButton">Continue</button>
+						<p>Sign in or create your own GameHub account to start trading and purchase games today!</p>
+					</form>
+				</div>
+				<div class="radio register-page">
+					<form id="profileForm">
+						<label for="fullname">Full name</label>
+						<input type="text" name="fullname" id="fullname" />
+						<div class="form-error" id="fullNameError">Please enter full name. Atleast 5 characters.</div>
+						<label for="email">Email</label>
+						<input type="email" name="email" id="email" />
+						<div class="form-error" id="emailError">Please enter an email address</div>
+						<label for="address">Address</label>
+						<input type="text" name="address" id="address" />
+						<div class="form-error" id="addressError">Please enter your address</div>
+						<div class="zip-city">
+							<div class="zip">
+								<label for="zip">Zip code</label>
+								<input type="text" name="zip" id="zip" />
+								<div class="form-error" id="zipError">Please enter zip</div>
+							</div>
+							<div class="city">
+								<label for="city">City</label>
+								<input type="text" name="city" id="city" />
+								<div class="form-error" id="cityError">Please enter city</div>
+							</div>
+						</div>
+						<label for="country">Country</label>
+						<input type="text" name="country" id="country" />
+						<div class="form-error" id="countryError">Please enter country</div>
+						<label for="telephone">Phone</label>
+						<input type="tel" name="telephone" id="telephone" />
+						<div class="form-error" id="phoneError">Please enter phone number</div>
+						<label for="pass">Password</label>
+						<input type="text" name="pass" id="pass" />
+						<div class="form-error" id="passError">Please enter password. More than 7 characters.</div>
+						<label for="password">Confirm password</label>
+						<input type="text" name="ConfirmPassword" id="confirmPassword" />
+						<div class="form-error" id="confPasswordError">The passwords do not match.</div>
+						<button onclick="validate()" class="cta" id="btn">Continue</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<script src="/js/signin.js"></script>
+	</body>
+</html>

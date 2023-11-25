@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="This is Home page for the Online shop to GameHub"/>
+		<link rel="stylesheet" href="/css/style.css" />
+		<script src="https://kit.fontawesome.com/97c20a411c.js" crossorigin="anonymous"></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
+		<title>GameHub | Home page</title>
+		<!-- Hotjar Tracking Code for https://determined-mirzakhani-cd7f68.netlify.app/ -->
+		<script>
+			(function(h,o,t,j,a,r){
+				h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+				h._hjSettings={hjid:3153643,hjsv:6};
+				a=o.getElementsByTagName('head')[0];
+				r=o.createElement('script');r.async=1;
+				r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+				a.appendChild(r);
+			})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+		</script>
+	</head>
+	<body>
+		<!-- Header-->
+		<header>
+			<div class="nav-fixed">
+				<div >
+					<img src="/images/Logo_small.png" alt="Logo image" class="logo phone" />
+					<img src="/images/Logo_desktop.png" alt="Logo image" class="logo desktop"/>
+					<nav class="nav-top">
+						<a href="/html/saved.html" class="icon heart"><i class="fas fa-heart"></i>Saved</a>
+						<div class=circle-heart><i class="fas fa-circle"></i></div>
+						<a href="/html/signin.html" class="icon"><i class="fas fa-user"></i>Sign in</a>
+						<a href="/html/checkout.html" class="icon" id="cart"><i class="fas fa-shopping-cart"></i>Cart <span>0</span></a>
+						<div class="cart-circle"><i class="fas fa-circle"></i></div>
+					</nav>
+				</div>
+			</div>
+			<div class="search-bar">
+				<div class="search">
+					<input type="text" placeholder="Search games..." class="game-search" name="game-search" id="game-search"/>
+					<a href="/html/gamelist.html" title="Click here for the list of games"><i class="fas fa-search"></i></a>
+					<select name="game categories" title="Select game category">
+						<option value="all">All Categories</option>
+						<option value="all">Action</option>
+						<option value="all">Adventure</option>
+						<option value="all">Sport</option>
+						<option value="all">strategy</option>
+						<option value="all">RPG</option>
+						<option value="all">Simulation</option>
+					</select>
+				</div>
+			</div>
+		</header>
+		<!-- Main-->
+		<main>
+			<h1>What computer game do you want to play?</h1>
+			<!-- Popular games-->
+			<section class="list">
+				<h2>Popular games</h2>
+				<div class="popular-games-list">
+					<div class= "game">
+						<div class="product prodPic">
+						</div>
+							<div class="details">
+							<input type="checkbox" id="save" />
+							<label for="save" class="heart heart-click"><i class="fas fa-heart"></i></label>
+							<p class="title">Assassin</p>
+							<p class="description">- New</p>
+							<p class="description">- Playbox One X Enhanced</p>
+							<p class="rating">Rating</p>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="far fa-star"></i>
+							<p class="prize">500 kr</p>
+							<a class="cta add-cart cart1" >Add to cart</a> 
+						</div>
+					</div>
+					<div class="game-one">
+						<div class="product-one prodPic popTwo">
+						</div>
+						<div class="details-one">
+							<input type="checkbox" id="save-one" />
+							<label for="save-one" class="heart heart-click"><i class="fas fa-heart"></i></label>
+							<p class="title">Racing</p>
+							<p class="description">- New</p>
+							<p class="description">- Playbox One X Enhanced</p>
+							<p class="rating">Rating</p>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<p class="prize">500 kr</p>
+							<a class="cta add-cart cart2" >Add to cart</a> 
+						</div>
+					</div>
+					<div class="game-two">
+						<div class="product-two prodPic popThree">
+						</div>
+						<div class="details-two">
+							<input type="checkbox" id="save-two" />
+							<label for="save-two" class="heart heart-click"><i class="fas fa-heart"></i></label>
+							<p class="title">Boxer</p>
+							<p class="description">- New</p>
+							<p class="description">- Playbox One X Enhanced</p>
+							<p class="rating">Rating</p>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="far fa-star"></i>
+							<p class="prize">500 kr</p>
+							<a class="cta add-cart cart3" >Add to cart</a>
+						</div>
+					</div>
+					<a href=/html/gamelist.html class="two big" title="Button to see more popular games">+</a>
+				</div>
+				<a href=/html/gamelist.html class="two small" title="Button to see more popular games">+ More</a>
+			</section>
+			<i class="fas fa-gamepad" id="gamepad"></i>
+			<!-- Selling point-->
+			<section class="slogan">
+				<div class="text">
+					<h2>The universe of games</h2>
+					<p class="pointb">
+						We have a huge range of games that is competitively priced. Buy
+						either used games, brand new or pre-order games from us.
+					</p>
+					<p class="points">
+						Be able to regain some money back by selling the games back to us.
+					</p>
+					<a href="/html/signin.html" class="text-link">Join us now -></a>
+				</div>
+			</section>
+			<!-- pre-order games-->
+			<section class="list">
+				<h2>Pre-order games</h2>
+				<div class="pre-order-games-list">
+					<div class="game">
+						<div class="product prodPic">
+						</div>
+						<div class="details pre doble">
+							<input type="checkbox" id="save-three" />
+							<label for="save-three" class="heart heart-click"><i class="fas fa-heart"></i></label>
+							<p class="title">Space War</p>
+							<p class="description">- Playbox One X Enhanced</p>
+							<p class="rating">Release Date: 12/12/2021</p>
+							<p class="prize">600 kr</p>
+							<a class="cta add-cart cart4" >Add to cart</a>
+						</div>
+					</div>
+					<div class="game-one">	
+						<div class="product-one prodPic preTwo">
+						</div>
+						<div class="details-one pre">
+							<input type="checkbox" id="save-four" />
+							<label for="save-four" class="heart heart-click"><i class="fas fa-heart"></i></label>
+							<p class="title">Cyberpunk</p>
+							<p class="description">- Playbox One X Enhanced</p>
+							<p class="rating">Release Date: 12/11/2021</p>
+							<p class="prize">600 kr</p>
+							<a class="cta add-cart cart5" >Add to cart</a>
+						</div>
+					</div>	
+					<div class="game-two">
+						<div class="product-two prodPic preThree">
+						</div>
+						<div class="details-two doble">
+							<input type="checkbox" id="save-five" />
+							<label for="save-five" class="heart heart-click"><i class="fas fa-heart"></i></label>
+							<p class="title">Forge Legend</p>
+							<p class="description">- Playbox One X Enhanced</p>
+							<p class="rating">Release Date: 12/10/2021</p>
+							<p class="prize">600 kr</p>
+							<a class="cta add-cart cart6">Add to cart</a>
+						</div>
+					</div>
+					<a href=/html/gamelist.html class="two big" title="Button to see more pre-order games">+</a>
+				</div>
+				<a href=/html/gamelist.html class="two small" title="Button to see more pre-order games">+ More</a>	
+			</section>
+			<!-- Brand new games-->
+			<section class="list border">
+				<h2>Brand new games</h2>
+				<div class="brand-new-games-list">
+					<div class="game">
+						<div class="product prodPic">
+						</div>
+						<div class="details brand">
+							<input type="checkbox" id="save-six" />
+							<label for="save-six" class="heart heart-click"><i class="fas fa-heart"></i></label>
+							<p class="title">Super Duper</p>
+							<p class="description">- New</p>
+							<p class="description">- Playbox One X Enhanced</p>
+							<p class="rating">Rating</p>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="far fa-star"></i>
+							<p class="prize">500 kr</p>
+							<a class="cta add-cart cart7" >Add to cart</a>
+						</div>
+					</div>
+					<div class="game-one">
+						<div class="product-one prodPic newTwo">
+						</div>
+						<div class="details-one">
+							<input type="checkbox" id="save-seven" />
+							<label for="save-seven" class="heart heart-click"><i class="fas fa-heart"></i></label>
+							<p class="title">Black</p>
+							<p class="description">- New</p>
+							<p class="description">- Playbox One X Enhanced</p>
+							<p class="rating">Rating</p>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="far fa-star"></i>
+							<p class="prize">500 kr</p>
+							<a class="cta add-cart cart8" >Add to cart</a>
+						</div>
+					</div>
+					<div class="game-two">
+						<div class="product-two prodPic newThree">
+						</div>
+						<div class="details-two">
+							<input type="checkbox" id="save-eight" />
+							<label for="save-eight" class="heart heart-click"><i class="fas fa-heart"></i></label>
+							<p class="title">Furious</p>
+							<p class="description">- New</p>
+							<p class="description">- Playbox One X Enhanced</p>
+							<p class="rating">Rating</p>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<p class="prize">500 kr</p>
+							<a class="cta add-cart cart9" >Add to cart</a>
+						</div>
+					</div>
+					<a href=/html/gamelist.html class="two big" title="Button to see more games">+</a>
+				</div>
+				<a href=/html/gamelist.html class="two small" title="Button to see more games">+ More</a>
+				
+			</section>
+			<!-- Pre-used games-->
+			<section class="list border">
+				<h2>Pre-used games</h2>
+				<div class="pre-used-games-list">
+					<div class="game">
+						<div class="product prodPic">
+						</div>
+						<div class="details">
+							<input type="checkbox" id="save-nine" />
+							<label for="save-nine" class="heart heart-click"><i class="fas fa-heart"></i></label>
+							<p class="title">Boxer</p>
+							<p class="description">- Pre-used</p>
+							<p class="description">- Playbox One X Enhanced</p>
+							<p class="rating">Rating</p>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="far fa-star"></i>
+							<p class="prize">400 kr</p>
+							<a class="cta add-cart cart10" >Add to cart</a>
+						</div>
+					</div>
+					<div class="game-one" >
+						<div class="product-one prodPic">
+						</div>
+						<div class="details-one">
+							<input type="checkbox" id="save-ten" />
+							<label for="save-ten" class="heart heart-click"><i class="fas fa-heart"></i></label>
+							<p class="title">Furious</p>
+							<p class="description">- Pre-used</p>
+							<p class="description">- Playbox One X Enhanced</p>
+							<p class="rating">Rating</p>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<p class="prize">400 kr</p>
+							<a class="cta add-cart cart11" >Add to cart</a>
+						</div>
+					</div>
+					<div class="game-two">
+					<div class="product-two prodPic">
+					</div>
+						<div class="details-two">
+							<input type="checkbox" id="save-eleven" />
+							<label for="save-eleven" class="heart heart-click"><i class="fas fa-heart"></i></label>
+							<p class="title">Assassin</p>
+							<p class="description">- Pre-used</p>
+							<p class="description">- Playbox One X Enhanced</p>
+							<p class="rating">Rating</p>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="far fa-star"></i>
+							<p class="prize">400 kr</p>
+							<a class="cta add-cart cart12" >Add to cart</a>
+						</div>
+					</div>
+					<a href=/html/gamelist.html class="two big" title="Button to see more pre-used games">+</a>
+				</div>
+				<a href=/html/gamelist.html class="two small" title="Button to see more pre-used games">+ More</a>
+				
+			</section>
+		</main>
+		<!-- Footer-->
+		<footer>
+			<div class="navb">
+				<a href="/index.html" class="topbutton" title="Button to move to the top of the page"><i class="fas fa-chevron-circle-up"></i></a>
+				<div class="navbottom">
+					<ul class="navlinks">
+						<li><a href="/html/contact.html">- Contact us</a></li>
+						<li><a href="/html/information.html">- About us</a></li>
+						<li><a href="/html/signin.html">- My account</a></li>
+						<li><a href="/html/information.html">- Terms of transaction and delivery</a></li>
+						<li><a href="/html/information.html">- Privacy policy</a></li>
+					</ul>
+					<div class="social">
+						<a href="http://www.Facebook.com/" title="linktext to facebook"><i class="fab fa-facebook-f"></i></a>
+						<a href="http://www.twitter.com/" title="linktext to twitter"><i class="fab fa-twitter"></i></a>
+						<a href="http://www.instagram.com/" title="linktext to instagram"><i class="fab fa-instagram"></i></a>
+						<a href="http://www.youtube.com/" title="linktext to youtube"><i class="fab fa-youtube"></i></a>
+					</div>
+				</div>
+			</div>
+			<div class="last">
+				<a href="index.html" title="Button to home page"><img src="/images/Logo_small.png" alt="logo" class="logotwo"/></a>
+				<p>&copy;Copyright 2022 GameHub</p>
+			</div>
+		</footer>
+		<script type="module" src="/js/index.js"></script>
+	</body>
+</html>

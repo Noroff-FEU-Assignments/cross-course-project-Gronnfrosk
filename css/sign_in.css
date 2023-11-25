@@ -1,0 +1,173 @@
+/* sign in/Register*/
+.whole-container {
+	background-color: rgba(0, 0, 0, 0.5);
+	height: 937px;
+	display: flex;
+	align-items: center;
+}
+.top-top {
+	text-align: center;
+	height: 55px;
+	padding-bottom: 23px;
+	border-bottom: solid 6px #45047a;
+	background-image: linear-gradient(to bottom, rgb(255 255 255) 0%, rgb(255 255 255) 100%),
+		linear-gradient(to top, #1b203d, #1b203d 50%, #1b203d 75%, #45047a 75%);
+	background-clip: content-box, padding-box;
+}
+img {
+	margin-top: 7px;
+	margin-right: 20px;
+}
+.top-top .fa-chevron-circle-left {
+	position: relative;
+	left: -30px;
+	top: -80px;
+}
+.top-top .previous .fas {
+	padding: 40px;
+}
+.container {
+	width: 465px;
+	height: 800px;
+	margin: 0 auto;
+	text-align: center;
+	background-color: white;
+}
+.radio {
+	width: 300px;
+	margin: 0 auto;
+}
+.sign-in-page {
+	margin-top: 50px;
+}
+#sign-in,
+#register,
+.register-page {
+	display: none;
+}
+label,
+.remember-me {
+	text-align: left;
+}
+.container h1 {
+	display: inline-block;
+	width: 150px;
+	border: none;
+	position: relative;
+	left: -5px;
+	padding-bottom: 10px;
+	margin: 60px auto 0 auto;
+}
+h1 label {
+	display: block;
+	width: 150px;
+	font-size: 27px;
+	font-weight: normal;
+	margin: 0 auto;
+	padding: 5.5px;
+	border: solid 2px #1b203d;
+	text-align: center;
+}
+h1 label:hover {
+	cursor: pointer;
+}
+#sign-in:checked ~ h1 label.sign-in,
+#register:checked ~ h1 label.register {
+	color: white;
+	background-color: #1b203d;
+}
+#register:checked ~ .register-page {
+	display: block;
+}
+.continue-profile {
+	padding: 15px 0;
+	font-size: 20px;
+	margin-top: 20px;
+}
+.continue-profile:hover {
+	color: black;
+	box-shadow: 0 10px 20px rgb(0, 0, 0);
+}
+.sign-in-page p {
+	margin: 16px auto;
+	width: 263;
+}
+.register-page {
+	position: relative;
+	background-color: white;
+	top: -460px;
+}
+/* profile.css */
+form {
+	display: flex;
+	margin: 20px auto 0 auto;
+	flex-direction: column;
+}
+.zip-city {
+	display: flex;
+	max-width: 100%;
+}
+.zip {
+	margin-right: 40px;
+}
+.zip,
+.city {
+	display: grid;
+}
+.zip input {
+	width: 100%;
+}
+.city input {
+	width: 100%;
+}
+input:hover,
+label:hover {
+	box-shadow: none;
+	background: lightgray;
+}
+form input[type="text" i],
+form input[type="email" i], form input[type="tel" i] {
+	padding: 0;
+}
+.container input {
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	margin-bottom: 10px;
+}
+#signInButton, #btn {
+	font-size: 20px;
+	padding: 15px 15px;
+	margin-top: 20px;
+	width: 100%;
+}
+.cta:hover {
+	cursor: pointer;
+	box-shadow: 0 10px 20px rgb(0, 0, 0);
+	background-color: #baff3b;
+}
+.form-error {
+	display: none;
+	color: red;
+	font-family: "Roboto", sans-serif;
+	font-size: 12px;
+}
+
+/* checkout */
+.remember-me {
+	display: flex;
+	border-bottom: solid 2px gray;
+	margin: 20px 0 60px 0;
+	width: fit-content;
+}
+.remember-me label {
+	margin-left: 20px;
+	padding-top: 11px;
+}
+
+/*desktop/tablet styles*/
+
+@media only screen and (min-width: 991px) {
+	.whole-container {
+	}
+}

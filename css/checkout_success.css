@@ -1,0 +1,126 @@
+header a {
+	z-index: 2;
+}
+main {
+	width: 80%;
+	margin: 0 auto;
+}
+.container {
+	display: flex;
+	flex-direction: column;
+	max-width: 600px;
+	margin: 350px auto 0 auto;
+	border: solid #5bd2ff;
+	border-width: 70px 50px;
+	text-align: center;
+}
+.container img {
+	position: absolute;
+	top: 104px;
+	padding-left: 186px;
+}
+h1 {
+	width: 100%;
+	margin: 20px 0 0 0;
+	padding: 0;
+	border-bottom: none;
+}
+.underline p {
+	text-decoration: underline;
+	margin-bottom: 0;
+}
+.nav-checkout {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	font-weight: bold;
+	color: #5bd2ff;
+}
+.nav-checkout.icon {
+	padding: 0 0 15px 0;
+}
+.nav-checkout i {
+	font-size: 40px;
+	padding: 15px 15px 0 15px;
+}
+footer {
+	border-top: none;
+	padding: 50px;
+	background-color: #5bd2ff;
+	margin-top: 0px;
+}
+
+/*mobile styles*/
+
+@media only screen and (max-width: 990px) {
+	header {
+		height: 67px;
+		padding-bottom: 23px;
+		border-bottom: solid 6px #45047a;
+		background-image: linear-gradient(to bottom, rgb(255 255 255) 0%, rgb(255 255 255) 100%),
+			linear-gradient(to top, #1b203d, #1b203d 50%, #1b203d 75%, #45047a 75%);
+		background-clip: content-box, padding-box;
+	}
+	.phone {
+		position: absolute;
+		top: 10px;
+		margin: 0;
+		z-index: 2;
+	}
+	.container {
+		margin-top: 310px;
+		max-width: 300px;
+		border-width: 70px 20px;
+	}
+	.container img {
+		padding-left: 3%;
+	}
+	.container h1 {
+		display: block;
+		font-size: 27px;
+		margin-top: 20px;
+	}
+	.container p {
+		font-size: 12px;
+		margin: 10px auto;
+		width: 75%;
+	}
+	.nav-checkout {
+		gap: 5px;
+	}
+	a.icon {
+		font-size: 12px;
+		padding: 0 0 15px 0;
+	}
+	.nav-checkout i {
+		font-size: 30px;
+		padding: 0 15px;
+	}
+	footer,
+	.again {
+		display: none;
+	}
+}
+
+/*desktop/tablet styles*/
+
+@media only screen and (min-width: 991px) {
+	header {
+		border-top: solid 50px #1b203d;
+		padding: 6px 0 0 0;
+		background-image: linear-gradient(to bottom, rgb(255 255 255) 0%, rgb(255 255 255) 100%), linear-gradient(to top, #45047a 0%, #45047a 100%);
+		background-clip: content-box, padding-box;
+		border-bottom: none;
+	}
+	.desktop {
+		margin: 0;
+	}
+	header a {
+		position: absolute;
+		top: 100px;
+		left: 80px;
+	}
+	p {
+		font-size: 20px;
+	}
+}
